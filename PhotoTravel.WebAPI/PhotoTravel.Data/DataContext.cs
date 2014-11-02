@@ -13,7 +13,7 @@ namespace PhotoTravel.Data
         }
 
         public DataContext()
-            : base("SQLSERVER_CONNECTION_STRING")
+            : base("DbContextString")
         {
         }
 
