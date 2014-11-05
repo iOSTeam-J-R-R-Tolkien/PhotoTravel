@@ -7,12 +7,21 @@
 //
 
 #import "AppDelegate.h"
+<<<<<<< HEAD
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <Parse/Parse.h>
+=======
+//#import "DetailViewController.h"
+>>>>>>> FETCH_HEAD
 
-@interface AppDelegate () <UISplitViewControllerDelegate>
 
-@end
+#import "LoginViewController.h"
+//facebook
+#import <Parse/Parse.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+
+//@interface AppDelegate () <UISplitViewControllerDelegate>
+//@end
 
 @implementation AppDelegate
 
@@ -27,6 +36,7 @@
       splitViewController.displayModeButtonItem;
   splitViewController.delegate = self;
 
+<<<<<<< HEAD
   // ****************************************************************************
   // Fill in with your Parse credentials:
   // ****************************************************************************
@@ -39,6 +49,36 @@
   [PFFacebookUtils initializeFacebook];
 
   return YES;
+=======
+#pragma mark -
+#pragma mark UIApplicationDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//    // Override point for customization after application launch.
+//    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+//    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
+//    navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
+//    splitViewController.delegate = self;
+//    return YES;
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // Parse credentials
+    [Parse setApplicationId:@"h26DZLy6933G60v7Ppcpz0gOT8aNqy044Z1rXBGi"
+                  clientKey:@"hlvtvqjVk5gbH8kIfcEDwenPjCuZLBT8N93ARe9M"];
+    
+    // Your Facebook application id is configured in Info.plist.
+    [PFFacebookUtils initializeFacebook];
+    
+    // Override point for customization after application launch.
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    return YES;
+
+>>>>>>> FETCH_HEAD
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -76,6 +116,7 @@
   [[PFFacebookUtils session] close];
 }
 
+<<<<<<< HEAD
 - (BOOL)application:(UIApplication *)application
               openURL:(NSURL *)url
     sourceApplication:(NSString *)sourceApplication
@@ -84,5 +125,17 @@
                 sourceApplication:sourceApplication
                       withSession:[PFFacebookUtils session]];
 }
+=======
+//#pragma mark - Split view
+//
+//- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
+//    if ([secondaryViewController isKindOfClass:[UINavigationController class]] && [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[DetailViewController class]] && ([(DetailViewController *)[(UINavigationController *)secondaryViewController topViewController] detailItem] == nil)) {
+//        // Return YES to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
+//        return YES;
+//    } else {
+//        return NO;
+//    }
+//}
+>>>>>>> FETCH_HEAD
 
 @end
