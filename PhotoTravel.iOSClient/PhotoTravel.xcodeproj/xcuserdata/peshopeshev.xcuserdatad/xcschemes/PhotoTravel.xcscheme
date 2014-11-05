@@ -42,16 +42,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8A360591A06F9A6001B6E9B"
-               BuildableName = "PhotoTravelTests.xctest"
-               BlueprintName = "PhotoTravelTests"
-               ReferencedContainer = "container:PhotoTravel.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CEE559829D349B2EB35466C /* libPods-PhotoTravel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF52D6019749EBCF1E1BDDF4 /* libPods-PhotoTravel.a */; };
+		F82FBE601A0ABE560055314A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F82FBE5B1A0ABE560055314A /* Icon.png */; };
+		F82FBE611A0ABE560055314A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F82FBE5C1A0ABE560055314A /* Icon@2x.png */; };
+		F82FBE621A0ABE560055314A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F82FBE5D1A0ABE560055314A /* logo.png */; };
+		F82FBE631A0ABE560055314A /* welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F82FBE5E1A0ABE560055314A /* welcome.jpg */; };
+		F82FBE641A0ABE560055314A /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = F82FBE5F1A0ABE560055314A /* welcome.png */; };
+		F887035F1A085E96004E0167 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F887035D1A085E96004E0167 /* Info.plist */; };
 		F8A360441A06F9A6001B6E9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A360431A06F9A6001B6E9B /* main.m */; };
 		F8A360471A06F9A6001B6E9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A360461A06F9A6001B6E9B /* AppDelegate.m */; };
-		F8A3604A1A06F9A6001B6E9B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A360491A06F9A6001B6E9B /* MasterViewController.m */; };
-		F8A3604D1A06F9A6001B6E9B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A3604C1A06F9A6001B6E9B /* DetailViewController.m */; };
 		F8A360501A06F9A6001B6E9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A3604E1A06F9A6001B6E9B /* Main.storyboard */; };
 		F8A360521A06F9A6001B6E9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8A360511A06F9A6001B6E9B /* Images.xcassets */; };
 		F8A360551A06F9A6001B6E9B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8A360531A06F9A6001B6E9B /* LaunchScreen.xib */; };
-		F8A360611A06F9A6001B6E9B /* PhotoTravelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A360601A06F9A6001B6E9B /* PhotoTravelTests.m */; };
+		F8A360711A071392001B6E9B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A360701A071392001B6E9B /* MainViewController.m */; };
+		F8AE8FA51A0A6DEB00774FB7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AE8FA41A0A6DEB00774FB7 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,28 +34,52 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4697E2A906A2BA02D49E691 /* Pods-PhotoTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTravel.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTravel/Pods-PhotoTravel.release.xcconfig"; sourceTree = "<group>"; };
+		CB3E22116C74526DBBB557CF /* Pods-PhotoTravel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTravel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTravel/Pods-PhotoTravel.debug.xcconfig"; sourceTree = "<group>"; };
+		CF52D6019749EBCF1E1BDDF4 /* libPods-PhotoTravel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoTravel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F82FBE5B1A0ABE560055314A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
+		F82FBE5C1A0ABE560055314A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icon@2x.png"; sourceTree = "<group>"; };
+		F82FBE5D1A0ABE560055314A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Resources/logo.png; sourceTree = "<group>"; };
+		F82FBE5E1A0ABE560055314A /* welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = welcome.jpg; path = Resources/welcome.jpg; sourceTree = "<group>"; };
+		F82FBE5F1A0ABE560055314A /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = welcome.png; path = Resources/welcome.png; sourceTree = "<group>"; };
+		F88703281A085A3F004E0167 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../Desktop/IntegratingFacebookTutorial-iOS/Bolts.framework"; sourceTree = "<group>"; };
+		F88703291A085A3F004E0167 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../../../../Desktop/IntegratingFacebookTutorial-iOS/FacebookSDK.framework"; sourceTree = "<group>"; };
+		F887032A1A085A3F004E0167 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../../Desktop/IntegratingFacebookTutorial-iOS/Parse.framework"; sourceTree = "<group>"; };
+		F887032B1A085A3F004E0167 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "../../../../Desktop/IntegratingFacebookTutorial-iOS/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
+		F88703441A085C03004E0167 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F88703461A085C3D004E0167 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F88703481A085C5A004E0167 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F887034A1A085C6B004E0167 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F887034C1A085C7E004E0167 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F887034E1A085CDE004E0167 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F88703501A085CEC004E0167 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F88703521A085CFA004E0167 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F88703541A085D0F004E0167 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F88703561A085D20004E0167 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F88703581A085D2E004E0167 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F887035A1A085D42004E0167 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F887035D1A085E96004E0167 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8A3603E1A06F9A6001B6E9B /* PhotoTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A360421A06F9A6001B6E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8A360431A06F9A6001B6E9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8A360451A06F9A6001B6E9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F8A360461A06F9A6001B6E9B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F8A360481A06F9A6001B6E9B /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		F8A360491A06F9A6001B6E9B /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		F8A3604B1A06F9A6001B6E9B /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		F8A3604C1A06F9A6001B6E9B /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F8A3604F1A06F9A6001B6E9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8A360511A06F9A6001B6E9B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F8A360541A06F9A6001B6E9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F8A3605A1A06F9A6001B6E9B /* PhotoTravelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoTravelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8A3605F1A06F9A6001B6E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8A360601A06F9A6001B6E9B /* PhotoTravelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoTravelTests.m; sourceTree = "<group>"; };
+		F8A3606F1A071392001B6E9B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		F8A360701A071392001B6E9B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		F8AE8FA31A0A6DEB00774FB7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F8AE8FA41A0A6DEB00774FB7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F8A3603B1A06F9A6001B6E9B /* Frameworks */ = {
+		A5FBF9D4BCC6CA34D8A6ACB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CEE559829D349B2EB35466C /* libPods-PhotoTravel.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,12 +93,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45741A2AD4446F5A79D6EAC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB3E22116C74526DBBB557CF /* Pods-PhotoTravel.debug.xcconfig */,
+				C4697E2A906A2BA02D49E691 /* Pods-PhotoTravel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F887031D1A0851B5004E0167 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F887035A1A085D42004E0167 /* CoreGraphics.framework */,
+				F88703581A085D2E004E0167 /* Foundation.framework */,
+				F88703561A085D20004E0167 /* UIKit.framework */,
+				F88703541A085D0F004E0167 /* SystemConfiguration.framework */,
+				F88703521A085CFA004E0167 /* Security.framework */,
+				F88703501A085CEC004E0167 /* QuartzCore.framework */,
+				F887034E1A085CDE004E0167 /* MobileCoreServices.framework */,
+				F887034C1A085C7E004E0167 /* CFNetwork.framework */,
+				F887034A1A085C6B004E0167 /* AudioToolbox.framework */,
+				F88703481A085C5A004E0167 /* libz.dylib */,
+				F88703461A085C3D004E0167 /* CoreLocation.framework */,
+				F88703441A085C03004E0167 /* StoreKit.framework */,
+				F88703281A085A3F004E0167 /* Bolts.framework */,
+				F88703291A085A3F004E0167 /* FacebookSDK.framework */,
+				F887032A1A085A3F004E0167 /* Parse.framework */,
+				F887032B1A085A3F004E0167 /* ParseFacebookUtils.framework */,
+				CF52D6019749EBCF1E1BDDF4 /* libPods-PhotoTravel.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F887035C1A085E96004E0167 /* PhotoTravelTests */ = {
+			isa = PBXGroup;
+			children = (
+				F887035D1A085E96004E0167 /* Info.plist */,
+			);
+			path = PhotoTravelTests;
+			sourceTree = "<group>";
+		};
 		F8A360351A06F9A6001B6E9B = {
 			isa = PBXGroup;
 			children = (
-				F8A360401A06F9A6001B6E9B /* PhotoTravel */,
-				F8A3605D1A06F9A6001B6E9B /* PhotoTravelTests */,
+				F887035C1A085E96004E0167 /* PhotoTravelTests */,
+				F8A360411A06F9A6001B6E9B /* Supporting Files */,
+				F8A3606A1A070413001B6E9B /* Resources */,
+				F887031D1A0851B5004E0167 /* Frameworks */,
+				F8A360401A06F9A6001B6E9B /* Classes */,
 				F8A3603F1A06F9A6001B6E9B /* Products */,
+				45741A2AD4446F5A79D6EAC8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,20 +156,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F8A360401A06F9A6001B6E9B /* PhotoTravel */ = {
+		F8A360401A06F9A6001B6E9B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				F8A360451A06F9A6001B6E9B /* AppDelegate.h */,
 				F8A360461A06F9A6001B6E9B /* AppDelegate.m */,
-				F8A360481A06F9A6001B6E9B /* MasterViewController.h */,
-				F8A360491A06F9A6001B6E9B /* MasterViewController.m */,
-				F8A3604B1A06F9A6001B6E9B /* DetailViewController.h */,
-				F8A3604C1A06F9A6001B6E9B /* DetailViewController.m */,
-				F8A3604E1A06F9A6001B6E9B /* Main.storyboard */,
 				F8A360511A06F9A6001B6E9B /* Images.xcassets */,
-				F8A360531A06F9A6001B6E9B /* LaunchScreen.xib */,
-				F8A360411A06F9A6001B6E9B /* Supporting Files */,
+				F8A3606F1A071392001B6E9B /* MainViewController.h */,
+				F8A360701A071392001B6E9B /* MainViewController.m */,
+				F8AE8FA31A0A6DEB00774FB7 /* LoginViewController.h */,
+				F8AE8FA41A0A6DEB00774FB7 /* LoginViewController.m */,
 			);
+			name = Classes;
 			path = PhotoTravel;
 			sourceTree = "<group>";
 		};
@@ -105,23 +178,22 @@
 				F8A360431A06F9A6001B6E9B /* main.m */,
 			);
 			name = "Supporting Files";
+			path = PhotoTravel;
 			sourceTree = "<group>";
 		};
-		F8A3605D1A06F9A6001B6E9B /* PhotoTravelTests */ = {
+		F8A3606A1A070413001B6E9B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F8A360601A06F9A6001B6E9B /* PhotoTravelTests.m */,
-				F8A3605E1A06F9A6001B6E9B /* Supporting Files */,
+				F82FBE5B1A0ABE560055314A /* Icon.png */,
+				F82FBE5C1A0ABE560055314A /* Icon@2x.png */,
+				F82FBE5D1A0ABE560055314A /* logo.png */,
+				F82FBE5E1A0ABE560055314A /* welcome.jpg */,
+				F82FBE5F1A0ABE560055314A /* welcome.png */,
+				F8A3604E1A06F9A6001B6E9B /* Main.storyboard */,
+				F8A360531A06F9A6001B6E9B /* LaunchScreen.xib */,
 			);
-			path = PhotoTravelTests;
-			sourceTree = "<group>";
-		};
-		F8A3605E1A06F9A6001B6E9B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F8A3605F1A06F9A6001B6E9B /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = Resources;
+			path = PhotoTravel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8A360641A06F9A6001B6E9B /* Build configuration list for PBXNativeTarget "PhotoTravel" */;
 			buildPhases = (
+				83F0C5EE16F9CFE8DA6375CE /* Check Pods Manifest.lock */,
 				F8A3603A1A06F9A6001B6E9B /* Sources */,
-				F8A3603B1A06F9A6001B6E9B /* Frameworks */,
 				F8A3603C1A06F9A6001B6E9B /* Resources */,
+				A1041A9DD1CA9AE2EEB5D9BE /* Copy Pods Resources */,
+				A5FBF9D4BCC6CA34D8A6ACB4 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,8 +278,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F887035F1A085E96004E0167 /* Info.plist in Resources */,
+				F82FBE611A0ABE560055314A /* Icon@2x.png in Resources */,
 				F8A360501A06F9A6001B6E9B /* Main.storyboard in Resources */,
+				F82FBE601A0ABE560055314A /* Icon.png in Resources */,
+				F82FBE621A0ABE560055314A /* logo.png in Resources */,
 				F8A360551A06F9A6001B6E9B /* LaunchScreen.xib in Resources */,
+				F82FBE641A0ABE560055314A /* welcome.png in Resources */,
+				F82FBE631A0ABE560055314A /* welcome.jpg in Resources */,
 				F8A360521A06F9A6001B6E9B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,15 +299,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		83F0C5EE16F9CFE8DA6375CE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A1041A9DD1CA9AE2EEB5D9BE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoTravel/Pods-PhotoTravel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F8A3603A1A06F9A6001B6E9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8AE8FA51A0A6DEB00774FB7 /* LoginViewController.m in Sources */,
 				F8A360471A06F9A6001B6E9B /* AppDelegate.m in Sources */,
-				F8A3604A1A06F9A6001B6E9B /* MasterViewController.m in Sources */,
 				F8A360441A06F9A6001B6E9B /* main.m in Sources */,
-				F8A3604D1A06F9A6001B6E9B /* DetailViewController.m in Sources */,
+				F8A360711A071392001B6E9B /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +348,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8A360611A06F9A6001B6E9B /* PhotoTravelTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,9 +461,19 @@
 		};
 		F8A360651A06F9A6001B6E9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB3E22116C74526DBBB557CF /* Pods-PhotoTravel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/peshopeshev/Documents/FacebookSDK,
+					"/Users/peshopeshev/Downloads/parse-library-1.4.2",
+					2,
+					"$(PROJECT_DIR)",
+					"/Users/peshopeshev/Desktop/IntegratingFacebookTutorial-iOS",
+				);
 				INFOPLIST_FILE = PhotoTravel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -359,9 +481,19 @@
 		};
 		F8A360661A06F9A6001B6E9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4697E2A906A2BA02D49E691 /* Pods-PhotoTravel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/peshopeshev/Documents/FacebookSDK,
+					"/Users/peshopeshev/Downloads/parse-library-1.4.2",
+					2,
+					"$(PROJECT_DIR)",
+					"/Users/peshopeshev/Desktop/IntegratingFacebookTutorial-iOS",
+				);
 				INFOPLIST_FILE = PhotoTravel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -420,6 +552,7 @@
 				F8A360661A06F9A6001B6E9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8A360671A06F9A6001B6E9B /* Build configuration list for PBXNativeTarget "PhotoTravelTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +561,7 @@
 				F8A360691A06F9A6001B6E9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
