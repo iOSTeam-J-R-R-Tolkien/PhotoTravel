@@ -13,5 +13,6 @@
 @interface MainViewController : UIViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, strong) UIImage *profileImage;
 
 @end

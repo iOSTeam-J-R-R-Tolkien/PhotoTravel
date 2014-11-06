@@ -102,6 +102,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		91057F501A0B14E900859454 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				91057F511A0B150600859454 /* FacebookLogin */,
+				F8A3606F1A071392001B6E9B /* MainViewController.h */,
+				F8A360701A071392001B6E9B /* MainViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		91057F511A0B150600859454 /* FacebookLogin */ = {
+			isa = PBXGroup;
+			children = (
+				F8AE8FA31A0A6DEB00774FB7 /* LoginViewController.h */,
+				F8AE8FA41A0A6DEB00774FB7 /* LoginViewController.m */,
+			);
+			name = FacebookLogin;
+			sourceTree = "<group>";
+		};
 		F887031D1A0851B5004E0167 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,11 +156,11 @@
 		F8A360351A06F9A6001B6E9B = {
 			isa = PBXGroup;
 			children = (
+				F8A360401A06F9A6001B6E9B /* Classes */,
+				F8A3606A1A070413001B6E9B /* Resources */,
 				F887035C1A085E96004E0167 /* PhotoTravelTests */,
 				F8A360411A06F9A6001B6E9B /* Supporting Files */,
-				F8A3606A1A070413001B6E9B /* Resources */,
 				F887031D1A0851B5004E0167 /* Frameworks */,
-				F8A360401A06F9A6001B6E9B /* Classes */,
 				F8A3603F1A06F9A6001B6E9B /* Products */,
 				45741A2AD4446F5A79D6EAC8 /* Pods */,
 			);
@@ -162,10 +181,7 @@
 				F8A360451A06F9A6001B6E9B /* AppDelegate.h */,
 				F8A360461A06F9A6001B6E9B /* AppDelegate.m */,
 				F8A360511A06F9A6001B6E9B /* Images.xcassets */,
-				F8A3606F1A071392001B6E9B /* MainViewController.h */,
-				F8A360701A071392001B6E9B /* MainViewController.m */,
-				F8AE8FA31A0A6DEB00774FB7 /* LoginViewController.h */,
-				F8AE8FA41A0A6DEB00774FB7 /* LoginViewController.m */,
+				91057F501A0B14E900859454 /* ViewControllers */,
 			);
 			name = Classes;
 			path = PhotoTravel;
@@ -184,12 +200,12 @@
 		F8A3606A1A070413001B6E9B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F8A3604E1A06F9A6001B6E9B /* Main.storyboard */,
 				F82FBE5B1A0ABE560055314A /* Icon.png */,
 				F82FBE5C1A0ABE560055314A /* Icon@2x.png */,
 				F82FBE5D1A0ABE560055314A /* logo.png */,
 				F82FBE5E1A0ABE560055314A /* welcome.jpg */,
 				F82FBE5F1A0ABE560055314A /* welcome.png */,
-				F8A3604E1A06F9A6001B6E9B /* Main.storyboard */,
 				F8A360531A06F9A6001B6E9B /* LaunchScreen.xib */,
 			);
 			name = Resources;

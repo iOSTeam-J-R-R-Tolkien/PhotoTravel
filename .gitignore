@@ -154,3 +154,19 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+
+PhotoTravel.iOSClient/Pods/Pods.xcodeproj/xcuserdata/vindicator.xcuserdatad/xcschemes/Pods-PhotoTravel-Bolts.xcscheme
+
+PhotoTravel.iOSClient/Pods/Pods.xcodeproj/xcuserdata/vindicator.xcuserdatad/xcschemes/Pods-PhotoTravel-Facebook-iOS-SDK.xcscheme
+
+PhotoTravel.iOSClient/Pods/Pods.xcodeproj/xcuserdata/vindicator.xcuserdatad/xcschemes/Pods-PhotoTravel-Parse.xcscheme
+
+PhotoTravel.iOSClient/Pods/Pods.xcodeproj/xcuserdata/vindicator.xcuserdatad/xcschemes/Pods-PhotoTravel-ParseFacebookUtils.xcscheme
+
+PhotoTravel.iOSClient/Pods/Pods.xcodeproj/xcuserdata/vindicator.xcuserdatad/xcschemes/Pods-PhotoTravel.xcscheme
+
+PhotoTravel.iOSClient/Pods/Pods.xcodeproj/xcuserdata/vindicator.xcuserdatad/xcschemes/xcschememanagement.plist
+
+PhotoTravel.iOSClient/Pods/Pods.xcodeproj/project.pbxproj
+
+PhotoTravel.iOSClient/Pods/Pods.xcodeproj/project.pbxproj

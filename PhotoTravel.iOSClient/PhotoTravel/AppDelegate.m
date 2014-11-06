@@ -19,24 +19,26 @@
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
-  UISplitViewController *splitViewController =
-      (UISplitViewController *)self.window.rootViewController;
-  UINavigationController *navigationController =
-      [splitViewController.viewControllers lastObject];
-  navigationController.topViewController.navigationItem.leftBarButtonItem =
-      splitViewController.displayModeButtonItem;
-  splitViewController.delegate = self;
+    UISplitViewController *splitViewController =
+        (UISplitViewController *)self.window.rootViewController;
+    UINavigationController *navigationController =
+        [splitViewController.viewControllers lastObject];
+    navigationController.topViewController.navigationItem.leftBarButtonItem =
+        splitViewController.displayModeButtonItem;
+    splitViewController.delegate = self;
 
-  // ****************************************************************************
+
+
+    
   // Fill in with your Parse credentials:
   // ****************************************************************************
-  [Parse setApplicationId:@"h26DZLy6933G60v7Ppcpz0gOT8aNqy044Z1rXBGi"
+    [Parse setApplicationId:@"h26DZLy6933G60v7Ppcpz0gOT8aNqy044Z1rXBGi"
                 clientKey:@"hlvtvqjVk5gbH8kIfcEDwenPjCuZLBT8N93ARe9M"];
 
   // ****************************************************************************
-  // Your Facebook application id is configured in Info.plist.
+        //Your Facebook application id is configured in Info.plist.
   // ****************************************************************************
-  [PFFacebookUtils initializeFacebook];
+    [PFFacebookUtils initializeFacebook];
 
   return YES;
 }
@@ -80,6 +82,7 @@
               openURL:(NSURL *)url
     sourceApplication:(NSString *)sourceApplication
            annotation:(id)annotation {
+    int fsdfsd = 4;
   return [FBAppCall handleOpenURL:url
                 sourceApplication:sourceApplication
                       withSession:[PFFacebookUtils session]];

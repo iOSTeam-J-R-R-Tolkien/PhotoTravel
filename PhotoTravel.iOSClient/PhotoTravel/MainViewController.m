@@ -28,17 +28,61 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+    //add button
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"MY INFO"
+                                                                      style:UIBarButtonItemStylePlain
+                                                                     target:self
+                                                                     action:@selector(myInfoBtn)]; //@selector(refreshPropertyList:)
+    //    anotherButton.image = profileImage;
+//    [anotherButton backgroundImageForState:profileImage forState:UIControlStateHighlighted];
+//    anotherButton.image = profileImage;
+        self.navigationItem.rightBarButtonItem = anotherButton;
+    //[anotherButton release];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
-
-  LoginViewController *login = [[LoginViewController alloc] init];
-  login.fields = PFLogInFieldsFacebook;
-  login.delegate = self;
-  login.signUpController.delegate = self;
-  [self presentViewController:login animated:YES completion:nil];
+    
+    if ([PFUser currentUser]) {
+        PFUser *user =[PFUser currentUser];
+        
+        int sdfsdf=34;
+//        if (!user) {
+//            NSString *errorMessage = nil;
+//            if (!error) {
+//                NSLog(@"Uh oh. The user cancelled the Facebook login.");
+//                errorMessage = @"Uh oh. The user cancelled the Facebook login.";
+//            } else {
+//                NSLog(@"Uh oh. An error occurred: %@", error);
+//                errorMessage = [error localizedDescription];
+//            }
+//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error"
+//                                                            message:errorMessage
+//                                                           delegate:nil
+//                                                  cancelButtonTitle:nil
+//                                                  otherButtonTitles:@"Dismiss", nil];
+//            [alert show];
+//        } else {
+//            if (user.isNew) {
+//                NSLog(@"User with facebook signed up and logged in!");
+//            } else {
+//                NSLog(@"User with facebook logged in!");
+//            }
+//            [self _presentUserDetailsViewControllerAnimated:YES];
+//        }
+    }
+    else{
+        LoginViewController *login = [[LoginViewController alloc] init];
+        login.fields = PFLogInFieldsFacebook;
+        login.delegate = self;
+        login.signUpController.delegate = self;
+        [self presentViewController:login animated:YES completion:nil];
+    }
+  
 }
+-(void)myInfoBtn {
+    [self performSegueWithIdentifier:@"myInfoSegue" sender:self];
+    }
 
 - (void)logInViewController:(PFLogInViewController *)logInController
                didLogInUser:(PFUser *)user {
@@ -64,5 +108,7 @@
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
 }
+
+
 
 @end
