@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) UIImage *profileImage;
-@property (strong, nonatomic) LoadingScreenViewController *popViewController;
+- (IBAction)buttonToImageView:(UIButton *)sender;
+
 
 @end

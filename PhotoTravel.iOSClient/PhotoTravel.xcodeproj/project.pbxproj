@@ -12,6 +12,7 @@
 		841958FC1A0CDFFD0077153C /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 841958FB1A0CDFFD0077153C /* sound.mp3 */; };
 		84D9337A1A0B71CF00AF73EC /* LoadingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D933781A0B71CF00AF73EC /* LoadingScreenViewController.m */; };
 		84D9337B1A0B71CF00AF73EC /* LoadingScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D933791A0B71CF00AF73EC /* LoadingScreenViewController.xib */; };
+		84E438711A0D55BC009BE8C4 /* DetailedImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E438701A0D55BC009BE8C4 /* DetailedImageViewController.m */; };
 		F82FBE601A0ABE560055314A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F82FBE5B1A0ABE560055314A /* Icon.png */; };
 		F82FBE611A0ABE560055314A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F82FBE5C1A0ABE560055314A /* Icon@2x.png */; };
 		F82FBE621A0ABE560055314A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F82FBE5D1A0ABE560055314A /* logo.png */; };
@@ -44,6 +45,8 @@
 		84D933771A0B71CF00AF73EC /* LoadingScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingScreenViewController.h; sourceTree = "<group>"; };
 		84D933781A0B71CF00AF73EC /* LoadingScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingScreenViewController.m; sourceTree = "<group>"; };
 		84D933791A0B71CF00AF73EC /* LoadingScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingScreenViewController.xib; sourceTree = "<group>"; };
+		84E4386F1A0D55BC009BE8C4 /* DetailedImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedImageViewController.h; sourceTree = "<group>"; };
+		84E438701A0D55BC009BE8C4 /* DetailedImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedImageViewController.m; sourceTree = "<group>"; };
 		C4697E2A906A2BA02D49E691 /* Pods-PhotoTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTravel.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTravel/Pods-PhotoTravel.release.xcconfig"; sourceTree = "<group>"; };
 		CB3E22116C74526DBBB557CF /* Pods-PhotoTravel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTravel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTravel/Pods-PhotoTravel.debug.xcconfig"; sourceTree = "<group>"; };
 		CF52D6019749EBCF1E1BDDF4 /* libPods-PhotoTravel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoTravel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +137,7 @@
 		8442743F1A0B47B800B7E3AD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				91057F511A0B150600859454 /* FacebookLogin */,
 				841958F71A0CDEC20077153C /* MusicManager */,
 				841958F61A0CDEB00077153C /* LoadingScreen */,
 			);
@@ -144,9 +148,10 @@
 			isa = PBXGroup;
 			children = (
 				8442743F1A0B47B800B7E3AD /* Utilities */,
-				91057F511A0B150600859454 /* FacebookLogin */,
 				F8A3606F1A071392001B6E9B /* MainViewController.h */,
 				F8A360701A071392001B6E9B /* MainViewController.m */,
+				84E4386F1A0D55BC009BE8C4 /* DetailedImageViewController.h */,
+				84E438701A0D55BC009BE8C4 /* DetailedImageViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -399,6 +404,7 @@
 				841958FA1A0CDEFB0077153C /* MusicManagerController.m in Sources */,
 				F8A360471A06F9A6001B6E9B /* AppDelegate.m in Sources */,
 				F8A360441A06F9A6001B6E9B /* main.m in Sources */,
+				84E438711A0D55BC009BE8C4 /* DetailedImageViewController.m in Sources */,
 				F8A360711A071392001B6E9B /* MainViewController.m in Sources */,
 				84D9337A1A0B71CF00AF73EC /* LoadingScreenViewController.m in Sources */,
 			);

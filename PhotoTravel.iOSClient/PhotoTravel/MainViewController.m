@@ -40,20 +40,19 @@
   //    anotherButton.image = profileImage;
   //        self.navigationItem.rightBarButtonItem = anotherButton;
   //[anotherButton release];
-    
-    self.loadingPopup = [LoadingScreenViewController initWithParentView:self];
-    
-    self.musicController = [[MusicManagerController alloc] init];
-    [self.musicController tryPlayMusic];
+
+  self.loadingPopup = [LoadingScreenViewController initWithParentView:self];
+
+  self.musicController = [[MusicManagerController alloc] init];
+  [self.musicController tryPlayMusic];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+  [self.loadingPopup showOnScreen];
   [super viewDidAppear:animated];
 
   PFUser *currentUser = [PFUser currentUser];
   if (currentUser != nil) {
-    [self.loadingPopup showOnScreen];
-
     FBRequest *request = [FBRequest requestForMe];
     [request startWithCompletionHandler:^(FBRequestConnection *connection,
                                           id result, NSError *error) {
@@ -108,4 +107,7 @@
   [super didReceiveMemoryWarning];
 }
 
+- (IBAction)buttonToImageView:(UIButton *)sender {
+  [self performSegueWithIdentifier:@"singleImageView" sender:self];
+}
 @end
