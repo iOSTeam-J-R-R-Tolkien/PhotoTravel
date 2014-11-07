@@ -82,7 +82,6 @@
               openURL:(NSURL *)url
     sourceApplication:(NSString *)sourceApplication
            annotation:(id)annotation {
-    int fsdfsd = 4;
   return [FBAppCall handleOpenURL:url
                 sourceApplication:sourceApplication
                       withSession:[PFFacebookUtils session]];

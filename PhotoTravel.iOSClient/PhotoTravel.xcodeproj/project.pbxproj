@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1CEE559829D349B2EB35466C /* libPods-PhotoTravel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF52D6019749EBCF1E1BDDF4 /* libPods-PhotoTravel.a */; };
+		841958FA1A0CDEFB0077153C /* MusicManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841958F91A0CDEFA0077153C /* MusicManagerController.m */; };
+		841958FC1A0CDFFD0077153C /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 841958FB1A0CDFFD0077153C /* sound.mp3 */; };
+		84D9337A1A0B71CF00AF73EC /* LoadingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D933781A0B71CF00AF73EC /* LoadingScreenViewController.m */; };
+		84D9337B1A0B71CF00AF73EC /* LoadingScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D933791A0B71CF00AF73EC /* LoadingScreenViewController.xib */; };
 		F82FBE601A0ABE560055314A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F82FBE5B1A0ABE560055314A /* Icon.png */; };
 		F82FBE611A0ABE560055314A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F82FBE5C1A0ABE560055314A /* Icon@2x.png */; };
 		F82FBE621A0ABE560055314A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F82FBE5D1A0ABE560055314A /* logo.png */; };
@@ -34,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		841958F81A0CDEFA0077153C /* MusicManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicManagerController.h; sourceTree = "<group>"; };
+		841958F91A0CDEFA0077153C /* MusicManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicManagerController.m; sourceTree = "<group>"; };
+		841958FB1A0CDFFD0077153C /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
+		84D933771A0B71CF00AF73EC /* LoadingScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingScreenViewController.h; sourceTree = "<group>"; };
+		84D933781A0B71CF00AF73EC /* LoadingScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingScreenViewController.m; sourceTree = "<group>"; };
+		84D933791A0B71CF00AF73EC /* LoadingScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingScreenViewController.xib; sourceTree = "<group>"; };
 		C4697E2A906A2BA02D49E691 /* Pods-PhotoTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTravel.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTravel/Pods-PhotoTravel.release.xcconfig"; sourceTree = "<group>"; };
 		CB3E22116C74526DBBB557CF /* Pods-PhotoTravel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTravel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTravel/Pods-PhotoTravel.debug.xcconfig"; sourceTree = "<group>"; };
 		CF52D6019749EBCF1E1BDDF4 /* libPods-PhotoTravel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoTravel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,9 +112,38 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		841958F61A0CDEB00077153C /* LoadingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				84D933771A0B71CF00AF73EC /* LoadingScreenViewController.h */,
+				84D933781A0B71CF00AF73EC /* LoadingScreenViewController.m */,
+				84D933791A0B71CF00AF73EC /* LoadingScreenViewController.xib */,
+			);
+			name = LoadingScreen;
+			sourceTree = "<group>";
+		};
+		841958F71A0CDEC20077153C /* MusicManager */ = {
+			isa = PBXGroup;
+			children = (
+				841958F81A0CDEFA0077153C /* MusicManagerController.h */,
+				841958F91A0CDEFA0077153C /* MusicManagerController.m */,
+			);
+			name = MusicManager;
+			sourceTree = "<group>";
+		};
+		8442743F1A0B47B800B7E3AD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				841958F71A0CDEC20077153C /* MusicManager */,
+				841958F61A0CDEB00077153C /* LoadingScreen */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		91057F501A0B14E900859454 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8442743F1A0B47B800B7E3AD /* Utilities */,
 				91057F511A0B150600859454 /* FacebookLogin */,
 				F8A3606F1A071392001B6E9B /* MainViewController.h */,
 				F8A360701A071392001B6E9B /* MainViewController.m */,
@@ -180,7 +219,6 @@
 			children = (
 				F8A360451A06F9A6001B6E9B /* AppDelegate.h */,
 				F8A360461A06F9A6001B6E9B /* AppDelegate.m */,
-				F8A360511A06F9A6001B6E9B /* Images.xcassets */,
 				91057F501A0B14E900859454 /* ViewControllers */,
 			);
 			name = Classes;
@@ -200,13 +238,15 @@
 		F8A3606A1A070413001B6E9B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				841958FB1A0CDFFD0077153C /* sound.mp3 */,
+				F8A360511A06F9A6001B6E9B /* Images.xcassets */,
 				F8A3604E1A06F9A6001B6E9B /* Main.storyboard */,
+				F8A360531A06F9A6001B6E9B /* LaunchScreen.xib */,
 				F82FBE5B1A0ABE560055314A /* Icon.png */,
 				F82FBE5C1A0ABE560055314A /* Icon@2x.png */,
 				F82FBE5D1A0ABE560055314A /* logo.png */,
 				F82FBE5E1A0ABE560055314A /* welcome.jpg */,
 				F82FBE5F1A0ABE560055314A /* welcome.png */,
-				F8A360531A06F9A6001B6E9B /* LaunchScreen.xib */,
 			);
 			name = Resources;
 			path = PhotoTravel;
@@ -298,7 +338,9 @@
 				F82FBE611A0ABE560055314A /* Icon@2x.png in Resources */,
 				F8A360501A06F9A6001B6E9B /* Main.storyboard in Resources */,
 				F82FBE601A0ABE560055314A /* Icon.png in Resources */,
+				841958FC1A0CDFFD0077153C /* sound.mp3 in Resources */,
 				F82FBE621A0ABE560055314A /* logo.png in Resources */,
+				84D9337B1A0B71CF00AF73EC /* LoadingScreenViewController.xib in Resources */,
 				F8A360551A06F9A6001B6E9B /* LaunchScreen.xib in Resources */,
 				F82FBE641A0ABE560055314A /* welcome.png in Resources */,
 				F82FBE631A0ABE560055314A /* welcome.jpg in Resources */,
@@ -354,9 +396,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8AE8FA51A0A6DEB00774FB7 /* LoginViewController.m in Sources */,
+				841958FA1A0CDEFB0077153C /* MusicManagerController.m in Sources */,
 				F8A360471A06F9A6001B6E9B /* AppDelegate.m in Sources */,
 				F8A360441A06F9A6001B6E9B /* main.m in Sources */,
 				F8A360711A071392001B6E9B /* MainViewController.m in Sources */,
+				84D9337A1A0B71CF00AF73EC /* LoadingScreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

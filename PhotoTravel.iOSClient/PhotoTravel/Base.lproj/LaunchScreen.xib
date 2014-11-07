@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -13,51 +13,49 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2014 PhotoTravel. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="20" y="440" width="411" height="21"/>
+                    <rect key="frame" x="20" y="429" width="411" height="32"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="AM3-hj-ccR">
-                    <rect key="frame" x="20" y="8" width="91" height="103"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="103" id="APn-Pn-UWS"/>
-                        <constraint firstAttribute="width" constant="91" id="mw9-de-qBC"/>
-                    </constraints>
+                    <rect key="frame" x="8" y="8" width="142" height="137"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PhotoTravel" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Mgh-0Z-2ZW">
-                    <rect key="frame" x="119" y="8" width="323" height="142"/>
+                    <rect key="frame" x="158" y="20" width="239" height="114"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="142" id="3ha-Lc-qYo"/>
+                        <constraint firstAttribute="height" constant="114" id="LvD-dg-JAN"/>
+                        <constraint firstAttribute="width" constant="239" id="xCW-vT-KOY"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome.png" translatesAutoresizingMaskIntoConstraints="NO" id="x5s-cm-ewd">
-                    <rect key="frame" x="8" y="119" width="456" height="225"/>
+                    <rect key="frame" x="8" y="117" width="456" height="344"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="225" id="BgA-6p-Xg6"/>
+                        <constraint firstAttribute="height" constant="344" id="WnH-Jc-9nL"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="Mgh-0Z-2ZW" firstAttribute="leading" secondItem="AM3-hj-ccR" secondAttribute="trailing" constant="8" symbolic="YES" id="1LN-bh-hhd"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1dr-T2-Q8e"/>
-                <constraint firstAttribute="trailing" secondItem="Mgh-0Z-2ZW" secondAttribute="trailing" constant="8" id="2Fo-ut-yRB"/>
-                <constraint firstItem="AM3-hj-ccR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="6HI-xd-J0w"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="top" secondItem="x5s-cm-ewd" secondAttribute="bottom" constant="96" id="84D-UL-0Ym"/>
-                <constraint firstItem="Mgh-0Z-2ZW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="DHx-8K-jPh"/>
-                <constraint firstItem="x5s-cm-ewd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="FAV-rJ-z4X"/>
-                <constraint firstItem="AM3-hj-ccR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Vgo-ep-LlH"/>
-                <constraint firstAttribute="trailing" secondItem="x5s-cm-ewd" secondAttribute="trailing" constant="-14" id="Wtb-cz-qBk"/>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="32" id="hfx-ch-8lu"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="tdG-Sh-Zts"/>
+                <constraint firstItem="AM3-hj-ccR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="6vH-Wg-cOy"/>
+                <constraint firstAttribute="trailing" secondItem="x5s-cm-ewd" secondAttribute="trailing" constant="-14" id="ItQ-vX-jhy"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="top" secondItem="x5s-cm-ewd" secondAttribute="bottom" constant="-32" id="K9J-i0-5yW"/>
+                <constraint firstItem="AM3-hj-ccR" firstAttribute="leading" secondItem="x5s-cm-ewd" secondAttribute="leading" id="Q5T-PD-lVv"/>
+                <constraint firstItem="Mgh-0Z-2ZW" firstAttribute="leading" secondItem="AM3-hj-ccR" secondAttribute="trailing" constant="8" id="Qy7-FA-v0f"/>
+                <constraint firstItem="Mgh-0Z-2ZW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="UAe-Io-ZZY"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="top" secondItem="Mgh-0Z-2ZW" secondAttribute="bottom" constant="295" id="Y8v-G4-PTi"/>
+                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="32" id="Y9W-M4-MDE"/>
+                <constraint firstItem="x5s-cm-ewd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="fKQ-jA-NaM"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="gq0-Fn-IXO"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="spg-a9-dYJ"/>
+                <constraint firstAttribute="trailing" secondItem="Mgh-0Z-2ZW" secondAttribute="trailing" constant="53" id="y6W-BY-qQe"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="366" y="385.5"/>
+            <point key="canvasLocation" x="405" y="517.5"/>
         </view>
     </objects>
     <resources>

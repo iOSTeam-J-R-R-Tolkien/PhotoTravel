@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -71,54 +71,7 @@
                     <view key="view" contentMode="scaleToFill" id="4go-FU-EKq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="U4e-aa-z74">
-                                <rect key="frame" x="16" y="72" width="20" height="20"/>
-                            </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading facebook login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IR8-lO-LfW">
-                                <rect key="frame" x="53" y="72" width="189" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="189" id="dBJ-n6-DlH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Loading facebook login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQl-QE-TLs">
-                                <rect key="frame" x="404" y="72" width="189" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="189" id="PJt-IK-jAq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Loading facebook login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlY-MH-KUf">
-                                <rect key="frame" x="16" y="559" width="189" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="189" id="wB8-QP-pFD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Loading facebook login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKc-ny-0Kb">
-                                <rect key="frame" x="395" y="559" width="189" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="189" id="FeV-n4-0Lm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="U4e-aa-z74" firstAttribute="top" secondItem="52h-fC-gef" secondAttribute="bottom" constant="8" id="F8J-0W-psg"/>
-                            <constraint firstItem="IR8-lO-LfW" firstAttribute="leading" secondItem="U4e-aa-z74" secondAttribute="trailing" constant="17" id="Xya-6K-ndy"/>
-                            <constraint firstItem="U4e-aa-z74" firstAttribute="top" secondItem="IR8-lO-LfW" secondAttribute="top" id="cxr-c1-AZv"/>
-                            <constraint firstItem="U4e-aa-z74" firstAttribute="leading" secondItem="4go-FU-EKq" secondAttribute="leading" constant="16" id="h8r-rW-scN"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Njq-mn-xNJ"/>
                     <connections>
