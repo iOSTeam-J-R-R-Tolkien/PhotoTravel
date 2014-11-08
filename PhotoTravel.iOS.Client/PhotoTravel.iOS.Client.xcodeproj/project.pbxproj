@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84EDC6981A0E302800939E2B /* DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDC6951A0E302800939E2B /* DataHelper.m */; };
+		84EDC6991A0E302800939E2B /* ViewsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDC6971A0E302800939E2B /* ViewsHelper.m */; };
+		84EDC69D1A0E310B00939E2B /* ApplicationUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDC69C1A0E310B00939E2B /* ApplicationUser.m */; };
+		84EDC6A01A0E336300939E2B /* LandmarkWithLastPostUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDC69F1A0E336300939E2B /* LandmarkWithLastPostUITableViewCell.m */; };
+		84EDC6A21A0E338200939E2B /* LandmarkWithLastPostUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84EDC6A11A0E338200939E2B /* LandmarkWithLastPostUITableViewCell.xib */; };
+		84EDC6A51A0E389500939E2B /* DetailedImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDC6A41A0E389500939E2B /* DetailedImageViewController.m */; };
+		9126847C1A0D6F210080DD77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9126847B1A0D6F210080DD77 /* main.m */; };
+		9126847F1A0D6F210080DD77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9126847E1A0D6F210080DD77 /* AppDelegate.m */; };
+		912684821A0D6F210080DD77 /* PhotoTravel_iOS_Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912684801A0D6F210080DD77 /* PhotoTravel_iOS_Client.xcdatamodeld */; };
+		9126848B1A0D6F210080DD77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912684891A0D6F210080DD77 /* Main.storyboard */; };
+		9126848D1A0D6F210080DD77 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9126848C1A0D6F210080DD77 /* Images.xcassets */; };
+		912684901A0D6F210080DD77 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9126848E1A0D6F210080DD77 /* LaunchScreen.xib */; };
+		9126849C1A0D6F210080DD77 /* PhotoTravel_iOS_ClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9126849B1A0D6F210080DD77 /* PhotoTravel_iOS_ClientTests.m */; };
+		912684B21A0D75B10080DD77 /* LoadingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 912684B01A0D75B10080DD77 /* LoadingScreenViewController.m */; };
+		912684B31A0D75B10080DD77 /* LoadingScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 912684B11A0D75B10080DD77 /* LoadingScreenViewController.xib */; };
+		912684B61A0D75CE0080DD77 /* MusicManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 912684B51A0D75CE0080DD77 /* MusicManagerController.m */; };
+		912684C11A0D75F00080DD77 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 912684BD1A0D75F00080DD77 /* MainViewController.m */; };
+		912684C21A0D75F00080DD77 /* MyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 912684BF1A0D75F00080DD77 /* MyInfoViewController.m */; };
+		912684C61A0D76600080DD77 /* ProfileData.m in Sources */ = {isa = PBXBuildFile; fileRef = 912684C51A0D76600080DD77 /* ProfileData.m */; };
+		912684D11A0D77620080DD77 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 912684C81A0D77620080DD77 /* bg.jpg */; };
+		912684D21A0D77620080DD77 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 912684C91A0D77620080DD77 /* Icon.png */; };
+		912684D31A0D77620080DD77 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 912684CA1A0D77620080DD77 /* Icon@2x.png */; };
+		912684D41A0D77620080DD77 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 912684CB1A0D77620080DD77 /* loading.gif */; };
+		912684D51A0D77620080DD77 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 912684CC1A0D77620080DD77 /* logo.png */; };
+		912684D61A0D77620080DD77 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 912684CD1A0D77620080DD77 /* sound.mp3 */; };
+		912684D71A0D77620080DD77 /* transparent-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 912684CE1A0D77620080DD77 /* transparent-bg.png */; };
+		912684D81A0D77620080DD77 /* welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 912684CF1A0D77620080DD77 /* welcome.jpg */; };
+		912684D91A0D77620080DD77 /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 912684D01A0D77620080DD77 /* welcome.png */; };
+		912684DC1A0D78450080DD77 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 912684DB1A0D78450080DD77 /* LoginViewController.m */; };
+		97BDC41AC5F9EB5EEC83545F /* libPods-PhotoTravel.iOS.Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69258BF7589ADC4ACE0E0DE /* libPods-PhotoTravel.iOS.Client.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		912684961A0D6F210080DD77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9126846E1A0D6F210080DD77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 912684751A0D6F210080DD77;
+			remoteInfo = PhotoTravel.iOS.Client;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4979C668896E36BD8BB0DE33 /* Pods-PhotoTravel.iOS.Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTravel.iOS.Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTravel.iOS.Client/Pods-PhotoTravel.iOS.Client.debug.xcconfig"; sourceTree = "<group>"; };
+		78CE6E8B169606394BBC1F2B /* Pods-PhotoTravel.iOS.Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTravel.iOS.Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTravel.iOS.Client/Pods-PhotoTravel.iOS.Client.release.xcconfig"; sourceTree = "<group>"; };
+		84EDC6941A0E302800939E2B /* DataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataHelper.h; path = Helpers/DataHelper.h; sourceTree = "<group>"; };
+		84EDC6951A0E302800939E2B /* DataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataHelper.m; path = Helpers/DataHelper.m; sourceTree = "<group>"; };
+		84EDC6961A0E302800939E2B /* ViewsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewsHelper.h; path = Helpers/ViewsHelper.h; sourceTree = "<group>"; };
+		84EDC6971A0E302800939E2B /* ViewsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewsHelper.m; path = Helpers/ViewsHelper.m; sourceTree = "<group>"; };
+		84EDC69B1A0E310B00939E2B /* ApplicationUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplicationUser.h; path = Data/Models/ApplicationUser.h; sourceTree = "<group>"; };
+		84EDC69C1A0E310B00939E2B /* ApplicationUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApplicationUser.m; path = Data/Models/ApplicationUser.m; sourceTree = "<group>"; };
+		84EDC69E1A0E336300939E2B /* LandmarkWithLastPostUITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandmarkWithLastPostUITableViewCell.h; path = ViewControllers/LandmarkWithLastPostUITableViewCell.h; sourceTree = "<group>"; };
+		84EDC69F1A0E336300939E2B /* LandmarkWithLastPostUITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandmarkWithLastPostUITableViewCell.m; path = ViewControllers/LandmarkWithLastPostUITableViewCell.m; sourceTree = "<group>"; };
+		84EDC6A11A0E338200939E2B /* LandmarkWithLastPostUITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LandmarkWithLastPostUITableViewCell.xib; path = Views/LandmarkWithLastPostUITableViewCell.xib; sourceTree = "<group>"; };
+		84EDC6A31A0E389500939E2B /* DetailedImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailedImageViewController.h; path = ViewControllers/DetailedImageViewController.h; sourceTree = "<group>"; };
+		84EDC6A41A0E389500939E2B /* DetailedImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailedImageViewController.m; path = ViewControllers/DetailedImageViewController.m; sourceTree = "<group>"; };
+		912684761A0D6F210080DD77 /* PhotoTravel.iOS.Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoTravel.iOS.Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9126847A1A0D6F210080DD77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9126847B1A0D6F210080DD77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9126847D1A0D6F210080DD77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9126847E1A0D6F210080DD77 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		912684811A0D6F210080DD77 /* PhotoTravel_iOS_Client.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotoTravel_iOS_Client.xcdatamodel; sourceTree = "<group>"; };
+		9126848A1A0D6F210080DD77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9126848C1A0D6F210080DD77 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9126848F1A0D6F210080DD77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		912684951A0D6F210080DD77 /* PhotoTravel.iOS.ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoTravel.iOS.ClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9126849A1A0D6F210080DD77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9126849B1A0D6F210080DD77 /* PhotoTravel_iOS_ClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoTravel_iOS_ClientTests.m; sourceTree = "<group>"; };
+		912684AF1A0D75B10080DD77 /* LoadingScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingScreenViewController.h; path = ViewControllers/Utilities/LoadingScreen/LoadingScreenViewController.h; sourceTree = "<group>"; };
+		912684B01A0D75B10080DD77 /* LoadingScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingScreenViewController.m; path = ViewControllers/Utilities/LoadingScreen/LoadingScreenViewController.m; sourceTree = "<group>"; };
+		912684B11A0D75B10080DD77 /* LoadingScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadingScreenViewController.xib; path = ViewControllers/Utilities/LoadingScreen/LoadingScreenViewController.xib; sourceTree = "<group>"; };
+		912684B41A0D75CE0080DD77 /* MusicManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicManagerController.h; path = ViewControllers/Utilities/MusicManager/MusicManagerController.h; sourceTree = "<group>"; };
+		912684B51A0D75CE0080DD77 /* MusicManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicManagerController.m; path = ViewControllers/Utilities/MusicManager/MusicManagerController.m; sourceTree = "<group>"; };
+		912684BC1A0D75F00080DD77 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ViewControllers/MainViewController.h; sourceTree = "<group>"; };
+		912684BD1A0D75F00080DD77 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ViewControllers/MainViewController.m; sourceTree = "<group>"; };
+		912684BE1A0D75F00080DD77 /* MyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyInfoViewController.h; path = ViewControllers/MyInfoViewController.h; sourceTree = "<group>"; };
+		912684BF1A0D75F00080DD77 /* MyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyInfoViewController.m; path = ViewControllers/MyInfoViewController.m; sourceTree = "<group>"; };
+		912684C41A0D76600080DD77 /* ProfileData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileData.h; path = Data/ProfileData.h; sourceTree = "<group>"; };
+		912684C51A0D76600080DD77 /* ProfileData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileData.m; path = Data/ProfileData.m; sourceTree = "<group>"; };
+		912684C81A0D77620080DD77 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg.jpg; path = Resourses/bg.jpg; sourceTree = "<group>"; };
+		912684C91A0D77620080DD77 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resourses/Icon.png; sourceTree = "<group>"; };
+		912684CA1A0D77620080DD77 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resourses/Icon@2x.png"; sourceTree = "<group>"; };
+		912684CB1A0D77620080DD77 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = Resourses/loading.gif; sourceTree = "<group>"; };
+		912684CC1A0D77620080DD77 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Resourses/logo.png; sourceTree = "<group>"; };
+		912684CD1A0D77620080DD77 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sound.mp3; path = Resourses/sound.mp3; sourceTree = "<group>"; };
+		912684CE1A0D77620080DD77 /* transparent-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "transparent-bg.png"; path = "Resourses/transparent-bg.png"; sourceTree = "<group>"; };
+		912684CF1A0D77620080DD77 /* welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = welcome.jpg; path = Resourses/welcome.jpg; sourceTree = "<group>"; };
+		912684D01A0D77620080DD77 /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = welcome.png; path = Resourses/welcome.png; sourceTree = "<group>"; };
+		912684DA1A0D78450080DD77 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/Utilities/FacebookLogin/LoginViewController.h; sourceTree = "<group>"; };
+		912684DB1A0D78450080DD77 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ViewControllers/Utilities/FacebookLogin/LoginViewController.m; sourceTree = "<group>"; };
+		D69258BF7589ADC4ACE0E0DE /* libPods-PhotoTravel.iOS.Client.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoTravel.iOS.Client.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		912684731A0D6F210080DD77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97BDC41AC5F9EB5EEC83545F /* libPods-PhotoTravel.iOS.Client.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		912684921A0D6F210080DD77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84EDC69A1A0E30F800939E2B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84EDC69B1A0E310B00939E2B /* ApplicationUser.h */,
+				84EDC69C1A0E310B00939E2B /* ApplicationUser.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8CA72CED455A75121F0AD06F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D69258BF7589ADC4ACE0E0DE /* libPods-PhotoTravel.iOS.Client.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9126846D1A0D6F210080DD77 = {
+			isa = PBXGroup;
+			children = (
+				912684781A0D6F210080DD77 /* PhotoTravel.iOS.Client */,
+				912684981A0D6F210080DD77 /* PhotoTravel.iOS.ClientTests */,
+				912684771A0D6F210080DD77 /* Products */,
+				926817E3CD574C6BDF7D792F /* Pods */,
+				8CA72CED455A75121F0AD06F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		912684771A0D6F210080DD77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				912684761A0D6F210080DD77 /* PhotoTravel.iOS.Client.app */,
+				912684951A0D6F210080DD77 /* PhotoTravel.iOS.ClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		912684781A0D6F210080DD77 /* PhotoTravel.iOS.Client */ = {
+			isa = PBXGroup;
+			children = (
+				912684AB1A0D75690080DD77 /* Helpers */,
+				912684C71A0D774F0080DD77 /* Resources */,
+				912684C31A0D764F0080DD77 /* Data */,
+				912684A61A0D750E0080DD77 /* ViewControllers */,
+				912684A51A0D70950080DD77 /* Views */,
+				9126847D1A0D6F210080DD77 /* AppDelegate.h */,
+				9126847E1A0D6F210080DD77 /* AppDelegate.m */,
+				912684891A0D6F210080DD77 /* Main.storyboard */,
+				9126848C1A0D6F210080DD77 /* Images.xcassets */,
+				9126848E1A0D6F210080DD77 /* LaunchScreen.xib */,
+				912684801A0D6F210080DD77 /* PhotoTravel_iOS_Client.xcdatamodeld */,
+				912684791A0D6F210080DD77 /* Supporting Files */,
+			);
+			path = PhotoTravel.iOS.Client;
+			sourceTree = "<group>";
+		};
+		912684791A0D6F210080DD77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9126847A1A0D6F210080DD77 /* Info.plist */,
+				9126847B1A0D6F210080DD77 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		912684981A0D6F210080DD77 /* PhotoTravel.iOS.ClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				9126849B1A0D6F210080DD77 /* PhotoTravel_iOS_ClientTests.m */,
+				912684991A0D6F210080DD77 /* Supporting Files */,
+			);
+			path = PhotoTravel.iOS.ClientTests;
+			sourceTree = "<group>";
+		};
+		912684991A0D6F210080DD77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9126849A1A0D6F210080DD77 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		912684A51A0D70950080DD77 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84EDC6A11A0E338200939E2B /* LandmarkWithLastPostUITableViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		912684A61A0D750E0080DD77 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84EDC6A31A0E389500939E2B /* DetailedImageViewController.h */,
+				84EDC6A41A0E389500939E2B /* DetailedImageViewController.m */,
+				84EDC69E1A0E336300939E2B /* LandmarkWithLastPostUITableViewCell.h */,
+				84EDC69F1A0E336300939E2B /* LandmarkWithLastPostUITableViewCell.m */,
+				912684BC1A0D75F00080DD77 /* MainViewController.h */,
+				912684BD1A0D75F00080DD77 /* MainViewController.m */,
+				912684BE1A0D75F00080DD77 /* MyInfoViewController.h */,
+				912684BF1A0D75F00080DD77 /* MyInfoViewController.m */,
+				912684A71A0D75200080DD77 /* Utilities */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		912684A71A0D75200080DD77 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				912684AA1A0D75580080DD77 /* LoadingScreen */,
+				912684A91A0D754B0080DD77 /* MusicManager */,
+				912684A81A0D753B0080DD77 /* FacebookLogin */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		912684A81A0D753B0080DD77 /* FacebookLogin */ = {
+			isa = PBXGroup;
+			children = (
+				912684DA1A0D78450080DD77 /* LoginViewController.h */,
+				912684DB1A0D78450080DD77 /* LoginViewController.m */,
+			);
+			name = FacebookLogin;
+			sourceTree = "<group>";
+		};
+		912684A91A0D754B0080DD77 /* MusicManager */ = {
+			isa = PBXGroup;
+			children = (
+				912684B41A0D75CE0080DD77 /* MusicManagerController.h */,
+				912684B51A0D75CE0080DD77 /* MusicManagerController.m */,
+			);
+			name = MusicManager;
+			sourceTree = "<group>";
+		};
+		912684AA1A0D75580080DD77 /* LoadingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				912684AF1A0D75B10080DD77 /* LoadingScreenViewController.h */,
+				912684B01A0D75B10080DD77 /* LoadingScreenViewController.m */,
+				912684B11A0D75B10080DD77 /* LoadingScreenViewController.xib */,
+			);
+			name = LoadingScreen;
+			sourceTree = "<group>";
+		};
+		912684AB1A0D75690080DD77 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				84EDC6941A0E302800939E2B /* DataHelper.h */,
+				84EDC6951A0E302800939E2B /* DataHelper.m */,
+				84EDC6961A0E302800939E2B /* ViewsHelper.h */,
+				84EDC6971A0E302800939E2B /* ViewsHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		912684C31A0D764F0080DD77 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				84EDC69A1A0E30F800939E2B /* Models */,
+				912684C41A0D76600080DD77 /* ProfileData.h */,
+				912684C51A0D76600080DD77 /* ProfileData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		912684C71A0D774F0080DD77 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				912684C81A0D77620080DD77 /* bg.jpg */,
+				912684C91A0D77620080DD77 /* Icon.png */,
+				912684CA1A0D77620080DD77 /* Icon@2x.png */,
+				912684CB1A0D77620080DD77 /* loading.gif */,
+				912684CC1A0D77620080DD77 /* logo.png */,
+				912684CD1A0D77620080DD77 /* sound.mp3 */,
+				912684CE1A0D77620080DD77 /* transparent-bg.png */,
+				912684CF1A0D77620080DD77 /* welcome.jpg */,
+				912684D01A0D77620080DD77 /* welcome.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		926817E3CD574C6BDF7D792F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4979C668896E36BD8BB0DE33 /* Pods-PhotoTravel.iOS.Client.debug.xcconfig */,
+				78CE6E8B169606394BBC1F2B /* Pods-PhotoTravel.iOS.Client.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		912684751A0D6F210080DD77 /* PhotoTravel.iOS.Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9126849F1A0D6F210080DD77 /* Build configuration list for PBXNativeTarget "PhotoTravel.iOS.Client" */;
+			buildPhases = (
+				E01ACCB482F269FD9DB3400F /* Check Pods Manifest.lock */,
+				912684721A0D6F210080DD77 /* Sources */,
+				912684731A0D6F210080DD77 /* Frameworks */,
+				912684741A0D6F210080DD77 /* Resources */,
+				0BDA0D6687E45BAF67861B06 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoTravel.iOS.Client;
+			productName = PhotoTravel.iOS.Client;
+			productReference = 912684761A0D6F210080DD77 /* PhotoTravel.iOS.Client.app */;
+			productType = "com.apple.product-type.application";
+		};
+		912684941A0D6F210080DD77 /* PhotoTravel.iOS.ClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 912684A21A0D6F210080DD77 /* Build configuration list for PBXNativeTarget "PhotoTravel.iOS.ClientTests" */;
+			buildPhases = (
+				912684911A0D6F210080DD77 /* Sources */,
+				912684921A0D6F210080DD77 /* Frameworks */,
+				912684931A0D6F210080DD77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				912684971A0D6F210080DD77 /* PBXTargetDependency */,
+			);
+			name = PhotoTravel.iOS.ClientTests;
+			productName = PhotoTravel.iOS.ClientTests;
+			productReference = 912684951A0D6F210080DD77 /* PhotoTravel.iOS.ClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9126846E1A0D6F210080DD77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Vindicator;
+				TargetAttributes = {
+					912684751A0D6F210080DD77 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					912684941A0D6F210080DD77 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 912684751A0D6F210080DD77;
+					};
+				};
+			};
+			buildConfigurationList = 912684711A0D6F210080DD77 /* Build configuration list for PBXProject "PhotoTravel.iOS.Client" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9126846D1A0D6F210080DD77;
+			productRefGroup = 912684771A0D6F210080DD77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				912684751A0D6F210080DD77 /* PhotoTravel.iOS.Client */,
+				912684941A0D6F210080DD77 /* PhotoTravel.iOS.ClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		912684741A0D6F210080DD77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				912684D21A0D77620080DD77 /* Icon.png in Resources */,
+				912684D11A0D77620080DD77 /* bg.jpg in Resources */,
+				912684D51A0D77620080DD77 /* logo.png in Resources */,
+				912684D31A0D77620080DD77 /* Icon@2x.png in Resources */,
+				912684D61A0D77620080DD77 /* sound.mp3 in Resources */,
+				9126848B1A0D6F210080DD77 /* Main.storyboard in Resources */,
+				912684D81A0D77620080DD77 /* welcome.jpg in Resources */,
+				84EDC6A21A0E338200939E2B /* LandmarkWithLastPostUITableViewCell.xib in Resources */,
+				912684B31A0D75B10080DD77 /* LoadingScreenViewController.xib in Resources */,
+				912684D91A0D77620080DD77 /* welcome.png in Resources */,
+				912684D41A0D77620080DD77 /* loading.gif in Resources */,
+				912684901A0D6F210080DD77 /* LaunchScreen.xib in Resources */,
+				912684D71A0D77620080DD77 /* transparent-bg.png in Resources */,
+				9126848D1A0D6F210080DD77 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		912684931A0D6F210080DD77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BDA0D6687E45BAF67861B06 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoTravel.iOS.Client/Pods-PhotoTravel.iOS.Client-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E01ACCB482F269FD9DB3400F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		912684721A0D6F210080DD77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9126847F1A0D6F210080DD77 /* AppDelegate.m in Sources */,
+				912684B61A0D75CE0080DD77 /* MusicManagerController.m in Sources */,
+				84EDC6A51A0E389500939E2B /* DetailedImageViewController.m in Sources */,
+				912684C21A0D75F00080DD77 /* MyInfoViewController.m in Sources */,
+				9126847C1A0D6F210080DD77 /* main.m in Sources */,
+				912684C11A0D75F00080DD77 /* MainViewController.m in Sources */,
+				912684C61A0D76600080DD77 /* ProfileData.m in Sources */,
+				84EDC6A01A0E336300939E2B /* LandmarkWithLastPostUITableViewCell.m in Sources */,
+				84EDC6991A0E302800939E2B /* ViewsHelper.m in Sources */,
+				912684821A0D6F210080DD77 /* PhotoTravel_iOS_Client.xcdatamodeld in Sources */,
+				84EDC6981A0E302800939E2B /* DataHelper.m in Sources */,
+				912684DC1A0D78450080DD77 /* LoginViewController.m in Sources */,
+				84EDC69D1A0E310B00939E2B /* ApplicationUser.m in Sources */,
+				912684B21A0D75B10080DD77 /* LoadingScreenViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		912684911A0D6F210080DD77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9126849C1A0D6F210080DD77 /* PhotoTravel_iOS_ClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		912684971A0D6F210080DD77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 912684751A0D6F210080DD77 /* PhotoTravel.iOS.Client */;
+			targetProxy = 912684961A0D6F210080DD77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		912684891A0D6F210080DD77 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9126848A1A0D6F210080DD77 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9126848E1A0D6F210080DD77 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9126848F1A0D6F210080DD77 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9126849D1A0D6F210080DD77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9126849E1A0D6F210080DD77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		912684A01A0D6F210080DD77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4979C668896E36BD8BB0DE33 /* Pods-PhotoTravel.iOS.Client.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhotoTravel.iOS.Client/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		912684A11A0D6F210080DD77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78CE6E8B169606394BBC1F2B /* Pods-PhotoTravel.iOS.Client.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhotoTravel.iOS.Client/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		912684A31A0D6F210080DD77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PhotoTravel.iOS.ClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoTravel.iOS.Client.app/PhotoTravel.iOS.Client";
+			};
+			name = Debug;
+		};
+		912684A41A0D6F210080DD77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PhotoTravel.iOS.ClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoTravel.iOS.Client.app/PhotoTravel.iOS.Client";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		912684711A0D6F210080DD77 /* Build configuration list for PBXProject "PhotoTravel.iOS.Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9126849D1A0D6F210080DD77 /* Debug */,
+				9126849E1A0D6F210080DD77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9126849F1A0D6F210080DD77 /* Build configuration list for PBXNativeTarget "PhotoTravel.iOS.Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				912684A01A0D6F210080DD77 /* Debug */,
+				912684A11A0D6F210080DD77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		912684A21A0D6F210080DD77 /* Build configuration list for PBXNativeTarget "PhotoTravel.iOS.ClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				912684A31A0D6F210080DD77 /* Debug */,
+				912684A41A0D6F210080DD77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		912684801A0D6F210080DD77 /* PhotoTravel_iOS_Client.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				912684811A0D6F210080DD77 /* PhotoTravel_iOS_Client.xcdatamodel */,
+			);
+			currentVersion = 912684811A0D6F210080DD77 /* PhotoTravel_iOS_Client.xcdatamodel */;
+			path = PhotoTravel_iOS_Client.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9126846E1A0D6F210080DD77 /* Project object */;
+}

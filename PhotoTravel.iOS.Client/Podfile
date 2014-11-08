@@ -1,0 +1,18 @@
+# Uncomment this line to define a global platform for your project
+
+platform :ios, '7.0'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'PhotoTravel.iOS.Client' do
+
+pod 'Facebook-iOS-SDK', '~> 3.17'
+pod 'Parse', '1.4'
+pod 'ParseFacebookUtils', '1.4'
+
+end
+
+target 'PhotoTravel.iOS.ClientTests' do
+
+end
+
