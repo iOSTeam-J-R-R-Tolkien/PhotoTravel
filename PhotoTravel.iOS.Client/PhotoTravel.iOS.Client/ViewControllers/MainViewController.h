@@ -18,5 +18,9 @@
 - (IBAction)buttonToImageView:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UITableView *postsTableView;
 
+
+- (IBAction)addPostToLastAddedLandmark:(id)sender;
+
+
 @property (nonatomic, strong) NSArray *rowDataArray;
 @end
