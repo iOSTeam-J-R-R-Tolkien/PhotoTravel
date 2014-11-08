@@ -51,6 +51,17 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
                                                              blue:0.960784
                                                             alpha:0.1]];
 }
+- (IBAction)addLandmark:(id)sender {
+    
+}
+- (IBAction)addPostToLastAddedLandmark:(id)sender {
+    //Find all posts
+//    PFUser *user = [PFUser currentUser];
+//    
+//    PFQuery *query = [PFQuery queryWithClassName:@"Landmark"];
+//	    [query wher;
+//    id *usersPosts = [query findObjects]
+}
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];

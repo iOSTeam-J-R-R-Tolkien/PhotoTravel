@@ -169,6 +169,24 @@
                                 <rect key="frame" x="16" y="142" width="573" height="442"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLP-xg-ckk">
+                                <rect key="frame" x="8" y="104" width="114" height="30"/>
+                                <state key="normal" title="Add Landmark">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addLandmark:" destination="Hvx-TW-jiy" eventType="touchUpInside" id="N6R-Wb-hXR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjW-OK-u5d">
+                                <rect key="frame" x="172" y="104" width="231" height="30"/>
+                                <state key="normal" title="Add Post to last added Landmark">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPostToLastAddedLandmark:" destination="Hvx-TW-jiy" eventType="touchUpInside" id="abN-qf-c5o"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
