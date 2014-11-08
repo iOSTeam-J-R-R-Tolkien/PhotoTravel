@@ -52,6 +52,7 @@
 /* Begin PBXFileReference section */
 		4979C668896E36BD8BB0DE33 /* Pods-PhotoTravel.iOS.Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTravel.iOS.Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTravel.iOS.Client/Pods-PhotoTravel.iOS.Client.debug.xcconfig"; sourceTree = "<group>"; };
 		78CE6E8B169606394BBC1F2B /* Pods-PhotoTravel.iOS.Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTravel.iOS.Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTravel.iOS.Client/Pods-PhotoTravel.iOS.Client.release.xcconfig"; sourceTree = "<group>"; };
+		8460C95F1A0E567900821C3C /* ProfileDataProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ProfileDataProtocol.h; path = Data/DataProtocols/ProfileDataProtocol.h; sourceTree = "<group>"; };
 		84EDC6941A0E302800939E2B /* DataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataHelper.h; path = Helpers/DataHelper.h; sourceTree = "<group>"; };
 		84EDC6951A0E302800939E2B /* DataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataHelper.m; path = Helpers/DataHelper.m; sourceTree = "<group>"; };
 		84EDC6961A0E302800939E2B /* ViewsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewsHelper.h; path = Helpers/ViewsHelper.h; sourceTree = "<group>"; };
@@ -119,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8460C95C1A0E552F00821C3C /* DataProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				8460C95F1A0E567900821C3C /* ProfileDataProtocol.h */,
+			);
+			name = DataProtocols;
+			sourceTree = "<group>";
+		};
 		84EDC69A1A0E30F800939E2B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +286,7 @@
 		912684C31A0D764F0080DD77 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				8460C95C1A0E552F00821C3C /* DataProtocols */,
 				84EDC69A1A0E30F800939E2B /* Models */,
 				912684C41A0D76600080DD77 /* ProfileData.h */,
 				912684C51A0D76600080DD77 /* ProfileData.m */,

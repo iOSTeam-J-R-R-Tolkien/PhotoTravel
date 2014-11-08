@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ProfileDataProtocol.h"
 @import UIKit;
 
 @interface ProfileData : NSObject
 
 +(UIImage *)getProfileImageForProfileId:(NSString *)profileId;
+
++ (void)loadProfileDataAsync:(id<ProfileDataProtocol>)delegate;
++ (void)loadProfileImageAsync:(id<ProfileDataProtocol>)delegate forUserId:(NSString *)userId;
 
 @end

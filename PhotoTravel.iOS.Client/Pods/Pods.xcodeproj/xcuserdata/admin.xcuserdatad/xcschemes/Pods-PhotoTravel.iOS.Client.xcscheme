@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0DF19B2B8AF08DEC6ED2C980"
+               BlueprintIdentifier = "02BCBEF1F2B77AAF2519F9A3"
                BuildableName = "libPods-PhotoTravel.iOS.Client.a"
                BlueprintName = "Pods-PhotoTravel.iOS.Client"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0DF19B2B8AF08DEC6ED2C980"
-            BuildableName = "libPods-PhotoTravel.iOS.Client.a"
-            BlueprintName = "Pods-PhotoTravel.iOS.Client"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -57,15 +48,6 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0DF19B2B8AF08DEC6ED2C980"
-            BuildableName = "libPods-PhotoTravel.iOS.Client.a"
-            BlueprintName = "Pods-PhotoTravel.iOS.Client"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

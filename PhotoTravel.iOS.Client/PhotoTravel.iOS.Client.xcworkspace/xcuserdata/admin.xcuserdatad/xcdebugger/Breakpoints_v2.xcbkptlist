@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PhotoTravel.iOS.Client/ViewControllers/MainViewController.m"
-            timestampString = "437138666.662403"
+            filePath = "PhotoTravel.iOS.Client/Data/ProfileData.m"
+            timestampString = "437150464.643894"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "-viewDidAppear:"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "+loadProfileDataAsync:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
