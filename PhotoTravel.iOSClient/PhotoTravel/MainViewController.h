@@ -16,6 +16,4 @@
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) UIImage *profileImage;
 - (IBAction)buttonToImageView:(UIButton *)sender;
-
-
 @end

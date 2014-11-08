@@ -13,6 +13,9 @@
 #import "LoadingScreenViewController.h"
 #import "AppDelegate.h"
 #import "MusicManagerController.h"
+#import "ViewsHelper.h"
+#include <math.h>
+#include "ProfileData.h"
 
 @interface MainViewController ()
 @property(strong, nonatomic) MusicManagerController *musicController;
@@ -27,28 +30,16 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // add button
-  //    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc]
-  //    initWithTitle:@"MY INFO"
-  //                                                                      style:UIBarButtonItemStylePlain
-  //                                                                     target:self
-  //                                                                     action:@selector(myInfoBtn)];
-  //                                                                     //@selector(refreshPropertyList:)
-  //    anotherButton.image = profileImage;
-  //    [anotherButton backgroundImageForState:profileImage
-  //    forState:UIControlStateHighlighted];
-  //    anotherButton.image = profileImage;
-  //        self.navigationItem.rightBarButtonItem = anotherButton;
-  //[anotherButton release];
 
   self.loadingPopup = [LoadingScreenViewController initWithParentView:self];
+  [self.loadingPopup showOnScreen];
 
   self.musicController = [[MusicManagerController alloc] init];
   [self.musicController tryPlayMusic];
+  [ViewsHelper changeBackgroundImage:self withImage:@"bg.jpg"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-  [self.loadingPopup showOnScreen];
   [super viewDidAppear:animated];
 
   PFUser *currentUser = [PFUser currentUser];
@@ -57,16 +48,11 @@
     [request startWithCompletionHandler:^(FBRequestConnection *connection,
                                           id result, NSError *error) {
         if (!error) {
-          // result is a dictionary with the user's Facebook data
           NSDictionary *userData = (NSDictionary *)result;
           NSString *name = userData[@"name"];
+          NSString *userId = userData[@"id"];
 
-          UIBarButtonItem *anotherButton =
-              [[UIBarButtonItem alloc] initWithTitle:name
-                                               style:UIBarButtonItemStylePlain
-                                              target:self
-                                              action:@selector(myInfoBtn)];
-          self.navigationItem.rightBarButtonItem = anotherButton;
+          [self loadBarItemsForUserWithName:name andId:userId];
           [self.loadingPopup hideFromScreen];
         }
     }];
@@ -110,4 +96,43 @@
 - (IBAction)buttonToImageView:(UIButton *)sender {
   [self performSegueWithIdentifier:@"singleImageView" sender:self];
 }
+
+- (UIButton *)profileImageToBarButton:(NSString *)userId {
+  UIImage *profileImage = [ProfileData getProfileImageForProfileId:userId];
+
+  CGFloat oImageWidth = profileImage.size.width;
+  CGFloat oImageHeight = profileImage.size.height;
+  // Draw the original image at the origin
+  CGRect oRect = CGRectMake(0, 0, oImageWidth, oImageHeight);
+  [profileImage drawInRect:oRect];
+
+  // Set the newRect to half the size of the original image
+  CGRect newRect = CGRectMake(0, 0, oImageWidth / 2, oImageHeight / 2);
+  UIImage *newImage =
+      [ViewsHelper circularScaleNCrop:profileImage withRectDimensions:newRect];
+
+  // create new button
+  UIButton *profileImageButton = [[UIButton alloc] init];
+  // set frame
+  profileImageButton.frame = CGRectMake(0, 0, 40, 40);
+  // set background image
+  [profileImageButton setBackgroundImage:newImage
+                                forState:UIControlStateNormal];
+  return profileImageButton;
+}
+
+- (void)loadBarItemsForUserWithName:(NSString *)name andId:(NSString *)userId {
+  UIBarButtonItem *nameButton =
+      [[UIBarButtonItem alloc] initWithTitle:name
+                                       style:UIBarButtonItemStylePlain
+                                      target:self
+                                      action:@selector(myInfoBtn)];
+
+  UIBarButtonItem *profileImageButtonItem = [[UIBarButtonItem alloc]
+      initWithCustomView:[self profileImageToBarButton:userId]];
+
+  self.navigationItem.rightBarButtonItems = [[NSArray alloc]
+      initWithObjects:profileImageButtonItem, nameButton, nil];
+}
+
 @end

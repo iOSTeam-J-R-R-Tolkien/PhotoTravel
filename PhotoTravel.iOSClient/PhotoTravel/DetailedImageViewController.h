@@ -14,5 +14,6 @@
 @property (strong, nonatomic) LoadingScreenViewController *popViewController;
 @property (weak, nonatomic) IBOutlet UIImageView *imageContainer;
 - (IBAction)imagePinch:(UIPinchGestureRecognizer *)sender;
+- (IBAction)imageTap:(UITapGestureRecognizer *)sender;
 
 @end

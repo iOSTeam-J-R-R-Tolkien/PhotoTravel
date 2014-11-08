@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "LoadingScreenViewController.h"
+#import "ViewsHelper.h"
 
 @implementation LoginViewController
 
@@ -20,10 +21,7 @@
     UIImageView *logoImage =
     [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
     self.logInView.logo = logoImage;
-}
-
--(void)viewDidAppear:(BOOL)animated{
-    
+    [ViewsHelper changeBackgroundImage:self withImage:@"bg.jpg"];
 }
 
 @end

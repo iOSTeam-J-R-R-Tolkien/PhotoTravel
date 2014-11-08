@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My Info View Controller-->
         <scene sceneID="evm-5c-dhr">
             <objects>
-                <viewController storyboardIdentifier="myInfoSegue" id="pWw-3f-ywl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myInfoSegue" id="pWw-3f-ywl" customClass="MyInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zns-Nd-zZA"/>
                         <viewControllerLayoutGuide type="bottom" id="fNe-VG-nrD"/>
@@ -17,20 +18,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo3-m6-mXI">
-                                <rect key="frame" x="116" y="98" width="58" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.89999999999999991" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cia-mH-h0L">
+                                <rect key="frame" x="16" y="72" width="568" height="138"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="T93-IY-SWy"/>
+                                    <constraint firstAttribute="width" constant="568" id="e2X-21-aj7"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.89999999999999991" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XV9-z8-hkj">
+                                <rect key="frame" x="217" y="180" width="167" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1ur-gd-w3K"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XV9-z8-hkj" firstAttribute="top" secondItem="Zns-Nd-zZA" secondAttribute="bottom" constant="116" id="gLL-yP-WGC"/>
+                            <constraint firstItem="Cia-mH-h0L" firstAttribute="leading" secondItem="vsc-MS-X75" secondAttribute="leadingMargin" id="kVn-0E-xSj"/>
+                            <constraint firstItem="Cia-mH-h0L" firstAttribute="top" secondItem="Zns-Nd-zZA" secondAttribute="bottom" constant="8" id="n2V-CO-gJJ"/>
+                            <constraint firstItem="Cia-mH-h0L" firstAttribute="trailing" secondItem="vsc-MS-X75" secondAttribute="trailingMargin" id="qeh-kw-Fcb"/>
+                            <constraint firstItem="Cia-mH-h0L" firstAttribute="trailing" secondItem="vsc-MS-X75" secondAttribute="trailingMargin" id="srT-ON-KSk"/>
+                            <constraint firstItem="XV9-z8-hkj" firstAttribute="centerX" secondItem="Cia-mH-h0L" secondAttribute="centerX" id="w7m-Rv-Rbu"/>
+                            <constraint firstItem="Cia-mH-h0L" firstAttribute="leading" secondItem="vsc-MS-X75" secondAttribute="leadingMargin" id="yMH-f5-Wmq"/>
+                            <constraint firstItem="Cia-mH-h0L" firstAttribute="top" secondItem="Zns-Nd-zZA" secondAttribute="bottom" constant="8" symbolic="YES" id="zf8-3d-D87"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iAO-3D-Tue"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="Cia-mH-h0L" id="gry-hK-Bqy"/>
+                        <outlet property="profileNameLabel" destination="XV9-z8-hkj" id="DTK-BZ-CIb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gyk-3D-Od6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1393" y="-330"/>
+            <point key="canvasLocation" x="1765" y="-315"/>
         </scene>
         <!--Master-->
         <scene sceneID="pY4-Hu-kfo">
@@ -120,6 +146,7 @@
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="YQc-8n-jfD" appends="YES" id="9DN-b8-omx"/>
+                            <outletCollection property="gestureRecognizers" destination="dZ2-If-c85" appends="YES" id="esa-z6-GYa"/>
                         </connections>
                     </view>
                     <connections>
@@ -132,6 +159,11 @@
                         <action selector="imagePinch:" destination="0bN-zh-II3" id="g9N-58-ZBT"/>
                     </connections>
                 </pinchGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="dZ2-If-c85">
+                    <connections>
+                        <action selector="imageTap:" destination="0bN-zh-II3" id="xU3-pe-Hi0"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="648" y="-1049"/>
         </scene>

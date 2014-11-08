@@ -9,7 +9,13 @@
 /* Begin PBXBuildFile section */
 		1CEE559829D349B2EB35466C /* libPods-PhotoTravel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF52D6019749EBCF1E1BDDF4 /* libPods-PhotoTravel.a */; };
 		841958FA1A0CDEFB0077153C /* MusicManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841958F91A0CDEFA0077153C /* MusicManagerController.m */; };
-		841958FC1A0CDFFD0077153C /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 841958FB1A0CDFFD0077153C /* sound.mp3 */; };
+		849D32431A0D7F1900E29397 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 849D32421A0D7F1900E29397 /* sound.mp3 */; };
+		849D32451A0D7F3400E29397 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 849D32441A0D7F3400E29397 /* bg.jpg */; };
+		849D32481A0D813900E29397 /* ViewsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D32471A0D813900E29397 /* ViewsHelper.m */; };
+		849D324C1A0D85A200E29397 /* MyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D324B1A0D85A200E29397 /* MyInfoViewController.m */; };
+		84B03C9E1A0DA687001D02DF /* ProfileData.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B03C9D1A0DA687001D02DF /* ProfileData.m */; };
+		84B03CA01A0DAE90001D02DF /* transparent-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B03C9F1A0DAE90001D02DF /* transparent-bg.png */; };
+		84B03CA21A0DB165001D02DF /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 84B03CA11A0DB165001D02DF /* loading.gif */; };
 		84D9337A1A0B71CF00AF73EC /* LoadingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D933781A0B71CF00AF73EC /* LoadingScreenViewController.m */; };
 		84D9337B1A0B71CF00AF73EC /* LoadingScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D933791A0B71CF00AF73EC /* LoadingScreenViewController.xib */; };
 		84E438711A0D55BC009BE8C4 /* DetailedImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E438701A0D55BC009BE8C4 /* DetailedImageViewController.m */; };
@@ -41,7 +47,16 @@
 /* Begin PBXFileReference section */
 		841958F81A0CDEFA0077153C /* MusicManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicManagerController.h; sourceTree = "<group>"; };
 		841958F91A0CDEFA0077153C /* MusicManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicManagerController.m; sourceTree = "<group>"; };
-		841958FB1A0CDFFD0077153C /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
+		849D32421A0D7F1900E29397 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sound.mp3; path = Resources/sound.mp3; sourceTree = "<group>"; };
+		849D32441A0D7F3400E29397 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg.jpg; path = Resources/bg.jpg; sourceTree = "<group>"; };
+		849D32461A0D813900E29397 /* ViewsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewsHelper.h; sourceTree = "<group>"; };
+		849D32471A0D813900E29397 /* ViewsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewsHelper.m; sourceTree = "<group>"; };
+		849D324A1A0D85A200E29397 /* MyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoViewController.h; sourceTree = "<group>"; };
+		849D324B1A0D85A200E29397 /* MyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoViewController.m; sourceTree = "<group>"; };
+		84B03C9C1A0DA687001D02DF /* ProfileData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileData.h; sourceTree = "<group>"; };
+		84B03C9D1A0DA687001D02DF /* ProfileData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileData.m; sourceTree = "<group>"; };
+		84B03C9F1A0DAE90001D02DF /* transparent-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "transparent-bg.png"; path = "Resources/transparent-bg.png"; sourceTree = "<group>"; };
+		84B03CA11A0DB165001D02DF /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = Resources/loading.gif; sourceTree = "<group>"; };
 		84D933771A0B71CF00AF73EC /* LoadingScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingScreenViewController.h; sourceTree = "<group>"; };
 		84D933781A0B71CF00AF73EC /* LoadingScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingScreenViewController.m; sourceTree = "<group>"; };
 		84D933791A0B71CF00AF73EC /* LoadingScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingScreenViewController.xib; sourceTree = "<group>"; };
@@ -140,8 +155,27 @@
 				91057F511A0B150600859454 /* FacebookLogin */,
 				841958F71A0CDEC20077153C /* MusicManager */,
 				841958F61A0CDEB00077153C /* LoadingScreen */,
+				849D32491A0D814600E29397 /* Helpers */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		849D32491A0D814600E29397 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				849D32461A0D813900E29397 /* ViewsHelper.h */,
+				849D32471A0D813900E29397 /* ViewsHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		84B03C9B1A0DA623001D02DF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				84B03C9C1A0DA687001D02DF /* ProfileData.h */,
+				84B03C9D1A0DA687001D02DF /* ProfileData.m */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		91057F501A0B14E900859454 /* ViewControllers */ = {
@@ -152,6 +186,8 @@
 				F8A360701A071392001B6E9B /* MainViewController.m */,
 				84E4386F1A0D55BC009BE8C4 /* DetailedImageViewController.h */,
 				84E438701A0D55BC009BE8C4 /* DetailedImageViewController.m */,
+				849D324A1A0D85A200E29397 /* MyInfoViewController.h */,
+				849D324B1A0D85A200E29397 /* MyInfoViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -222,6 +258,7 @@
 		F8A360401A06F9A6001B6E9B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				84B03C9B1A0DA623001D02DF /* Data */,
 				F8A360451A06F9A6001B6E9B /* AppDelegate.h */,
 				F8A360461A06F9A6001B6E9B /* AppDelegate.m */,
 				91057F501A0B14E900859454 /* ViewControllers */,
@@ -243,7 +280,10 @@
 		F8A3606A1A070413001B6E9B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				841958FB1A0CDFFD0077153C /* sound.mp3 */,
+				84B03CA11A0DB165001D02DF /* loading.gif */,
+				84B03C9F1A0DAE90001D02DF /* transparent-bg.png */,
+				849D32441A0D7F3400E29397 /* bg.jpg */,
+				849D32421A0D7F1900E29397 /* sound.mp3 */,
 				F8A360511A06F9A6001B6E9B /* Images.xcassets */,
 				F8A3604E1A06F9A6001B6E9B /* Main.storyboard */,
 				F8A360531A06F9A6001B6E9B /* LaunchScreen.xib */,
@@ -343,12 +383,15 @@
 				F82FBE611A0ABE560055314A /* Icon@2x.png in Resources */,
 				F8A360501A06F9A6001B6E9B /* Main.storyboard in Resources */,
 				F82FBE601A0ABE560055314A /* Icon.png in Resources */,
-				841958FC1A0CDFFD0077153C /* sound.mp3 in Resources */,
+				84B03CA01A0DAE90001D02DF /* transparent-bg.png in Resources */,
+				849D32431A0D7F1900E29397 /* sound.mp3 in Resources */,
 				F82FBE621A0ABE560055314A /* logo.png in Resources */,
 				84D9337B1A0B71CF00AF73EC /* LoadingScreenViewController.xib in Resources */,
 				F8A360551A06F9A6001B6E9B /* LaunchScreen.xib in Resources */,
 				F82FBE641A0ABE560055314A /* welcome.png in Resources */,
 				F82FBE631A0ABE560055314A /* welcome.jpg in Resources */,
+				84B03CA21A0DB165001D02DF /* loading.gif in Resources */,
+				849D32451A0D7F3400E29397 /* bg.jpg in Resources */,
 				F8A360521A06F9A6001B6E9B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,8 +447,11 @@
 				841958FA1A0CDEFB0077153C /* MusicManagerController.m in Sources */,
 				F8A360471A06F9A6001B6E9B /* AppDelegate.m in Sources */,
 				F8A360441A06F9A6001B6E9B /* main.m in Sources */,
+				84B03C9E1A0DA687001D02DF /* ProfileData.m in Sources */,
+				849D324C1A0D85A200E29397 /* MyInfoViewController.m in Sources */,
 				84E438711A0D55BC009BE8C4 /* DetailedImageViewController.m in Sources */,
 				F8A360711A071392001B6E9B /* MainViewController.m in Sources */,
+				849D32481A0D813900E29397 /* ViewsHelper.m in Sources */,
 				84D9337A1A0B71CF00AF73EC /* LoadingScreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
