@@ -17,6 +17,9 @@
 #import "Post.h"
 #import "LandmarkData.h"
 
+#import "PostsData.h"
+#import "ViewsHelper.h"
+
 @interface LandmarkTableViewController ()
 @property(strong, nonatomic) LoadingScreenViewController *loadingPopup;
 @end
@@ -37,12 +40,12 @@
                                     action:@selector(logoutButtonAction:)];
     self.navigationItem.rightBarButtonItems =
     [[NSArray alloc] initWithObjects:logoutButton, nil];
-//    [LandmarkData getLastPostsAsync:5 for:self];
+    //    [LandmarkData getLastPostsAsync:5 for:self];
 }
 
 - (void)lastPostsDataLoadHandler:(NSMutableArray *)landmarkData {
-//    self.rowDataArray = landmarkData;
-//    [self.postsTableView reloadData];
+    //    self.rowDataArray = landmarkData;
+    //    [self.postsTableView reloadData];
 }
 
 - (void)logoutButtonAction:(id)sender {
@@ -54,5 +57,34 @@
     [super viewDidAppear:animated];
     [self.loadingPopup hideFromScreen];
 }
+
+//- (NSInteger)tableView:(UITableView *)tableView
+// numberOfRowsInSection:(NSInteger)section {
+//    return [self.landmarkData count];
+//}
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView
+//         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    static NSString *CellIdentifier = @"LandmarkWithLastPostUITableViewCell";
+//    
+//    LandmarkWithLastPostUITableViewCell *cell =
+//    [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    if (cell == nil) {
+//        cell = [self.postsTableView dequeueReusableCellWithIdentifier:identifier
+//                                                         forIndexPath:indexPath];
+//    }
+//    
+//    //    Landmark *landmark = (Landmark *)self.rowDataArray[indexPath.row];
+//    //    Post *post = (Post *)self.landmarkData[indexPath.row].posts[0];
+//    Post *post = (Post *)self.landmarkData.posts[0];
+//    [PostsData loadImageFromPostAsync:post.pfObject
+//                       andLoadHandler:^(UIImage *image) {
+//                           [ViewsHelper changeImageSourceWithAnimation:image forTargetView:cell.postImageView];
+//                       }];
+//    
+//    cell.landmarkLabel.text = landmark.name;
+//    cell.lastPostLable.text = post.name;
+//    return cell;
+//}
 
 @end
