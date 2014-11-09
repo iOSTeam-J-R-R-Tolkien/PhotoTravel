@@ -30,16 +30,19 @@ const int QUERY_LIMIT  = 10;
 //        [query includeKey:@"landmark"];
 //        query.limit = count;
     
+        //1st way
         //sych - dava 4e prekaleno dylyg proces se osy6testvqva na glavnata nishka, a assycjh ne raboti -.-
         NSArray * posts = [query findObjects];
         NSMutableArray *output = [[NSMutableArray init]alloc];
         for (PFObject *post in posts) {
-            [output addObject:post];
+            //transforme PFObject to PostModel and add it to output
+            [output addObject:[PostModel initWithPFObject:post]];
             NSLog(@"retrieved related post: %@", post);
         }
         int x = 32523;
         return output;
     
+//      //2nd way
 //    //assync
 //    NSMutableArray *output2 = [[NSMutableArray init]alloc];
 //    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
@@ -49,6 +52,8 @@ const int QUERY_LIMIT  = 10;
 //            NSLog(@"Successfully retrieved the object. %@", posts);
 //        
 //            for (PFObject *post in posts) {
+    
+//                //transforme PFObject to PostModel and add it to output
 //                [output2 addObject:[PostModel initWithPFObject:post]];
 //                NSLog(@"retrieved related post: %@", post);
 //            }
