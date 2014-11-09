@@ -17,6 +17,7 @@
     
     return post;
 }
+
 +(instancetype)initWithName:(NSString *)name {
     Post *post = [[Post alloc] init];
     post.name = name;

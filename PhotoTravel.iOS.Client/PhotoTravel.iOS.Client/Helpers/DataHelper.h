@@ -14,6 +14,6 @@
 
 + (ApplicationUser *)parseApplicationUserFromQuery:(id)queryResult;
 + (Landmark *)parseLastPostWithLandmarkFromQuery:(id)queryResult;
-//+ (Landmark *)parseLandmarkFromQuery:(id)queryResult;
++ (Landmark *)parsePostFromQuery:(id)queryResult;
 
 @end

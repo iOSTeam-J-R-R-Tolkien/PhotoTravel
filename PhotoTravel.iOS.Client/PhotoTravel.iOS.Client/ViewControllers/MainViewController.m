@@ -18,7 +18,6 @@
 #include "ProfileData.h"
 #import "LandmarkWithLastPostUITableViewCell.h"
 #import "DataHelper.h"
-#import "LastPostWithLandmarkData.h"
 
 #import "Landmark.h"
 #import "Post.h"

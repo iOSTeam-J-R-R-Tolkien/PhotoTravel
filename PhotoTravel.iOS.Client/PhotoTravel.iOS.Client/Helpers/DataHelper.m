@@ -38,6 +38,7 @@
 //    return  newLandmark;
 //}
 
+
 + (Landmark *) parseLandmarkFromQuery:(id)postLandmarkQuery
                              withPost:(Post*) post{
     PFObject *landmark = postLandmarkQuery[@"landmark"];
@@ -52,7 +53,6 @@
 
 
 + (Post *) parsePostFromQuery:(id)postQuery{
-//    PFObject *post = postQuery[@"landmark"];
     NSString *postName = postQuery[@"name"];
     
     Post * newPost = [Post initWithName:postName];
@@ -68,10 +68,8 @@
     
     Landmark *landmark = [DataHelper parseLandmarkFromQuery:queryResult
                                                    withPost:post];
-    //    landmark.pfObject = queryResult;
     
     return landmark;
 }
-
 
 @end
