@@ -3,10 +3,38 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[MyInfoViewController _updateProfileData]:MyInfoViewController.m">
+         contextName = "-[MyInfoViewController userDataLoadHandler:]:MyInfoViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "user[@&quot;profiless&quot;]">
+               value = "self.userProfileRowsData">
+            </PersistentString>
+            <PersistentString
+               value = "self.userData">
+            </PersistentString>
+            <PersistentString
+               value = "[self.userProfileRowsData count]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MyInfoViewController tableView:cellForRowAtIndexPath:]:MyInfoViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.userProfileRowsDataKeys">
+            </PersistentString>
+            <PersistentString
+               value = "[cell viewWithTag:101]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MyInfoViewController tableView:numberOfRowsInSection:]:MyInfoViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.userProfileRowsData count]">
+            </PersistentString>
+            <PersistentString
+               value = "self.userProfileRowsData">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

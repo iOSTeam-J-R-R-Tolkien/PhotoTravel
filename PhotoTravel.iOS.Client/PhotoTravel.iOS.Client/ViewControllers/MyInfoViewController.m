@@ -1,11 +1,3 @@
-//
-//  MyInfoViewController.m
-//  PhotoTravel
-//
-//  Created by Pesho on 11/7/14.
-//  Copyright (c) 2014 PhotoTravel. All rights reserved.
-//
-
 #import "MyInfoViewController.h"
 #import "ViewsHelper.h"
 #import "LoadingScreenViewController.h"
@@ -35,7 +27,9 @@
                                       action:@selector(logoutButtonAction:)];
   self.navigationItem.rightBarButtonItems =
       [[NSArray alloc] initWithObjects:logoutButton, nil];
-
+  self.userProfileRowsData = [[NSMutableDictionary alloc] init];
+  [self.viewTableProfileData setDataSource:self];
+  [self.viewTableProfileData setBackgroundColor:[UIColor clearColor]];
   [self _loadData];
 }
 
@@ -51,47 +45,80 @@
 
 - (void)_loadData {
   if (self.userData) {
-      [self userDataLoadHandler: self.userData];
+    [self userDataLoadHandler:self.userData];
   } else {
-      [ProfileData loadProfileDataAsync:self];
+    [ProfileData loadProfileDataAsync:self];
   }
 }
 
 - (void)userDataLoadHandler:(ApplicationUser *)userData {
   self.userData = userData;
 
-  if (self.userData.locationName) {
-    self.profileLocationLable.text = self.userData.locationName;
-  }
-
-  if (self.userData.gender) {
-    self.profileGenderLable.text = self.userData.gender;
-  }
-
-  if (self.userData.birthday) {
-    self.profileDataOfBirthLable.text = self.userData.birthday;
-  }
-
   if (self.userData.name) {
     self.profileNameLabel.text = self.userData.name;
   }
+
+  if (self.userData.gender) {
+    [self.userProfileRowsData setObject:self.userData.gender forKey:@"Gender"];
+  }
+
+  if (self.userData.birthday) {
+    [self.userProfileRowsData setObject:self.userData.birthday
+                                 forKey:@"Birthday"];
+  }
+
+  if (self.userData.locationName) {
+    [self.userProfileRowsData setObject:self.userData.locationName
+                                 forKey:@"Location"];
+  }
+
+  self.userProfileRowsDataKeys = [self.userProfileRowsData allKeys];
+  [self.viewTableProfileData reloadData];
 
   [ProfileData loadProfileImageAsync:self forUserId:self.userData.userId];
 }
 
 - (void)profileImageLoadHandler:(UIImage *)profileImage {
-    CGFloat oImageWidth = profileImage.size.width;
-    CGFloat oImageHeight = profileImage.size.height;
-    // Draw the original image at the origin
-    CGRect oRect = CGRectMake(0, 0, oImageWidth / 2, oImageHeight / 2);
-    [profileImage drawInRect:oRect];
-    
-    // Set the newRect to half the size of the original image
-    CGRect newRect = CGRectMake(0, 0, oImageWidth, oImageHeight);
-    UIImage *circleImage =
-    [ViewsHelper circularScaleNCrop:profileImage withRectDimensions:newRect];
-    
-    self.profileImageView.image = circleImage;
+  CGFloat oImageWidth = profileImage.size.width;
+  CGFloat oImageHeight = profileImage.size.height;
+  // Draw the original image at the origin
+  CGRect oRect = CGRectMake(0, 0, oImageWidth / 2, oImageHeight / 2);
+  [profileImage drawInRect:oRect];
+
+  // Set the newRect to half the size of the original image
+  CGRect newRect = CGRectMake(0, 0, oImageWidth, oImageHeight);
+  UIImage *circleImage =
+      [ViewsHelper circularScaleNCrop:profileImage withRectDimensions:newRect];
+
+  self.profileImageView.image = circleImage;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView
+    numberOfRowsInSection:(NSInteger)section {
+  return [self.userProfileRowsData count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  static NSString *CellIdentifier = @"Cell";
+
+  NSString *description = (self.userProfileRowsDataKeys)[indexPath.row];
+  NSString *labelValue = [self.userProfileRowsData objectForKey:description];
+
+  UITableViewCell *cell =
+      [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  if (cell == nil) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                  reuseIdentifier:CellIdentifier];
+  }
+
+  UILabel *descLabel = (UILabel *)[cell viewWithTag:100];
+  UILabel *valueLabel = (UILabel *)[cell viewWithTag:101];
+
+  descLabel.text = description;
+  valueLabel.text = labelValue;
+
+  return cell;
 }
 
 @end

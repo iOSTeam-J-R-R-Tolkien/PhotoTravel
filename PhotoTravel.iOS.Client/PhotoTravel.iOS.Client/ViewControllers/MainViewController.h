@@ -20,6 +20,7 @@
 
 
 - (IBAction)addPostToLastAddedLandmark:(id)sender;
+@property NSMutableDictionary *estimatedRowHeightCache;
 
 
 @property (nonatomic, strong) NSArray *rowDataArray;

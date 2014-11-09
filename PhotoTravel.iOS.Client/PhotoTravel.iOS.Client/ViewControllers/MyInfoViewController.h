@@ -10,16 +10,16 @@
 #import "ApplicationUser.h"
 #import "ProfileDataProtocol.h"
 
-@interface MyInfoViewController : UIViewController <ProfileDataProtocol>
+@interface MyInfoViewController : UIViewController <ProfileDataProtocol, UITableViewDataSource>
 
 @property(weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property(weak, nonatomic) IBOutlet UITextField *profileNameLabel;
 
-@property(weak, nonatomic) IBOutlet UILabel *profileLocationLable;
-@property(weak, nonatomic) IBOutlet UILabel *profileGenderLable;
-@property(weak, nonatomic) IBOutlet UILabel *profileDataOfBirthLable;
+@property (weak, nonatomic) IBOutlet UITableView *viewTableProfileData;
 
 @property(strong, nonatomic) ApplicationUser *userData;
+@property(strong, nonatomic) NSMutableDictionary *userProfileRowsData;
+@property(strong, nonatomic) NSArray *userProfileRowsDataKeys;
 
 - (void)userDataLoadHandler:(ApplicationUser *)userData;
 - (void)profileImageLoadHandler:(UIImage *)profileImage;
