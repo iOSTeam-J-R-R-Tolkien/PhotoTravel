@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -15,21 +15,12 @@
             <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="Liz-MT-ivM" id="GYW-ge-m0t">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="b1i-Wa-rnx">
-                        <rect key="frame" x="8" y="10" width="128" height="105"/>
+                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b1i-Wa-rnx">
+                        <rect key="frame" x="8" y="11" width="128" height="105"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="b1i-Wa-rnx" secondAttribute="height" multiplier="128:105" id="Ohw-Ik-dMt"/>
                         </constraints>
                     </imageView>
-                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4DJ-Re-31U">
-                        <rect key="frame" x="144" y="17" width="329" height="32"/>
-                        <color key="backgroundColor" red="0.75917467948717943" green="0.75917467948717943" blue="0.75917467948717943" alpha="0.17999999999999999" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                        <color key="textColor" red="0.92338966840000003" green="0.92338966840000003" blue="0.92338966840000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </label>
                     <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QJI-uU-WBY">
                         <rect key="frame" x="144" y="51" width="329" height="28"/>
                         <color key="backgroundColor" red="0.75917467949999995" green="0.75917467949999995" blue="0.75917467949999995" alpha="0.17999999999999999" colorSpace="calibratedRGB"/>
@@ -37,7 +28,16 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="28" id="JHJ-Xi-jx8"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="17"/>
+                        <color key="textColor" red="0.92338966840000003" green="0.92338966840000003" blue="0.92338966840000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4DJ-Re-31U">
+                        <rect key="frame" x="144" y="17" width="329" height="32"/>
+                        <color key="backgroundColor" red="0.75917467948717943" green="0.75917467948717943" blue="0.75917467948717943" alpha="0.17999999999999999" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="26"/>
                         <color key="textColor" red="0.92338966840000003" green="0.92338966840000003" blue="0.92338966840000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -68,7 +68,4 @@
             <point key="canvasLocation" x="808" y="529.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="Icon.png" width="57" height="57"/>
-    </resources>
 </document>

@@ -15,6 +15,7 @@
 @interface MainViewController : UIViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UITableViewDataSource, LandmarkDataProtocol>
 
 @property (nonatomic, strong) NSMutableArray *rowDataArray;
+@property(nonatomic, strong) NSMutableDictionary *postsImages;
 
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) UIImage *profileImage;

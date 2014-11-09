@@ -102,11 +102,11 @@
 }
 
 - (void)hideFromScreen {
+  [NSThread sleepForTimeInterval:.3];
   if (self.parentViewController != nil) {
-    [NSThread sleepForTimeInterval:.5];
     [self willMoveToParentViewController:nil];
     [self.view removeFromSuperview];
-    //    [self removeFromParentViewController];
+    //   [self removeFromParentViewController];
   }
 }
 

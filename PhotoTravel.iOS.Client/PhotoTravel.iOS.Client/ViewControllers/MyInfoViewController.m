@@ -16,8 +16,9 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+
   self.loadingPopup = [LoadingScreenViewController initWithParentView:self];
-  [self.loadingPopup showOnScreen];
+
   [ViewsHelper changeBackgroundImage:self withImage:@"bg.jpg"];
 
   UIBarButtonItem *logoutButton =
@@ -30,7 +31,7 @@
   self.userProfileRowsData = [[NSMutableDictionary alloc] init];
   [self.viewTableProfileData setDataSource:self];
   [self.viewTableProfileData setBackgroundColor:[UIColor clearColor]];
-  [self _loadData];
+  
 }
 
 - (void)logoutButtonAction:(id)sender {
@@ -40,7 +41,8 @@
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
-  [self.loadingPopup hideFromScreen];
+  [self.loadingPopup showOnScreen];
+    [self _loadData];
 }
 
 - (void)_loadData {
@@ -74,6 +76,7 @@
 
   self.userProfileRowsDataKeys = [self.userProfileRowsData allKeys];
   [self.viewTableProfileData reloadData];
+    [self.loadingPopup hideFromScreen];
 
   [ProfileData loadProfileImageAsync:self forUserId:self.userData.userId];
 }
