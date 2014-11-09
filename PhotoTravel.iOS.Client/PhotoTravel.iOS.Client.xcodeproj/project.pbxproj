@@ -39,6 +39,7 @@
 		91C54E651A0E688A005BD8EA /* LastPostWithLandmarkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C54E641A0E688A005BD8EA /* LastPostWithLandmarkData.m */; };
 		91C54E681A0E69F8005BD8EA /* LandmarkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C54E671A0E69F8005BD8EA /* LandmarkModel.m */; };
 		91C54E6B1A0E7811005BD8EA /* PostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C54E6A1A0E7811005BD8EA /* PostModel.m */; };
+		91F6DDBE1A0F558000D8CCCF /* LandmarkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F6DDBD1A0F558000D8CCCF /* LandmarkData.m */; };
 		97BDC41AC5F9EB5EEC83545F /* libPods-PhotoTravel.iOS.Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69258BF7589ADC4ACE0E0DE /* libPods-PhotoTravel.iOS.Client.a */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,8 @@
 		91C54E691A0E7811005BD8EA /* PostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostModel.h; path = Data/Models/PostModel.h; sourceTree = "<group>"; };
 		91C54E6A1A0E7811005BD8EA /* PostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostModel.m; path = Data/Models/PostModel.m; sourceTree = "<group>"; };
 		91EE46011A0E872400FDB782 /* LastPostWithLandmarkDataProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LastPostWithLandmarkDataProtocol.h; path = Data/DataProtocols/LastPostWithLandmarkDataProtocol.h; sourceTree = "<group>"; };
+		91F6DDBC1A0F558000D8CCCF /* LandmarkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandmarkData.h; path = Data/LandmarkData.h; sourceTree = "<group>"; };
+		91F6DDBD1A0F558000D8CCCF /* LandmarkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandmarkData.m; path = Data/LandmarkData.m; sourceTree = "<group>"; };
 		D69258BF7589ADC4ACE0E0DE /* libPods-PhotoTravel.iOS.Client.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoTravel.iOS.Client.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -307,6 +310,8 @@
 				912684C51A0D76600080DD77 /* ProfileData.m */,
 				91C54E631A0E688A005BD8EA /* LastPostWithLandmarkData.h */,
 				91C54E641A0E688A005BD8EA /* LastPostWithLandmarkData.m */,
+				91F6DDBC1A0F558000D8CCCF /* LandmarkData.h */,
+				91F6DDBD1A0F558000D8CCCF /* LandmarkData.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -485,6 +490,7 @@
 				91C54E651A0E688A005BD8EA /* LastPostWithLandmarkData.m in Sources */,
 				9126847F1A0D6F210080DD77 /* AppDelegate.m in Sources */,
 				912684B61A0D75CE0080DD77 /* MusicManagerController.m in Sources */,
+				91F6DDBE1A0F558000D8CCCF /* LandmarkData.m in Sources */,
 				84EDC6A51A0E389500939E2B /* DetailedImageViewController.m in Sources */,
 				912684C21A0D75F00080DD77 /* MyInfoViewController.m in Sources */,
 				91C54E681A0E69F8005BD8EA /* LandmarkModel.m in Sources */,
