@@ -10,7 +10,15 @@
 #import "Landmark.h"
 #import "LandmarkDataProtocol.h"
 
-@interface LandmarkTableViewController : UITableViewController<LandmarkDataProtocol>
+@interface LandmarkTableViewController : UITableViewController<LandmarkDataProtocol,UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UILabel *landmarkNamelable;
+
+@property (weak, nonatomic) IBOutlet UIView *tableCell;
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *postImageView;
 @property (nonatomic, strong) Landmark *landmarkData;
 @end

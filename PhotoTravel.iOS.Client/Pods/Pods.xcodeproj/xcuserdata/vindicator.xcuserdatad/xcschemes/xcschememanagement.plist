@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-PhotoTravel.iOS.Client-Bolts.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-PhotoTravel.iOS.Client-Facebook-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-PhotoTravel.iOS.Client-Parse.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Pods-PhotoTravel.iOS.Client-ParseFacebookUtils.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Pods-PhotoTravel.iOS.Client.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>297CC1263E37700EAC5C19EB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB6D41AE16774CEE98FBBFDE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2266C91510868B0DD99900B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6CEBF376B95BDD7BE5E6DE2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FC38BB98358CF1112CD4781B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
