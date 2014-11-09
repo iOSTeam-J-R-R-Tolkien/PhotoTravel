@@ -13,4 +13,5 @@
 
 -(void)lastPostsDataLoadHandler:(NSMutableArray *)landmarkData;
 
+//-(void)landmarkWithPosts:(Landmark *)landmarkData;
 @end

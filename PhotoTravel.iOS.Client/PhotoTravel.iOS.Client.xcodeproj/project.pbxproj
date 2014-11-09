@@ -36,6 +36,7 @@
 		912684D81A0D77620080DD77 /* welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 912684CF1A0D77620080DD77 /* welcome.jpg */; };
 		912684D91A0D77620080DD77 /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 912684D01A0D77620080DD77 /* welcome.png */; };
 		912684DC1A0D78450080DD77 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 912684DB1A0D78450080DD77 /* LoginViewController.m */; };
+		91C500931A0FC61B008BDAB5 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C500921A0FC61B008BDAB5 /* Post.m */; };
 		91C54E651A0E688A005BD8EA /* LastPostWithLandmarkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C54E641A0E688A005BD8EA /* LastPostWithLandmarkData.m */; };
 		91C54E681A0E69F8005BD8EA /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C54E671A0E69F8005BD8EA /* Landmark.m */; };
 		91F6DDBE1A0F558000D8CCCF /* LandmarkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F6DDBD1A0F558000D8CCCF /* LandmarkData.m */; };
@@ -101,6 +102,8 @@
 		912684D01A0D77620080DD77 /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = welcome.png; path = Resourses/welcome.png; sourceTree = "<group>"; };
 		912684DA1A0D78450080DD77 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/Utilities/FacebookLogin/LoginViewController.h; sourceTree = "<group>"; };
 		912684DB1A0D78450080DD77 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ViewControllers/Utilities/FacebookLogin/LoginViewController.m; sourceTree = "<group>"; };
+		91C500911A0FC61B008BDAB5 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = Data/Models/Post.h; sourceTree = "<group>"; };
+		91C500921A0FC61B008BDAB5 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = Data/Models/Post.m; sourceTree = "<group>"; };
 		91C54E631A0E688A005BD8EA /* LastPostWithLandmarkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LastPostWithLandmarkData.h; path = Data/LastPostWithLandmarkData.h; sourceTree = "<group>"; };
 		91C54E641A0E688A005BD8EA /* LastPostWithLandmarkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LastPostWithLandmarkData.m; path = Data/LastPostWithLandmarkData.m; sourceTree = "<group>"; };
 		91C54E661A0E69F8005BD8EA /* Landmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Landmark.h; path = Data/Models/Landmark.h; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 		84EDC69A1A0E30F800939E2B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				91C500911A0FC61B008BDAB5 /* Post.h */,
+				91C500921A0FC61B008BDAB5 /* Post.m */,
 				84EDC69B1A0E310B00939E2B /* ApplicationUser.h */,
 				84EDC69C1A0E310B00939E2B /* ApplicationUser.m */,
 				91C54E661A0E69F8005BD8EA /* Landmark.h */,
@@ -495,6 +500,7 @@
 				84EDC6A01A0E336300939E2B /* LandmarkWithLastPostUITableViewCell.m in Sources */,
 				84EDC6991A0E302800939E2B /* ViewsHelper.m in Sources */,
 				912684821A0D6F210080DD77 /* PhotoTravel_iOS_Client.xcdatamodeld in Sources */,
+				91C500931A0FC61B008BDAB5 /* Post.m in Sources */,
 				84EDC6981A0E302800939E2B /* DataHelper.m in Sources */,
 				912684DC1A0D78450080DD77 /* LoginViewController.m in Sources */,
 				84EDC69D1A0E310B00939E2B /* ApplicationUser.m in Sources */,

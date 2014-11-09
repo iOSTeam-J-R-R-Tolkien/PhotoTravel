@@ -13,6 +13,7 @@
 @interface DataHelper : NSObject
 
 + (ApplicationUser *)parseApplicationUserFromQuery:(id)queryResult;
-+ (Landmark *)parseLandmarkFromQuery:(id)queryResult;
++ (Landmark *)parseLastPostWithLandmarkFromQuery:(id)queryResult;
+//+ (Landmark *)parseLandmarkFromQuery:(id)queryResult;
 
 @end

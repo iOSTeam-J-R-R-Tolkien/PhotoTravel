@@ -9,6 +9,9 @@
 #import "DataHelper.h"
 #import "ApplicationUser.h"
 #import "Landmark.h"
+#import "Post.h"
+#import <Parse/Parse.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @implementation DataHelper
 
@@ -27,11 +30,48 @@
   return appUser;
 }
 
-+ (Landmark *)parseLandmarkFromQuery:(id)queryResult {
-  NSString *landmarkName = queryResult[@"name"];
-  Landmark *landmark = [Landmark initWithName:landmarkName];
+//+ (Landmark *) parseLandmarkFromQuery:(id)postLandmarkQuery{
+//    PFObject *landmark = postLandmarkQuery[@"landmark"];
+//    
+//    Landmark * newLandmark = [Landmark initWithName:landmark[@"name"]];
+//    
+//    return  newLandmark;
+//}
 
++ (Landmark *) parseLandmarkFromQuery:(id)postLandmarkQuery
+                             withPost:(Post*) post{
+    PFObject *landmark = postLandmarkQuery[@"landmark"];
+    
+    Landmark * newLandmark = [Landmark initWithName:landmark[@"name"]
+                                           withPost:post];
+    newLandmark.pfObject=landmark;
+    
+    
+    return  newLandmark;
+}
+
+
++ (Post *) parsePostFromQuery:(id)postQuery{
+//    PFObject *post = postQuery[@"landmark"];
+    NSString *postName = postQuery[@"name"];
+    
+    Post * newPost = [Post initWithName:postName];
+    newPost.pfObject = postQuery;
+    return newPost;
+}
+
++ (Landmark *)parseLastPostWithLandmarkFromQuery:(id)queryResult {
+    
+    NSString *landmarkName = queryResult[@"name"];
+    Post * post = [DataHelper parsePostFromQuery:queryResult];
+    
+    
+    Landmark *landmark = [DataHelper parseLandmarkFromQuery:queryResult
+                                                   withPost:post];
+    //    landmark.pfObject = queryResult;
+    
     return landmark;
 }
+
 
 @end

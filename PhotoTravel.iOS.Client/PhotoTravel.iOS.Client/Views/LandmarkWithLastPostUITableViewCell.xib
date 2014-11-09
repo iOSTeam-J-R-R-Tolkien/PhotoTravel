@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -15,18 +15,27 @@
             <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="Liz-MT-ivM" id="GYW-ge-m0t">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="b1i-Wa-rnx">
-                        <rect key="frame" x="8" y="9" width="128" height="105"/>
+                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="b1i-Wa-rnx">
+                        <rect key="frame" x="8" y="10" width="128" height="105"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="b1i-Wa-rnx" secondAttribute="height" multiplier="128:105" id="Ohw-Ik-dMt"/>
                         </constraints>
                     </imageView>
                     <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4DJ-Re-31U">
-                        <rect key="frame" x="144" y="9" width="329" height="105"/>
+                        <rect key="frame" x="144" y="17" width="329" height="32"/>
                         <color key="backgroundColor" red="0.75917467948717943" green="0.75917467948717943" blue="0.75917467948717943" alpha="0.17999999999999999" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                        <color key="textColor" red="0.92338966840000003" green="0.92338966840000003" blue="0.92338966840000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QJI-uU-WBY">
+                        <rect key="frame" x="144" y="51" width="329" height="28"/>
+                        <color key="backgroundColor" red="0.75917467949999995" green="0.75917467949999995" blue="0.75917467949999995" alpha="0.17999999999999999" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="4DJ-Re-31U" secondAttribute="height" multiplier="47:15" id="kgm-bX-bwL"/>
+                            <constraint firstAttribute="height" constant="28" id="JHJ-Xi-jx8"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.92338966840000003" green="0.92338966840000003" blue="0.92338966840000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,22 +46,26 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="4DJ-Re-31U" firstAttribute="leading" secondItem="b1i-Wa-rnx" secondAttribute="trailing" constant="8" id="0Ux-dk-f8K"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="4DJ-Re-31U" secondAttribute="trailing" constant="-1" id="20G-W4-tMY"/>
+                    <constraint firstItem="QJI-uU-WBY" firstAttribute="trailing" secondItem="4DJ-Re-31U" secondAttribute="trailing" id="4eK-Vc-bTv"/>
                     <constraint firstItem="b1i-Wa-rnx" firstAttribute="leading" secondItem="GYW-ge-m0t" secondAttribute="leadingMargin" id="5Jw-Jg-iDd"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="4DJ-Re-31U" secondAttribute="bottom" constant="6" id="D3r-sn-N8k"/>
-                    <constraint firstItem="4DJ-Re-31U" firstAttribute="top" secondItem="GYW-ge-m0t" secondAttribute="topMargin" constant="1" id="KgA-ux-3cR"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="4DJ-Re-31U" secondAttribute="trailing" constant="-1" id="9ib-7c-y0K"/>
+                    <constraint firstItem="QJI-uU-WBY" firstAttribute="top" secondItem="4DJ-Re-31U" secondAttribute="bottom" constant="2" id="JcR-bE-rgw"/>
+                    <constraint firstItem="4DJ-Re-31U" firstAttribute="leading" secondItem="b1i-Wa-rnx" secondAttribute="trailing" constant="8" symbolic="YES" id="R10-nG-eY0"/>
                     <constraint firstAttribute="bottomMargin" secondItem="b1i-Wa-rnx" secondAttribute="bottom" constant="6" id="fW1-Ps-TZ5"/>
-                    <constraint firstItem="4DJ-Re-31U" firstAttribute="leading" secondItem="b1i-Wa-rnx" secondAttribute="trailing" constant="8" id="g1M-cf-fDM"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="QJI-uU-WBY" secondAttribute="bottom" constant="41" id="hzQ-vE-Kld"/>
                     <constraint firstItem="b1i-Wa-rnx" firstAttribute="top" secondItem="GYW-ge-m0t" secondAttribute="topMargin" constant="1" id="mGA-Hn-5Oe"/>
+                    <constraint firstItem="4DJ-Re-31U" firstAttribute="top" secondItem="GYW-ge-m0t" secondAttribute="topMargin" constant="9" id="uY5-rj-Xi9"/>
+                    <constraint firstItem="QJI-uU-WBY" firstAttribute="leading" secondItem="4DJ-Re-31U" secondAttribute="leading" id="yis-6f-HFu"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="landmarkLabel" destination="4DJ-Re-31U" id="C31-fg-S9u"/>
+                <outlet property="landmarkLabel" destination="QJI-uU-WBY" id="HXt-iQ-lng"/>
+                <outlet property="lastPostLable" destination="4DJ-Re-31U" id="Mbl-XA-2ZN"/>
+                <outlet property="postImageView" destination="b1i-Wa-rnx" id="wXe-3T-sQn"/>
             </connections>
-            <point key="canvasLocation" x="808" y="533.5"/>
+            <point key="canvasLocation" x="808" y="529.5"/>
         </tableViewCell>
     </objects>
     <resources>

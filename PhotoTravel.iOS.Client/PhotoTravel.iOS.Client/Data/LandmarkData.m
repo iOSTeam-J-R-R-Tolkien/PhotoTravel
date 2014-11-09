@@ -16,21 +16,53 @@
 @implementation LandmarkData
 
 + (void)getLastPostsAsync:(int)count for:(id<LandmarkDataProtocol>)delegate {
-  PFQuery *query = [PFQuery queryWithClassName:@"Post"];
-  [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
-      if (!posts) {
-        NSLog(@"The getFirstObject request failed.");
-      } else {
-        NSLog(@"Successfully retrieved the object. %@", posts);
-        NSMutableArray *outputData = [[NSMutableArray alloc] init];
-        for (PFObject *post in posts) {
-          Landmark *landmark = [DataHelper parseLandmarkFromQuery:post];
-          [outputData addObject:landmark];
-          NSLog(@"retrieved related post: %@", post);
+    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    [query orderByDescending:@"createdAt"];
+    [query includeKey:@"landmark"];
+    //    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
+    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
+        if (!posts) {
+            NSLog(@"The getFirstObject request failed.");
+        } else {
+            NSLog(@"Successfully retrieved the object. %@", posts);
+            NSMutableArray *outputData = [[NSMutableArray alloc] init];
+            for (PFObject *post in posts) {
+                PFObject *thisLandmark = post[@"landmark"];
+                NSLog(@"retrieved related landmark to the post: %@", thisLandmark);
+                NSLog(@"retrieved related landmark to the post: %@", thisLandmark[@"image"]);
+                
+                Landmark *landmark = [DataHelper parseLastPostWithLandmarkFromQuery:post];
+                [outputData addObject:landmark];
+                NSLog(@"retrieved related post: %@", post);
+            }
+            [delegate lastPostsDataLoadHandler:outputData];
         }
-        [delegate lastPostsDataLoadHandler:outputData];
-      }
-  }];
+    }];
 }
+
+//+ (void)getLandmarkPosts:(Landmark *)landmark
+//                     for:(id<LandmarkDataProtocol>)delegate {
+//    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+//    [query orderByDescending:@"createdAt"];
+//    [query whereKey:@"landmark" equalTo:landmark.pfObject];
+//
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
+//        if (!posts) {
+//            NSLog(@"The getFirstObject request failed.");
+//        } else {
+//            NSLog(@"Successfully retrieved the object. %@", posts);
+//            NSMutableArray *outputData = [[NSMutableArray alloc] init];
+//            for (PFObject *post in posts) {
+//                Landmark *landmark = [DataHelper parseLandmarkFromQuery:post];
+//                [outputData addObject:landmark];
+//                NSLog(@"retrieved related post: %@", post);
+//            }
+//            landmark.posts = outputData;
+//            [delegate landmarkWithPosts:landmark];
+//        }
+//    }];
+//}
+
+
 
 @end
