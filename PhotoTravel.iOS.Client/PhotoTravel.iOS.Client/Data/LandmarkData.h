@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-#import "PostModel.h"
-#import "LandmarkModel.h"
+#import "Landmark.h"
 
 @interface LandmarkData : NSObject
 
-+(NSMutableArray *)getPostsOfLandmark:(LandmarkModel *)landmark;
-+(PostModel *)addNewPostWithPostModel:(PostModel *)postModel
-                           toLandmark:(LandmarkModel *) landmark
-                          currentUser:(PFUser *) user;
+//+(NSMutableArray *)getPostsOfLandmark:(Landmark *)landmark;
+//+(PostModel *)addNewPostWithPostModel:(PostModel *)postModel
+//                           toLandmark:(Landmark *) landmark
+//                          currentUser:(PFUser *) user;
++ (void)getLastPostsAsync:(int)count for:(id<LandmarkDataProtocol>)delegate;
 @end

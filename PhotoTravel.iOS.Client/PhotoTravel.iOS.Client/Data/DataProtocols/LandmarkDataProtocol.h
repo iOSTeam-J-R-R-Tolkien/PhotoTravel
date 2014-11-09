@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Landmark.h"
 
-@protocol LastPostWithLandmarkDataProtocol
+@protocol LandmarkDataProtocol
 
+-(void)lastPostsDataLoadHandler:(NSMutableArray *)landmarkData;
 
 @end

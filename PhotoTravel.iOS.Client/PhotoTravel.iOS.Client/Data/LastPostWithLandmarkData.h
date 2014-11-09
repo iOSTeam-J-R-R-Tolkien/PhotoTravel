@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LastPostWithLandmarkDataProtocol.h"
 //dori ne mi go namira
 @interface LastPostWithLandmarkData : NSObject
 
-
-+(NSMutableArray *)getLastPosts:(int) count;
-+(NSMutableArray *)getLastPosts;
+//
+//+(NSMutableArray *)getLastPosts:(int) count;
+//+(NSMutableArray *)getLastPosts;
 @end

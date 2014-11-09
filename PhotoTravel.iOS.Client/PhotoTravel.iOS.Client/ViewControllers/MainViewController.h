@@ -10,18 +10,19 @@
 #import <Parse/Parse.h>
 #import <QuartzCore/QuartzCore.h>
 #import "LoadingScreenViewController.h"
+#import "LandmarkDataProtocol.h"
 
-@interface MainViewController : UIViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UITableViewDataSource>
+@interface MainViewController : UIViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UITableViewDataSource, LandmarkDataProtocol>
+
+@property (nonatomic, strong) NSMutableArray *rowDataArray;
 
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) UIImage *profileImage;
-- (IBAction)buttonToImageView:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UITableView *postsTableView;
 
-
+- (IBAction)buttonToImageView:(UIButton *)sender;
 - (IBAction)addPostToLastAddedLandmark:(id)sender;
-@property NSMutableDictionary *estimatedRowHeightCache;
 
+-(void)lastPostsDataLoadHandler:(NSMutableArray *)landmarkData;
 
-@property (nonatomic, strong) NSArray *rowDataArray;
 @end

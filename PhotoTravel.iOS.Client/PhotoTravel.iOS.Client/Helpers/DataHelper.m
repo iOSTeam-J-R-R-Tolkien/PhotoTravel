@@ -8,6 +8,7 @@
 
 #import "DataHelper.h"
 #import "ApplicationUser.h"
+#import "Landmark.h"
 
 @implementation DataHelper
 
@@ -24,6 +25,13 @@
   appUser.relationshipStatus = userData[@"relationship_status"];
 
   return appUser;
+}
+
++ (Landmark *)parseLandmarkFromQuery:(id)queryResult {
+  NSString *landmarkName = queryResult[@"name"];
+  Landmark *landmark = [Landmark initWithName:landmarkName];
+
+    return landmark;
 }
 
 @end

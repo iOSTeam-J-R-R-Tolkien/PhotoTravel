@@ -20,7 +20,8 @@
 #import "DataHelper.h"
 #import "LastPostWithLandmarkData.h"
 
-#import "LandmarkModel.h"
+#import "Landmark.h"
+#import "LandmarkData.h"
 
 @interface MainViewController ()
 @property(strong, nonatomic) MusicManagerController *musicController;
@@ -47,20 +48,24 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
 
   UINib *nib = [UINib nibWithNibName:identifier bundle:nil];
   [self.postsTableView registerNib:nib forCellReuseIdentifier:identifier];
-  _rowDataArray = @[ @"tab1", @"tab2", @"tab3", @"tab4" ];
+  self.rowDataArray = [[NSMutableArray alloc] init];
   [self.postsTableView setDataSource:self];
   [self.postsTableView setBackgroundColor:[UIColor colorWithRed:0.960784
                                                           green:0.960784
                                                            blue:0.960784
                                                           alpha:0.1]];
+    [LandmarkData getLastPostsAsync:5 for:self];
 }
 
 - (IBAction)addLandmark:(id)sender {
 }
 
+- (void)lastPostsDataLoadHandler:(NSMutableArray *)landmarkData {
+  self.rowDataArray = landmarkData;
+  [self.postsTableView reloadData];
+}
+
 - (IBAction)addPostToLastAddedLandmark:(id)sender {
-  NSArray *posts = [LastPostWithLandmarkData getLastPosts];
-  long postsCount = [posts count];
   //    //Find all posts
   //    PFUser *user = [PFUser currentUser];
   //
@@ -121,9 +126,6 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
   ////        }
   //    }];
 }
-
-//	    [query wher;
-//    NS *usersPosts = [query findObjects]
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
@@ -223,7 +225,6 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
 
 - (NSInteger)tableView:(UITableView *)tableView
     numberOfRowsInSection:(NSInteger)section {
-  // Return the number of rows in the section.
   return [self.rowDataArray count];
 }
 
@@ -237,8 +238,8 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
     cell = [self.postsTableView dequeueReusableCellWithIdentifier:identifier
                                                      forIndexPath:indexPath];
   }
-    
-  cell.landmarkLabel.text = self.rowDataArray[indexPath.row];
+
+  cell.landmarkLabel.text = ((Landmark *)self.rowDataArray[indexPath.row]).name;
   return cell;
 }
 

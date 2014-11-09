@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "ApplicationUser.h"
+#import "Landmark.h"
 
 @interface DataHelper : NSObject
 
 + (ApplicationUser *)parseApplicationUserFromQuery:(id)queryResult;
++ (Landmark *)parseLandmarkFromQuery:(id)queryResult;
 
 @end

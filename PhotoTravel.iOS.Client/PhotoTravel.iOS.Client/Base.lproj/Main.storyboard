@@ -120,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gyk-3D-Od6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1420" y="59"/>
+            <point key="canvasLocation" x="1400" y="-330"/>
         </scene>
         <!--Master-->
         <scene sceneID="pY4-Hu-kfo">
@@ -232,13 +232,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="Njq-mn-xNJ"/>
                     <connections>
-                        <outlet property="postsTableView" destination="Q7M-3R-xYn" id="Hri-nt-YTs"/>
+                        <outlet property="postsTableView" destination="Q7M-3R-xYn" id="Kxh-Yj-C5w"/>
                         <segue destination="pWw-3f-ywl" kind="show" identifier="myInfoSegue" id="OSV-Oi-HiC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biG-d4-E72" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1082" y="-379"/>
+            <point key="canvasLocation" x="628" y="-330"/>
         </scene>
         <!--Image View-->
         <scene sceneID="bPV-aC-ofe">
@@ -286,7 +286,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="643" y="-1111"/>
+            <point key="canvasLocation" x="1400" y="-1041"/>
         </scene>
     </scenes>
     <resources>
