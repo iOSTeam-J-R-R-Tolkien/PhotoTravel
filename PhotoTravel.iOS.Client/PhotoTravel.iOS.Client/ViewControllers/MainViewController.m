@@ -18,11 +18,11 @@
 #include "ProfileData.h"
 #import "LandmarkWithLastPostUITableViewCell.h"
 #import "DataHelper.h"
-#import "LastPostWithLandmarkData.h"
 
 #import "Landmark.h"
 #import "Post.h"
 #import "LandmarkData.h"
+#import "PostsData.h"
 
 @interface MainViewController ()
 @property(strong, nonatomic) MusicManagerController *musicController;
@@ -67,65 +67,6 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
 }
 
 - (IBAction)addPostToLastAddedLandmark:(id)sender {
-    //    //Find all posts
-    //    PFUser *user = [PFUser currentUser];
-    //
-    //    PFQuery *query = [PFQuery queryWithClassName:@"Landmark"];
-    //    [query orderByDescending:@"createdAt"];
-    //
-    //    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError
-    //    *error) {
-    //        if (!object) {
-    //            NSLog(@"The getFirstObject request failed.");
-    //        } else {
-    //            NSLog(@"Successfully retrieved the object. %@", object);
-    //            LandmarkModel * land = [LandmarkModel initWithPFObject:object];
-    //            NSString  *stringgg = object[@"name"];
-    //
-    //            PFQuery *queryPosts = [PFQuery queryWithClassName:@"Post"];
-    //            //    addPostsWithPFObject
-    //            queryPosts.limit = 10;
-    //
-    //            // Include the post data with each comment
-    //            //    [query includeKey:@"post"];
-    //            [queryPosts findObjectsInBackgroundWithBlock:^(NSArray
-    //            *comments, NSError *error) {
-    //                // Comments now contains the last ten comments, and the
-    //                "post" field
-    //                // has been populated. For example:
-    //
-    //                //        for (PFObject *comment in comments) {
-    //                //            // This does not require a network access.
-    //                //            PFObject *post = comment[@"post"];
-    //                //            NSLog(@"retrieved related post: %@", post);
-    //                //        }
-    //                [land addPostsWithPFObject:comments];
-    //            }];
-    //
-    //            int asd = 352;
-    //            int asfasf = asd;
-    //        }
-    //    }];
-    //
-    //
-    //
-    //    PFQuery *queryPosts = [PFQuery queryWithClassName:@"Post"];
-    ////    addPostsWithPFObject
-    //    queryPosts.limit = 10;
-    //
-    //    // Include the post data with each comment
-    ////    [query includeKey:@"post"];
-    //    [queryPosts findObjectsInBackgroundWithBlock:^(NSArray *comments,
-    //    NSError *error) {
-    //        // Comments now contains the last ten comments, and the "post" field
-    //        // has been populated. For example:
-    //
-    ////        for (PFObject *comment in comments) {
-    ////            // This does not require a network access.
-    ////            PFObject *post = comment[@"post"];
-    ////            NSLog(@"retrieved related post: %@", post);
-    ////        }
-    //    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -242,15 +183,10 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
     
     Landmark *landmark =(Landmark *)self.rowDataArray[indexPath.row];
     Post *post =(Post *) landmark.posts[0];
-    
-    
-    PFFile *userImageFile = post.pfObject[@"image"];
-    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
-        if (!error) {
-            UIImage *image =[UIImage imageWithData:imageData];
-            cell.postImageView.image = image;
-        }
+    [PostsData loadImageFromPostAsync:post.pfObject andLoadHandler:^(UIImage *image){
+        cell.postImageView.image = image;
     }];
+    
     cell.landmarkLabel.text = landmark.name;
     cell.lastPostLable.text = post.name;
     return cell;
