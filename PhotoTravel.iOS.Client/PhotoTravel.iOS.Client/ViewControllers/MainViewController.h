@@ -26,4 +26,6 @@
 - (void)lastPostsDataLoadHandler:(NSMutableArray *)landmarkData;
 - (void)noConnectionHandler;
 
+- (IBAction)newPostBtn:(id)sender;
+
 @end

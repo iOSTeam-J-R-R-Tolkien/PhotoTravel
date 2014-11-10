@@ -42,6 +42,7 @@
 		912684D81A0D77620080DD77 /* welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 912684CF1A0D77620080DD77 /* welcome.jpg */; };
 		912684D91A0D77620080DD77 /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 912684D01A0D77620080DD77 /* welcome.png */; };
 		912684DC1A0D78450080DD77 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 912684DB1A0D78450080DD77 /* LoginViewController.m */; };
+		91A3F4831A10FC160043CA32 /* NewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A3F4821A10FC160043CA32 /* NewPostViewController.m */; };
 		91C500931A0FC61B008BDAB5 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C500921A0FC61B008BDAB5 /* Post.m */; };
 		91C54E681A0E69F8005BD8EA /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C54E671A0E69F8005BD8EA /* Landmark.m */; };
 		91D56B571A1034880070DC25 /* LandmarkUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91D56B561A1034870070DC25 /* LandmarkUITableViewCell.xib */; };
@@ -122,6 +123,8 @@
 		912684D01A0D77620080DD77 /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = welcome.png; path = Resourses/welcome.png; sourceTree = "<group>"; };
 		912684DA1A0D78450080DD77 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/Utilities/FacebookLogin/LoginViewController.h; sourceTree = "<group>"; };
 		912684DB1A0D78450080DD77 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ViewControllers/Utilities/FacebookLogin/LoginViewController.m; sourceTree = "<group>"; };
+		91A3F4811A10FC160043CA32 /* NewPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewPostViewController.h; path = ViewControllers/NewPostViewController.h; sourceTree = "<group>"; };
+		91A3F4821A10FC160043CA32 /* NewPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewPostViewController.m; path = ViewControllers/NewPostViewController.m; sourceTree = "<group>"; };
 		91C500911A0FC61B008BDAB5 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = Data/Models/Post.h; sourceTree = "<group>"; };
 		91C500921A0FC61B008BDAB5 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = Data/Models/Post.m; sourceTree = "<group>"; };
 		91C54E661A0E69F8005BD8EA /* Landmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Landmark.h; path = Data/Models/Landmark.h; sourceTree = "<group>"; };
@@ -288,6 +291,8 @@
 				912684A71A0D75200080DD77 /* Utilities */,
 				91D56B581A1034C20070DC25 /* LandmarkUITableViewCell.h */,
 				91D56B591A1034C20070DC25 /* LandmarkUITableViewCell.m */,
+				91A3F4811A10FC160043CA32 /* NewPostViewController.h */,
+				91A3F4821A10FC160043CA32 /* NewPostViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -552,7 +557,11 @@
 				91C500931A0FC61B008BDAB5 /* Post.m in Sources */,
 				8476C1641A0FECE9002D296F /* PostsData.m in Sources */,
 				91D56B5A1A1034C20070DC25 /* LandmarkUITableViewCell.m in Sources */,
+<<<<<<< HEAD
 				844F24B11A11096600438066 /* StatisticsData.m in Sources */,
+=======
+				91A3F4831A10FC160043CA32 /* NewPostViewController.m in Sources */,
+>>>>>>> FETCH_HEAD
 				84EDC6981A0E302800939E2B /* DataHelper.m in Sources */,
 				844F24A71A11004600438066 /* CoreDataHelper.m in Sources */,
 				912684DC1A0D78450080DD77 /* LoginViewController.m in Sources */,

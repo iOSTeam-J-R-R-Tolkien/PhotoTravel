@@ -4,9 +4,11 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @implementation Post
-+ (instancetype)initWithName:(NSString *)name user:(id)user {
-  Post *post = [[Post alloc] init];
-  post.name = name;
++ (instancetype)initWithName:(NSString *)name
+                        user:(NSString *)userName {
+    Post *post = [[Post alloc] init];
+    post.name = name;
+    post.userName = userName;
 
   return post;
 }

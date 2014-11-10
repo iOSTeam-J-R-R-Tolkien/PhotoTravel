@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gyk-3D-Od6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1376" y="428"/>
+            <point key="canvasLocation" x="1119" y="301"/>
         </scene>
         <!--LandmarUIkTableView-->
         <scene sceneID="fkr-o1-Ok9">
@@ -195,9 +195,6 @@
                                     <color key="titleColor" red="0.88269292089999996" green="0.88269292089999996" blue="0.88269292089999996" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="addLandmark:" destination="Hvx-TW-jiy" eventType="touchUpInside" id="N6R-Wb-hXR"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjW-OK-u5d">
                                 <rect key="frame" x="157" y="20" width="300" height="38"/>
@@ -212,8 +209,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addPostToLastAddedLandmark:" destination="Hvx-TW-jiy" eventType="touchUpInside" id="HS0-wB-rSs"/>
-                                    <action selector="addPostToLastAddedLandmark:" destination="Hvx-TW-jiy" eventType="touchDown" id="sM1-tz-UsQ"/>
+                                    <action selector="newPostBtn:" destination="Hvx-TW-jiy" eventType="touchUpInside" id="T4t-Si-2cn"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="126" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Q7M-3R-xYn">
@@ -240,6 +236,7 @@
                         <segue destination="pWw-3f-ywl" kind="show" identifier="myInfoSegue" id="OSV-Oi-HiC"/>
                         <segue destination="0bN-zh-II3" kind="show" identifier="singleImageView" id="JMg-Pg-GEe"/>
                         <segue destination="TAv-Ng-cfn" kind="show" identifier="myLandmarkSegue" id="zzs-8w-vqg"/>
+                        <segue destination="uvO-ej-lgO" kind="show" identifier="newPostSegue" id="5zb-cc-TmL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biG-d4-E72" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -292,13 +289,93 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1400" y="-1041"/>
+            <point key="canvasLocation" x="1128" y="-1151"/>
+        </scene>
+        <!--New Post-->
+        <scene sceneID="gs2-kM-c97">
+            <objects>
+                <viewController title="New Post" id="uvO-ej-lgO" customClass="NewPostViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t1x-Ye-uxT"/>
+                        <viewControllerLayoutGuide type="bottom" id="dzH-OG-5bh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fsh-Xc-epc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqM-b4-guy">
+                                <rect key="frame" x="16" y="72" width="131" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="Jmk-yR-LuZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="name of the post" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OUr-tl-f4M">
+                                <rect key="frame" x="155" y="68" width="429" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkk-6l-LeH">
+                                <rect key="frame" x="16" y="188" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="XIl-uf-g8h">
+                                <rect key="frame" x="155" y="118" width="429" height="162"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pg-u0-sT5">
+                                <rect key="frame" x="225" y="359" width="150" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="6lw-yu-xCa"/>
+                                    <constraint firstAttribute="height" constant="59" id="ep1-Ib-CCL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Add new post">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewPostBtn:" destination="uvO-ej-lgO" eventType="touchUpInside" id="xaM-bL-ZpP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6pg-u0-sT5" firstAttribute="top" secondItem="XIl-uf-g8h" secondAttribute="bottom" constant="76" id="65C-hl-Cdx"/>
+                            <constraint firstItem="OUr-tl-f4M" firstAttribute="trailing" secondItem="fsh-Xc-epc" secondAttribute="trailingMargin" id="7C8-uq-8Sf"/>
+                            <constraint firstItem="6pg-u0-sT5" firstAttribute="centerX" secondItem="fsh-Xc-epc" secondAttribute="centerX" id="Dw0-bI-xwW"/>
+                            <constraint firstItem="XIl-uf-g8h" firstAttribute="leading" secondItem="OUr-tl-f4M" secondAttribute="leading" id="E5F-GA-HvY"/>
+                            <constraint firstItem="bkk-6l-LeH" firstAttribute="top" secondItem="sqM-b4-guy" secondAttribute="bottom" constant="95" id="NNP-XZ-teJ"/>
+                            <constraint firstItem="sqM-b4-guy" firstAttribute="leading" secondItem="fsh-Xc-epc" secondAttribute="leadingMargin" id="NvO-ax-jTe"/>
+                            <constraint firstItem="bkk-6l-LeH" firstAttribute="leading" secondItem="sqM-b4-guy" secondAttribute="leading" id="OLt-vO-rtD"/>
+                            <constraint firstItem="XIl-uf-g8h" firstAttribute="top" secondItem="OUr-tl-f4M" secondAttribute="bottom" constant="20" id="U0M-bF-4U3"/>
+                            <constraint firstItem="OUr-tl-f4M" firstAttribute="baseline" secondItem="sqM-b4-guy" secondAttribute="baseline" id="VFP-fz-anR"/>
+                            <constraint firstItem="OUr-tl-f4M" firstAttribute="trailing" secondItem="XIl-uf-g8h" secondAttribute="trailing" id="VcQ-kY-YcS"/>
+                            <constraint firstItem="XIl-uf-g8h" firstAttribute="leading" secondItem="bkk-6l-LeH" secondAttribute="trailing" constant="8" symbolic="YES" id="Vrg-MW-wE1"/>
+                            <constraint firstItem="OUr-tl-f4M" firstAttribute="leading" secondItem="sqM-b4-guy" secondAttribute="trailing" constant="8" symbolic="YES" id="aIb-iL-bfg"/>
+                            <constraint firstItem="dzH-OG-5bh" firstAttribute="top" secondItem="6pg-u0-sT5" secondAttribute="bottom" constant="185" id="tP9-aJ-ukW"/>
+                            <constraint firstItem="sqM-b4-guy" firstAttribute="top" secondItem="t1x-Ye-uxT" secondAttribute="bottom" constant="8" symbolic="YES" id="v2g-Jf-4gT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="postDescriptionTextView" destination="XIl-uf-g8h" id="XtL-GU-GRv"/>
+                        <outlet property="postNameTextField" destination="OUr-tl-f4M" id="xqB-2w-UUu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aeu-i2-AY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915" y="-735"/>
         </scene>
     </scenes>
     <resources>
         <image name="transparent-bg.png" width="518" height="524"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LhW-Kb-v8B"/>
+        <segue reference="JMg-Pg-GEe"/>
     </inferredMetricsTieBreakers>
 </document>

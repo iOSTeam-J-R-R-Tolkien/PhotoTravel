@@ -65,9 +65,6 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
     [LandmarksData getLastPostsAsync:5 for:self];
 }
 
-- (IBAction)addLandmark:(id)sender {
-}
-
 - (void)lastPostsDataLoadHandler:(NSMutableArray *)landmarkData {
   self.rowDataArray = landmarkData;
   [self.postsTableView reloadData];
@@ -231,6 +228,10 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
                        cancelButtonTitle:@"Ok"
                        otherButtonTitles:nil];
   [alert show];
+}
+
+- (IBAction)newPostBtn:(id)sender {
+    [self performSegueWithIdentifier:@"newPostSegue" sender:self];
 }
 
 @end
