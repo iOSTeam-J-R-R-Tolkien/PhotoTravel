@@ -11,10 +11,18 @@
 #import <Parse/Parse.h>
 
 #import "PostsData.h"
+#import "EnvironmentHelper.h"
+#import "PostDataProtocol.h"
 
 @implementation PostsData
 
-+(void)loadImageFromPostAsync:(PFObject *) post andLoadHandler:(void (^)(UIImage *))delegate{
++(void)loadImageFromPostAsync:(PFObject *) post for:(id<PostDataProtocol>)resultConsumer andLoadHandler:(void (^)(UIImage *))delegate{
+    BOOL isConnected = [EnvironmentHelper isInternetConnectionEstablished];
+    if(!isConnected){
+        [resultConsumer noConnectionHandler];
+        return;
+    }
+    
     PFFile *userImageFile = post[@"image"];
     [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
         if (!error) {

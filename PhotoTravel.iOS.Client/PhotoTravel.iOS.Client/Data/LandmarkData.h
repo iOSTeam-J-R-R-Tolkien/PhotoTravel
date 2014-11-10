@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "Landmark.h"
+#import "LandmarkDataProtocol.h"
 
 @interface LandmarkData : NSObject
 

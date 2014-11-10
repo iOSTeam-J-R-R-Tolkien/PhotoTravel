@@ -3,6 +3,9 @@
 
 @protocol ProfileDataProtocol
 
+@required
+- (void)noConnectionHandler;
+
 @optional
 - (void)profileImageLoadHandler:(UIImage *)profileImage;
 - (void)userDataLoadHandler:(ApplicationUser *)userData;

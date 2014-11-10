@@ -31,7 +31,6 @@
   self.userProfileRowsData = [[NSMutableDictionary alloc] init];
   [self.viewTableProfileData setDataSource:self];
   [self.viewTableProfileData setBackgroundColor:[UIColor clearColor]];
-  
 }
 
 - (void)logoutButtonAction:(id)sender {
@@ -42,7 +41,7 @@
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
   [self.loadingPopup showOnScreen];
-    [self _loadData];
+  [self _loadData];
 }
 
 - (void)_loadData {
@@ -76,7 +75,7 @@
 
   self.userProfileRowsDataKeys = [self.userProfileRowsData allKeys];
   [self.viewTableProfileData reloadData];
-    [self.loadingPopup hideFromScreen];
+  [self.loadingPopup hideFromScreen];
 
   [ProfileData loadProfileImageAsync:self forUserId:self.userData.userId];
 }
@@ -122,6 +121,17 @@
   valueLabel.text = labelValue;
 
   return cell;
+}
+
+- (void)noConnectionHandler {
+  UIAlertView *alert =
+      [[UIAlertView alloc] initWithTitle:@"No connection"
+                                 message:@"Please ensure your WiFi or mobile "
+                                         @"data connection is enabled."
+                                delegate:self
+                       cancelButtonTitle:@"Ok"
+                       otherButtonTitles:nil];
+  [alert show];
 }
 
 @end

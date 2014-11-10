@@ -25,5 +25,6 @@
 - (IBAction)addPostToLastAddedLandmark:(id)sender;
 
 -(void)lastPostsDataLoadHandler:(NSMutableArray *)landmarkData;
+- (void)noConnectionHandler;
 
 @end

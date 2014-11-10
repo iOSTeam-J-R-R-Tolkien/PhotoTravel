@@ -62,6 +62,7 @@
 		78CE6E8B169606394BBC1F2B /* Pods-PhotoTravel.iOS.Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTravel.iOS.Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTravel.iOS.Client/Pods-PhotoTravel.iOS.Client.release.xcconfig"; sourceTree = "<group>"; };
 		84110DB81A1049C40066D03E /* EnvironmentHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentHelper.h; sourceTree = "<group>"; };
 		84110DB91A1049C40066D03E /* EnvironmentHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvironmentHelper.m; sourceTree = "<group>"; };
+		84110DBC1A1050FF0066D03E /* PostDataProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PostDataProtocol.h; path = Data/DataProtocols/PostDataProtocol.h; sourceTree = "<group>"; };
 		8460C95F1A0E567900821C3C /* ProfileDataProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ProfileDataProtocol.h; path = Data/DataProtocols/ProfileDataProtocol.h; sourceTree = "<group>"; };
 		8476C1621A0FECE9002D296F /* PostsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostsData.h; path = Data/PostsData.h; sourceTree = "<group>"; };
 		8476C1631A0FECE9002D296F /* PostsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostsData.m; path = Data/PostsData.m; sourceTree = "<group>"; };
@@ -149,6 +150,7 @@
 			children = (
 				8460C95F1A0E567900821C3C /* ProfileDataProtocol.h */,
 				91EE46011A0E872400FDB782 /* LandmarkDataProtocol.h */,
+				84110DBC1A1050FF0066D03E /* PostDataProtocol.h */,
 			);
 			name = DataProtocols;
 			sourceTree = "<group>";

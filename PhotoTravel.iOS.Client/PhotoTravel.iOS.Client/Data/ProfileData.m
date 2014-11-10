@@ -1,22 +1,16 @@
-//
-//  ProfileInformation.m
-//  PhotoTravel
-//
-//  Created by Pesho on 11/7/14.
-//  Copyright (c) 2014 PhotoTravel. All rights reserved.
-//
+@import UIKit;
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <Parse/Parse.h>
 
 #import "ProfileData.h"
 #import "ProfileDataProtocol.h"
-#import <Parse/Parse.h>
-#import <Parse/Parse.h>
-#import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "DataHelper.h"
-@import UIKit;
+#import "EnvironmentHelper.h"
 
 @implementation ProfileData
 
 + (UIImage *)getProfileImageForProfileId:(NSString *)profileId {
+    
   NSString *profileImageUrl = [NSString
       stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large",
                        profileId];
@@ -28,6 +22,12 @@
 }
 
 + (void)loadProfileDataAsync:(id<ProfileDataProtocol>)delegate {
+    BOOL isConnected = [EnvironmentHelper isInternetConnectionEstablished];
+    if(!isConnected){
+        [delegate noConnectionHandler];
+        return;
+    }
+    
   FBRequest *request = [FBRequest requestForMe];
   [request startWithCompletionHandler:^(FBRequestConnection *connection,
                                         id result, NSError *error) {
@@ -47,6 +47,12 @@
 
 + (void)loadProfileImageAsync:(id<ProfileDataProtocol>)delegate
                     forUserId:(NSString *)userId {
+    BOOL isConnected = [EnvironmentHelper isInternetConnectionEstablished];
+    if(!isConnected){
+        [delegate noConnectionHandler];
+        return;
+    }
+    
   NSString *pictureUrlFormat = [NSString
       stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large",
                        userId];

@@ -184,7 +184,7 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
   UIImage *imageToLoad = [self.cachedImages objectForKey:postId];
   if (!imageToLoad) {
     [PostsData
-        loadImageFromPostAsync:post.pfObject
+        loadImageFromPostAsync:post.pfObject for:self
                 andLoadHandler:^(UIImage *image) {
                     [self.cachedImages setObject:image forKey:postId];
 
@@ -222,6 +222,17 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   self.cachedImages = nil;
+}
+
+- (void)noConnectionHandler {
+    UIAlertView *alert =
+    [[UIAlertView alloc] initWithTitle:@"No connection"
+                               message:@"Please ensure your WiFi or mobile "
+     @"data connection is enabled."
+                              delegate:self
+                     cancelButtonTitle:@"Ok"
+                     otherButtonTitles:nil];
+    [alert show];
 }
 
 @end

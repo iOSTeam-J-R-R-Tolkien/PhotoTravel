@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#import "PostDataProtocol.h"
+
 @interface PostsData : NSObject
 
-+(void)loadImageFromPostAsync:(PFObject *) post andLoadHandler:(void (^)(UIImage *))delegate;
++(void)loadImageFromPostAsync:(PFObject *) post for:(id<PostDataProtocol>)resultConsumer andLoadHandler:(void (^)(UIImage *))delegate;
 
 @end

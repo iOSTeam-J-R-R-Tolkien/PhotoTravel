@@ -1,22 +1,23 @@
-//
-//  LandmarkData.m
-//  PhotoTravel.iOS.Client
-//
-//  Created by Vindicator on 11/9/14.
-//  Copyright (c) 2014 Vindicator. All rights reserved.
-//
 
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
-#import "LandmarkDataProtocol.h"
 #import "LandmarkData.h"
+#import "LandmarkDataProtocol.h"
 #import "DataHelper.h"
+#import "EnvironmentHelper.h"
+
 
 @implementation LandmarkData
 
 + (void)getLastPostsAsync:(int)count
                       for:(id<LandmarkDataProtocol>)delegate {
+    BOOL isConnected = [EnvironmentHelper isInternetConnectionEstablished];
+    if(!isConnected){
+        [delegate noConnectionHandler];
+        return;
+    }
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
     [query orderByDescending:@"createdAt"];
     [query includeKey:@"landmark"];
@@ -43,6 +44,12 @@
 
 + (void)getLandmarkWithPostsAsync:(Landmark *)landmark
                      for:(id<LandmarkDataProtocol>)delegate {
+    BOOL isConnected = [EnvironmentHelper isInternetConnectionEstablished];
+    if(!isConnected){
+        [delegate noConnectionHandler];
+        return;
+    }
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
     [query orderByDescending:@"createdAt"];
     [query whereKey:@"landmark" equalTo:landmark.pfObject];

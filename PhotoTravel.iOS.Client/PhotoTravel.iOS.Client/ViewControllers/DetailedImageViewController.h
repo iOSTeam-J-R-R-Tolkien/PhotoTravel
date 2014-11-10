@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "LoadingScreenViewController.h"
-#import "Landmark.h"
 #import "LandmarkDataProtocol.h"
+#import "Landmark.h"
 
 @interface DetailedImageViewController : UIViewController<LandmarkDataProtocol>
 
@@ -21,5 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageContainer;
 - (IBAction)imagePinch:(UIPinchGestureRecognizer *)sender;
 - (IBAction)imageTap:(UITapGestureRecognizer *)sender;
+
+- (void)noConnectionHandler;
 
 @end

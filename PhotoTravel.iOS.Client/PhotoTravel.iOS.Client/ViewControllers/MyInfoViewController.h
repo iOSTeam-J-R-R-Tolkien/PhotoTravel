@@ -23,4 +23,5 @@
 
 - (void)userDataLoadHandler:(ApplicationUser *)userData;
 - (void)profileImageLoadHandler:(UIImage *)profileImage;
+- (void)noConnectionHandler;
 @end

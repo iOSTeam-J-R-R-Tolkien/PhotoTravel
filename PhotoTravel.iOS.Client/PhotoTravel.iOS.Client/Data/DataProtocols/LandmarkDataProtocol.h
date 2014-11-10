@@ -11,6 +11,9 @@
 
 @protocol LandmarkDataProtocol
 
+@required
+- (void)noConnectionHandler;
+
 @optional
 - (void)lastPostsDataLoadHandler:(NSMutableArray *)landmarkData;
 - (void)landmarkWithPostsHander:(Landmark *)landmarkData;
