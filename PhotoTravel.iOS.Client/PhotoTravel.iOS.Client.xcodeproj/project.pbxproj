@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		84110DBA1A1049C40066D03E /* EnvironmentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84110DB91A1049C40066D03E /* EnvironmentHelper.m */; };
+		844F24A71A11004600438066 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F24A61A11004600438066 /* CoreDataHelper.m */; };
+		844F24AB1A11047A00438066 /* StatisticsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 844F24A91A11047A00438066 /* StatisticsModel.xcdatamodeld */; };
+		844F24AE1A1105AC00438066 /* Statistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F24AD1A1105AC00438066 /* Statistics.m */; };
+		844F24B11A11096600438066 /* StatisticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F24B01A11096600438066 /* StatisticsData.m */; };
 		8476C1641A0FECE9002D296F /* PostsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8476C1631A0FECE9002D296F /* PostsData.m */; };
 		84EDC6981A0E302800939E2B /* DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDC6951A0E302800939E2B /* DataHelper.m */; };
 		84EDC6991A0E302800939E2B /* ViewsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDC6971A0E302800939E2B /* ViewsHelper.m */; };
@@ -38,7 +42,6 @@
 		912684D81A0D77620080DD77 /* welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 912684CF1A0D77620080DD77 /* welcome.jpg */; };
 		912684D91A0D77620080DD77 /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 912684D01A0D77620080DD77 /* welcome.png */; };
 		912684DC1A0D78450080DD77 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 912684DB1A0D78450080DD77 /* LoginViewController.m */; };
-		91A3F4831A10FC160043CA32 /* NewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A3F4821A10FC160043CA32 /* NewPostViewController.m */; };
 		91C500931A0FC61B008BDAB5 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C500921A0FC61B008BDAB5 /* Post.m */; };
 		91C54E681A0E69F8005BD8EA /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C54E671A0E69F8005BD8EA /* Landmark.m */; };
 		91D56B571A1034880070DC25 /* LandmarkUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91D56B561A1034870070DC25 /* LandmarkUITableViewCell.xib */; };
@@ -64,6 +67,13 @@
 		84110DB81A1049C40066D03E /* EnvironmentHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentHelper.h; sourceTree = "<group>"; };
 		84110DB91A1049C40066D03E /* EnvironmentHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvironmentHelper.m; sourceTree = "<group>"; };
 		84110DBC1A1050FF0066D03E /* PostDataProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PostDataProtocol.h; path = Data/DataProtocols/PostDataProtocol.h; sourceTree = "<group>"; };
+		844F24A51A11004600438066 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataHelper.h; path = Helpers/CoreDataHelper.h; sourceTree = "<group>"; };
+		844F24A61A11004600438066 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataHelper.m; path = Helpers/CoreDataHelper.m; sourceTree = "<group>"; };
+		844F24AA1A11047A00438066 /* StatisticsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StatisticsModel.xcdatamodel; sourceTree = "<group>"; };
+		844F24AC1A1105AC00438066 /* Statistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Statistics.h; path = Databse/Statistics.h; sourceTree = "<group>"; };
+		844F24AD1A1105AC00438066 /* Statistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Statistics.m; path = Databse/Statistics.m; sourceTree = "<group>"; };
+		844F24AF1A11096600438066 /* StatisticsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsData.h; path = Data/StatisticsData.h; sourceTree = "<group>"; };
+		844F24B01A11096600438066 /* StatisticsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsData.m; path = Data/StatisticsData.m; sourceTree = "<group>"; };
 		8460C95F1A0E567900821C3C /* ProfileDataProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ProfileDataProtocol.h; path = Data/DataProtocols/ProfileDataProtocol.h; sourceTree = "<group>"; };
 		8476C1621A0FECE9002D296F /* PostsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostsData.h; path = Data/PostsData.h; sourceTree = "<group>"; };
 		8476C1631A0FECE9002D296F /* PostsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostsData.m; path = Data/PostsData.m; sourceTree = "<group>"; };
@@ -112,8 +122,6 @@
 		912684D01A0D77620080DD77 /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = welcome.png; path = Resourses/welcome.png; sourceTree = "<group>"; };
 		912684DA1A0D78450080DD77 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/Utilities/FacebookLogin/LoginViewController.h; sourceTree = "<group>"; };
 		912684DB1A0D78450080DD77 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ViewControllers/Utilities/FacebookLogin/LoginViewController.m; sourceTree = "<group>"; };
-		91A3F4811A10FC160043CA32 /* NewPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewPostViewController.h; path = ViewControllers/NewPostViewController.h; sourceTree = "<group>"; };
-		91A3F4821A10FC160043CA32 /* NewPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewPostViewController.m; path = ViewControllers/NewPostViewController.m; sourceTree = "<group>"; };
 		91C500911A0FC61B008BDAB5 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = Data/Models/Post.h; sourceTree = "<group>"; };
 		91C500921A0FC61B008BDAB5 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = Data/Models/Post.m; sourceTree = "<group>"; };
 		91C54E661A0E69F8005BD8EA /* Landmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Landmark.h; path = Data/Models/Landmark.h; sourceTree = "<group>"; };
@@ -148,6 +156,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		844F24A81A11043A00438066 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				844F24A91A11047A00438066 /* StatisticsModel.xcdatamodeld */,
+				844F24AC1A1105AC00438066 /* Statistics.h */,
+				844F24AD1A1105AC00438066 /* Statistics.m */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
 		8460C95C1A0E552F00821C3C /* DataProtocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +220,7 @@
 		912684781A0D6F210080DD77 /* PhotoTravel.iOS.Client */ = {
 			isa = PBXGroup;
 			children = (
+				844F24A81A11043A00438066 /* Database */,
 				912684AB1A0D75690080DD77 /* Helpers */,
 				912684C71A0D774F0080DD77 /* Resources */,
 				912684C31A0D764F0080DD77 /* Data */,
@@ -269,8 +288,6 @@
 				912684A71A0D75200080DD77 /* Utilities */,
 				91D56B581A1034C20070DC25 /* LandmarkUITableViewCell.h */,
 				91D56B591A1034C20070DC25 /* LandmarkUITableViewCell.m */,
-				91A3F4811A10FC160043CA32 /* NewPostViewController.h */,
-				91A3F4821A10FC160043CA32 /* NewPostViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -322,6 +339,8 @@
 				84EDC6971A0E302800939E2B /* ViewsHelper.m */,
 				84110DB81A1049C40066D03E /* EnvironmentHelper.h */,
 				84110DB91A1049C40066D03E /* EnvironmentHelper.m */,
+				844F24A51A11004600438066 /* CoreDataHelper.h */,
+				844F24A61A11004600438066 /* CoreDataHelper.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -337,6 +356,8 @@
 				91F6DDBD1A0F558000D8CCCF /* LandmarksData.m */,
 				8476C1621A0FECE9002D296F /* PostsData.h */,
 				8476C1631A0FECE9002D296F /* PostsData.m */,
+				844F24AF1A11096600438066 /* StatisticsData.h */,
+				844F24B01A11096600438066 /* StatisticsData.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -522,6 +543,7 @@
 				9126847C1A0D6F210080DD77 /* main.m in Sources */,
 				912684C11A0D75F00080DD77 /* MainViewController.m in Sources */,
 				91D7A2161A0FFA2A00BA0724 /* LandmarkTableViewController.m in Sources */,
+				844F24AB1A11047A00438066 /* StatisticsModel.xcdatamodeld in Sources */,
 				912684C61A0D76600080DD77 /* UsersData.m in Sources */,
 				84EDC6A01A0E336300939E2B /* LandmarkWithLastPostUITableViewCell.m in Sources */,
 				84EDC6991A0E302800939E2B /* ViewsHelper.m in Sources */,
@@ -530,10 +552,12 @@
 				91C500931A0FC61B008BDAB5 /* Post.m in Sources */,
 				8476C1641A0FECE9002D296F /* PostsData.m in Sources */,
 				91D56B5A1A1034C20070DC25 /* LandmarkUITableViewCell.m in Sources */,
-				91A3F4831A10FC160043CA32 /* NewPostViewController.m in Sources */,
+				844F24B11A11096600438066 /* StatisticsData.m in Sources */,
 				84EDC6981A0E302800939E2B /* DataHelper.m in Sources */,
+				844F24A71A11004600438066 /* CoreDataHelper.m in Sources */,
 				912684DC1A0D78450080DD77 /* LoginViewController.m in Sources */,
 				84EDC69D1A0E310B00939E2B /* ApplicationUser.m in Sources */,
+				844F24AE1A1105AC00438066 /* Statistics.m in Sources */,
 				912684B21A0D75B10080DD77 /* LoadingScreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -743,6 +767,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		844F24A91A11047A00438066 /* StatisticsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				844F24AA1A11047A00438066 /* StatisticsModel.xcdatamodel */,
+			);
+			currentVersion = 844F24AA1A11047A00438066 /* StatisticsModel.xcdatamodel */;
+			name = StatisticsModel.xcdatamodeld;
+			path = Databse/StatisticsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		912684801A0D6F210080DD77 /* PhotoTravel_iOS_Client.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

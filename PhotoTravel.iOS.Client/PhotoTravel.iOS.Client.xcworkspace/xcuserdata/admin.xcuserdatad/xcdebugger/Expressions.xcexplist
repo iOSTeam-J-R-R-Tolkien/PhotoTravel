@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "+[StatisticsData deleteOldStatistics]:StatisticsData.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[DetailedImageViewController nextImageHandler:]:DetailedImageViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.landmark.posts count]">
+            </PersistentString>
+            <PersistentString
+               value = "self.postIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController viewDidLoad]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "todayStatistics.usersCount;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DetailedImageViewController previousImageHandler:]:DetailedImageViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.postIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DetailedImageViewController reloadImage]:DetailedImageViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.cachedImages">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
