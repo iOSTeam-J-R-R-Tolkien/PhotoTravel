@@ -23,6 +23,7 @@
 #import "Post.h"
 #import "LandmarkData.h"
 #import "PostsData.h"
+#import "DetailedImageViewController.h"
 
 @interface MainViewController ()
 @property(strong, nonatomic) MusicManagerController *musicController;
@@ -44,11 +45,12 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
 
   self.musicController = [[MusicManagerController alloc] init];
   [self.musicController tryPlayMusic];
-    
+
   [ViewsHelper changeBackgroundImage:self withImage:@"bg.jpg"];
 
   UINib *nib = [UINib nibWithNibName:identifier bundle:nil];
   [self.postsTableView registerNib:nib forCellReuseIdentifier:identifier];
+  self.postsTableView.delegate = self;
   self.rowDataArray = [[NSMutableArray alloc] init];
   [self.postsTableView setDataSource:self];
   [self.postsTableView setBackgroundColor:[UIColor colorWithRed:0.960784
@@ -71,7 +73,7 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
-    [self.loadingPopup showOnScreen];
+  [self.loadingPopup showOnScreen];
 
   PFUser *currentUser = [PFUser currentUser];
   if (currentUser != nil) {
@@ -122,10 +124,6 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
-}
-
-- (IBAction)buttonToImageView:(UIButton *)sender {
-  [self performSegueWithIdentifier:@"singleImageView" sender:self];
 }
 
 - (UIButton *)profileImageToBarButton:(NSString *)userId {
@@ -184,14 +182,44 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
 
   Landmark *landmark = (Landmark *)self.rowDataArray[indexPath.row];
   Post *post = (Post *)landmark.posts[0];
-  [PostsData loadImageFromPostAsync:post.pfObject
-                     andLoadHandler:^(UIImage *image) {
-                         [ViewsHelper changeImageSourceWithAnimation:image forTargetView:cell.postImageView];
-                     }];
+  NSNumber *postId = post.pfObject.objectId;
+
+  UIImage *imageToLoad = [self.cachedImages objectForKey:postId];
+  if (!imageToLoad) {
+    [PostsData
+        loadImageFromPostAsync:post.pfObject
+                andLoadHandler:^(UIImage *image) {
+                    [self.cachedImages setObject:image forKey:postId];
+
+                    [ViewsHelper
+                        changeImageSourceWithAnimation:image
+                                         forTargetView:cell.postImageView];
+                }];
+  } else {
+    [ViewsHelper changeImageSourceWithAnimation:imageToLoad
+                                  forTargetView:cell.postImageView];
+  }
 
   cell.landmarkLabel.text = landmark.name;
   cell.lastPostLable.text = post.name;
   return cell;
+}
+
+- (void)tableView:(UITableView *)tableView
+    didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+  self.selectedRow = indexPath.row;
+  [self performSegueWithIdentifier:@"singleImageView" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([[segue identifier] isEqualToString:@"singleImageView"]) {
+    DetailedImageViewController *galleryController =
+        (DetailedImageViewController *)[segue destinationViewController];
+    Landmark *landmark = (Landmark *)self.rowDataArray[self.selectedRow];
+    galleryController.landmark = landmark;
+    galleryController.postIndex = 0;
+  }
 }
 
 @end

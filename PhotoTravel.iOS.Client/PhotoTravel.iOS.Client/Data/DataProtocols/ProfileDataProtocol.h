@@ -3,7 +3,8 @@
 
 @protocol ProfileDataProtocol
 
+@optional
 - (void)profileImageLoadHandler:(UIImage *)profileImage;
--(void)userDataLoadHandler:(ApplicationUser *)userData;
+- (void)userDataLoadHandler:(ApplicationUser *)userData;
 
 @end

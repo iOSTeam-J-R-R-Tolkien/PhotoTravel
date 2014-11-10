@@ -15,13 +15,13 @@
 @interface MainViewController : UIViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UITableViewDataSource, LandmarkDataProtocol>
 
 @property (nonatomic, strong) NSMutableArray *rowDataArray;
-@property(nonatomic, strong) NSMutableDictionary *postsImages;
+@property(strong, nonatomic) NSMutableDictionary *cachedImages;
+@property(nonatomic) long selectedRow;
 
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) UIImage *profileImage;
 @property (weak, nonatomic) IBOutlet UITableView *postsTableView;
 
-- (IBAction)buttonToImageView:(UIButton *)sender;
 - (IBAction)addPostToLastAddedLandmark:(id)sender;
 
 -(void)lastPostsDataLoadHandler:(NSMutableArray *)landmarkData;

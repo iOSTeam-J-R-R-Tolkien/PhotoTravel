@@ -20,7 +20,6 @@
         if (!error) {
             UIImage *image =[UIImage imageWithData:imageData];
             delegate(image);
-//            cell.postImageView.image = image;
         }
     }];
 }

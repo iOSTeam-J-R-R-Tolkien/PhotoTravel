@@ -41,7 +41,7 @@
     }];
 }
 
-+ (void)getLandmarkWithPosts:(Landmark *)landmark
++ (void)getLandmarkWithPostsAsync:(Landmark *)landmark
                      for:(id<LandmarkDataProtocol>)delegate {
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
     [query orderByDescending:@"createdAt"];
@@ -59,7 +59,7 @@
                 NSLog(@"retrieved related post: %@", post);
             }
             landmark.posts = outputData;
-            [delegate landmarkWithPosts:landmark];
+            [delegate landmarkWithPostsHander:landmark];
         }
     }];
 }

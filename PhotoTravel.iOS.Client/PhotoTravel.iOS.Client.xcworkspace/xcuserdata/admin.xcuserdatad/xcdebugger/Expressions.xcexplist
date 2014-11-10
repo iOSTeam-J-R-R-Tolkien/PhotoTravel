@@ -3,15 +3,23 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[LoadingScreenViewController hideFromScreen]:LoadingScreenViewController.m">
+         contextName = "-[DetailedImageViewController nextImageHandler:]:DetailedImageViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.parentViewController">
+               value = "[self.landmark.posts count]">
+            </PersistentString>
+            <PersistentString
+               value = "self.postIndex">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[MyInfoViewController userDataLoadHandler:]:MyInfoViewController.m">
+         contextName = "-[DetailedImageViewController previousImageHandler:]:DetailedImageViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.postIndex">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

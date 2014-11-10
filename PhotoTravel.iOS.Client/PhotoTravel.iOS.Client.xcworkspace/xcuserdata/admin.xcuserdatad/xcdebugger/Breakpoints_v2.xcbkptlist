@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PhotoTravel.iOS.Client/ViewControllers/Utilities/LoadingScreen/LoadingScreenViewController.m"
-            timestampString = "437255001.755886"
+            filePath = "PhotoTravel.iOS.Client/ViewControllers/DetailedImageViewController.m"
+            timestampString = "437272896.370379"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "-hideFromScreen"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-previousImageHandler:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,26 +25,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PhotoTravel.iOS.Client/ViewControllers/MainViewController.m"
-            timestampString = "437264154.384622"
+            filePath = "PhotoTravel.iOS.Client/ViewControllers/DetailedImageViewController.m"
+            timestampString = "437272898.497935"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "207"
-            endingLineNumber = "207">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotoTravel.iOS.Client/ViewControllers/MainViewController.m"
-            timestampString = "437263187.216684"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211">
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "-nextImageHandler:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -54,11 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhotoTravel.iOS.Client/ViewControllers/DetailedImageViewController.m"
-            timestampString = "437264190.030552"
+            timestampString = "437272960.95181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65">
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "-previousImageHandler:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -68,53 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhotoTravel.iOS.Client/ViewControllers/DetailedImageViewController.m"
-            timestampString = "437264258.834809"
+            timestampString = "437273027.012049"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotoTravel.iOS.Client/ViewControllers/DetailedImageViewController.m"
-            timestampString = "437264262.600471"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotoTravel.iOS.Client/ViewControllers/DetailedImageViewController.m"
-            timestampString = "437264264.625753"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotoTravel.iOS.Client/ViewControllers/DetailedImageViewController.m"
-            timestampString = "437264392.632002"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56">
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-nextImageHandler:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
