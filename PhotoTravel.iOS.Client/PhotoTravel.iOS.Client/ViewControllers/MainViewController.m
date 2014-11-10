@@ -11,6 +11,7 @@
 #import "UsersData.h"
 #import "LandmarksData.h"
 #import "PostsData.h"
+#import "StatisticsData.h"
 
 #import "ViewsHelper.h"
 #import "DataHelper.h"
@@ -38,6 +39,11 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+
+  [StatisticsData updateStatisticsWithPostsCount:[NSNumber numberWithInt:5]
+                               andLandmarksCount:[NSNumber numberWithInt:6]
+                                   andUsersCount:[NSNumber numberWithInt:7]];
+  Statistics *todayStatistics = [StatisticsData getTodayStatistics];
 
   self.cachedImages = [[NSMutableDictionary alloc] init];
   self.loadingPopup = [LoadingScreenViewController initWithParentView:self];

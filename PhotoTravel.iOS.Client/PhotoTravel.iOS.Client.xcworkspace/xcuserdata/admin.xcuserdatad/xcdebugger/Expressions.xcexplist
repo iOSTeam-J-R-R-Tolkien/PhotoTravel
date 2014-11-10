@@ -3,12 +3,7 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[DetailedImageViewController reloadImage]:DetailedImageViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.cachedImages">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "+[StatisticsData deleteOldStatistics]:StatisticsData.m">
       </ContextState>
       <ContextState
          contextName = "-[DetailedImageViewController nextImageHandler:]:DetailedImageViewController.m">
@@ -22,10 +17,26 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[MainViewController viewDidLoad]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "todayStatistics.usersCount;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[DetailedImageViewController previousImageHandler:]:DetailedImageViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "self.postIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DetailedImageViewController reloadImage]:DetailedImageViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.cachedImages">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
