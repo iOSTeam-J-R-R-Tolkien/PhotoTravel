@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[DetailedImageViewController reloadImage]:DetailedImageViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.cachedImages">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[DetailedImageViewController nextImageHandler:]:DetailedImageViewController.m">
          <PersistentStrings>
             <PersistentString

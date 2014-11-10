@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-PhotoTravel.iOS.Client-Reachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PhotoTravel.iOS.Client.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>397DE3E54EFBA7883328FDD5</key>
+		<key>01B1C30915CCD90FB85A01CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4061756AE59D46DEBBD0BD38</key>
+		<key>5333DA6B7894A0F6E389D2A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5852EAC4BCD671850AD5DEC3</key>
+		<key>5B9CFEEB280A8F8A53936928</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ADD3BE8F52BBDB2F6F419E96</key>
+		<key>8E9A1EF12800AD7A452C5E1E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F502DB62D4950EE7748B1F33</key>
+		<key>D4A904AE0DFB8837C40A63D3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC7B0CEEDF9A2A463A34E2CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

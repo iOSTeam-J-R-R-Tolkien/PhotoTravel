@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84110DBA1A1049C40066D03E /* EnvironmentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84110DB91A1049C40066D03E /* EnvironmentHelper.m */; };
 		8476C1641A0FECE9002D296F /* PostsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8476C1631A0FECE9002D296F /* PostsData.m */; };
 		84EDC6981A0E302800939E2B /* DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDC6951A0E302800939E2B /* DataHelper.m */; };
 		84EDC6991A0E302800939E2B /* ViewsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDC6971A0E302800939E2B /* ViewsHelper.m */; };
@@ -59,6 +60,8 @@
 /* Begin PBXFileReference section */
 		4979C668896E36BD8BB0DE33 /* Pods-PhotoTravel.iOS.Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTravel.iOS.Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTravel.iOS.Client/Pods-PhotoTravel.iOS.Client.debug.xcconfig"; sourceTree = "<group>"; };
 		78CE6E8B169606394BBC1F2B /* Pods-PhotoTravel.iOS.Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTravel.iOS.Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTravel.iOS.Client/Pods-PhotoTravel.iOS.Client.release.xcconfig"; sourceTree = "<group>"; };
+		84110DB81A1049C40066D03E /* EnvironmentHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentHelper.h; sourceTree = "<group>"; };
+		84110DB91A1049C40066D03E /* EnvironmentHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvironmentHelper.m; sourceTree = "<group>"; };
 		8460C95F1A0E567900821C3C /* ProfileDataProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ProfileDataProtocol.h; path = Data/DataProtocols/ProfileDataProtocol.h; sourceTree = "<group>"; };
 		8476C1621A0FECE9002D296F /* PostsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostsData.h; path = Data/PostsData.h; sourceTree = "<group>"; };
 		8476C1631A0FECE9002D296F /* PostsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostsData.m; path = Data/PostsData.m; sourceTree = "<group>"; };
@@ -310,6 +313,8 @@
 				84EDC6951A0E302800939E2B /* DataHelper.m */,
 				84EDC6961A0E302800939E2B /* ViewsHelper.h */,
 				84EDC6971A0E302800939E2B /* ViewsHelper.m */,
+				84110DB81A1049C40066D03E /* EnvironmentHelper.h */,
+				84110DB91A1049C40066D03E /* EnvironmentHelper.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -513,6 +518,7 @@
 				912684C61A0D76600080DD77 /* ProfileData.m in Sources */,
 				84EDC6A01A0E336300939E2B /* LandmarkWithLastPostUITableViewCell.m in Sources */,
 				84EDC6991A0E302800939E2B /* ViewsHelper.m in Sources */,
+				84110DBA1A1049C40066D03E /* EnvironmentHelper.m in Sources */,
 				912684821A0D6F210080DD77 /* PhotoTravel_iOS_Client.xcdatamodeld in Sources */,
 				91C500931A0FC61B008BDAB5 /* Post.m in Sources */,
 				8476C1641A0FECE9002D296F /* PostsData.m in Sources */,

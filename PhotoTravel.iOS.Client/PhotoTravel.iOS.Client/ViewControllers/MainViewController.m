@@ -41,9 +41,10 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
 - (void)viewDidLoad {
   [super viewDidLoad];
 
+  self.cachedImages = [[NSMutableDictionary alloc] init];
   self.loadingPopup = [LoadingScreenViewController initWithParentView:self];
-
   self.musicController = [[MusicManagerController alloc] init];
+
   [self.musicController tryPlayMusic];
 
   [ViewsHelper changeBackgroundImage:self withImage:@"bg.jpg"];
@@ -120,10 +121,6 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
 - (void)signUpViewControllerDidCancelSignUp:
             (PFSignUpViewController *)signUpController {
   [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
 }
 
 - (UIButton *)profileImageToBarButton:(NSString *)userId {
@@ -220,6 +217,11 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
     galleryController.landmark = landmark;
     galleryController.postIndex = 0;
   }
+}
+
+- (void)didReceiveMemoryWarning {
+  [super didReceiveMemoryWarning];
+  self.cachedImages = nil;
 }
 
 @end

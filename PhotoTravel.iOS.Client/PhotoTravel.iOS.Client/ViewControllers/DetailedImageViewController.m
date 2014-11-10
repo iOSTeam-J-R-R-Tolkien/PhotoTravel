@@ -20,8 +20,11 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+
+  self.cachedImages = [[NSMutableDictionary alloc] init];
   self.loadingPopup = [LoadingScreenViewController initWithParentView:self];
   [self.loadingPopup showOnScreen];
+
   [ViewsHelper changeBackgroundImage:self withImage:@"bg.jpg"];
     [LandmarkData getLandmarkWithPostsAsync:self.landmark for:self];
 
@@ -96,6 +99,11 @@
     [ViewsHelper changeImageSourceWithAnimation:imageToLoad
                                   forTargetView:self.imageContainer];
   }
+}
+
+- (void)didReceiveMemoryWarning {
+  [super didReceiveMemoryWarning];
+  self.cachedImages = nil;
 }
 
 @end

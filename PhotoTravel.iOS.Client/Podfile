@@ -8,6 +8,7 @@ target 'PhotoTravel.iOS.Client' do
 pod 'Facebook-iOS-SDK', '~> 3.17'
 pod 'Parse', '1.4'
 pod 'ParseFacebookUtils', '1.4'
+pod 'Reachability', '~> 3.1'
 
 end
 
