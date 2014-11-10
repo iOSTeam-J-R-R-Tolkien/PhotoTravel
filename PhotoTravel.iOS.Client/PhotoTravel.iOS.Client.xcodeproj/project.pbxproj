@@ -27,7 +27,7 @@
 		912684B61A0D75CE0080DD77 /* MusicManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 912684B51A0D75CE0080DD77 /* MusicManagerController.m */; };
 		912684C11A0D75F00080DD77 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 912684BD1A0D75F00080DD77 /* MainViewController.m */; };
 		912684C21A0D75F00080DD77 /* MyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 912684BF1A0D75F00080DD77 /* MyInfoViewController.m */; };
-		912684C61A0D76600080DD77 /* ProfileData.m in Sources */ = {isa = PBXBuildFile; fileRef = 912684C51A0D76600080DD77 /* ProfileData.m */; };
+		912684C61A0D76600080DD77 /* UsersData.m in Sources */ = {isa = PBXBuildFile; fileRef = 912684C51A0D76600080DD77 /* UsersData.m */; };
 		912684D11A0D77620080DD77 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 912684C81A0D77620080DD77 /* bg.jpg */; };
 		912684D21A0D77620080DD77 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 912684C91A0D77620080DD77 /* Icon.png */; };
 		912684D31A0D77620080DD77 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 912684CA1A0D77620080DD77 /* Icon@2x.png */; };
@@ -43,7 +43,7 @@
 		91D56B571A1034880070DC25 /* LandmarkUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91D56B561A1034870070DC25 /* LandmarkUITableViewCell.xib */; };
 		91D56B5A1A1034C20070DC25 /* LandmarkUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D56B591A1034C20070DC25 /* LandmarkUITableViewCell.m */; };
 		91D7A2161A0FFA2A00BA0724 /* LandmarkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D7A2151A0FFA2A00BA0724 /* LandmarkTableViewController.m */; };
-		91F6DDBE1A0F558000D8CCCF /* LandmarkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F6DDBD1A0F558000D8CCCF /* LandmarkData.m */; };
+		91F6DDBE1A0F558000D8CCCF /* LandmarksData.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F6DDBD1A0F558000D8CCCF /* LandmarksData.m */; };
 		97BDC41AC5F9EB5EEC83545F /* libPods-PhotoTravel.iOS.Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69258BF7589ADC4ACE0E0DE /* libPods-PhotoTravel.iOS.Client.a */; };
 /* End PBXBuildFile section */
 
@@ -98,8 +98,8 @@
 		912684BD1A0D75F00080DD77 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ViewControllers/MainViewController.m; sourceTree = "<group>"; };
 		912684BE1A0D75F00080DD77 /* MyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyInfoViewController.h; path = ViewControllers/MyInfoViewController.h; sourceTree = "<group>"; };
 		912684BF1A0D75F00080DD77 /* MyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyInfoViewController.m; path = ViewControllers/MyInfoViewController.m; sourceTree = "<group>"; };
-		912684C41A0D76600080DD77 /* ProfileData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileData.h; path = Data/ProfileData.h; sourceTree = "<group>"; };
-		912684C51A0D76600080DD77 /* ProfileData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileData.m; path = Data/ProfileData.m; sourceTree = "<group>"; };
+		912684C41A0D76600080DD77 /* UsersData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UsersData.h; path = Data/UsersData.h; sourceTree = "<group>"; };
+		912684C51A0D76600080DD77 /* UsersData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UsersData.m; path = Data/UsersData.m; sourceTree = "<group>"; };
 		912684C81A0D77620080DD77 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg.jpg; path = Resourses/bg.jpg; sourceTree = "<group>"; };
 		912684C91A0D77620080DD77 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resourses/Icon.png; sourceTree = "<group>"; };
 		912684CA1A0D77620080DD77 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resourses/Icon@2x.png"; sourceTree = "<group>"; };
@@ -121,8 +121,8 @@
 		91D7A2141A0FFA2A00BA0724 /* LandmarkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandmarkTableViewController.h; sourceTree = "<group>"; };
 		91D7A2151A0FFA2A00BA0724 /* LandmarkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandmarkTableViewController.m; sourceTree = "<group>"; };
 		91EE46011A0E872400FDB782 /* LandmarkDataProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandmarkDataProtocol.h; path = Data/DataProtocols/LandmarkDataProtocol.h; sourceTree = "<group>"; };
-		91F6DDBC1A0F558000D8CCCF /* LandmarkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandmarkData.h; path = Data/LandmarkData.h; sourceTree = "<group>"; };
-		91F6DDBD1A0F558000D8CCCF /* LandmarkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandmarkData.m; path = Data/LandmarkData.m; sourceTree = "<group>"; };
+		91F6DDBC1A0F558000D8CCCF /* LandmarksData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandmarksData.h; path = Data/LandmarksData.h; sourceTree = "<group>"; };
+		91F6DDBD1A0F558000D8CCCF /* LandmarksData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandmarksData.m; path = Data/LandmarksData.m; sourceTree = "<group>"; };
 		D69258BF7589ADC4ACE0E0DE /* libPods-PhotoTravel.iOS.Client.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoTravel.iOS.Client.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -326,10 +326,10 @@
 			children = (
 				8460C95C1A0E552F00821C3C /* DataProtocols */,
 				84EDC69A1A0E30F800939E2B /* Models */,
-				912684C41A0D76600080DD77 /* ProfileData.h */,
-				912684C51A0D76600080DD77 /* ProfileData.m */,
-				91F6DDBC1A0F558000D8CCCF /* LandmarkData.h */,
-				91F6DDBD1A0F558000D8CCCF /* LandmarkData.m */,
+				912684C41A0D76600080DD77 /* UsersData.h */,
+				912684C51A0D76600080DD77 /* UsersData.m */,
+				91F6DDBC1A0F558000D8CCCF /* LandmarksData.h */,
+				91F6DDBD1A0F558000D8CCCF /* LandmarksData.m */,
 				8476C1621A0FECE9002D296F /* PostsData.h */,
 				8476C1631A0FECE9002D296F /* PostsData.m */,
 			);
@@ -510,14 +510,14 @@
 			files = (
 				9126847F1A0D6F210080DD77 /* AppDelegate.m in Sources */,
 				912684B61A0D75CE0080DD77 /* MusicManagerController.m in Sources */,
-				91F6DDBE1A0F558000D8CCCF /* LandmarkData.m in Sources */,
+				91F6DDBE1A0F558000D8CCCF /* LandmarksData.m in Sources */,
 				84EDC6A51A0E389500939E2B /* DetailedImageViewController.m in Sources */,
 				912684C21A0D75F00080DD77 /* MyInfoViewController.m in Sources */,
 				91C54E681A0E69F8005BD8EA /* Landmark.m in Sources */,
 				9126847C1A0D6F210080DD77 /* main.m in Sources */,
 				912684C11A0D75F00080DD77 /* MainViewController.m in Sources */,
 				91D7A2161A0FFA2A00BA0724 /* LandmarkTableViewController.m in Sources */,
-				912684C61A0D76600080DD77 /* ProfileData.m in Sources */,
+				912684C61A0D76600080DD77 /* UsersData.m in Sources */,
 				84EDC6A01A0E336300939E2B /* LandmarkWithLastPostUITableViewCell.m in Sources */,
 				84EDC6991A0E302800939E2B /* ViewsHelper.m in Sources */,
 				84110DBA1A1049C40066D03E /* EnvironmentHelper.m in Sources */,

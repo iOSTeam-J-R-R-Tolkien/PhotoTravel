@@ -1,16 +1,11 @@
-//
-//  SingleImageViewController.m
-//  PhotoTravel
-//
-//  Created by Pesho on 11/7/14.
-//  Copyright (c) 2014 PhotoTravel. All rights reserved.
-//
-
 #import "DetailedImageViewController.h"
-#import "ViewsHelper.h"
-#import "LandmarkData.h"
+
 #import "Post.h"
+
+#import "LandmarksData.h"
 #import "PostsData.h"
+
+#import "ViewsHelper.h"
 
 @interface DetailedImageViewController ()
 @property(strong, nonatomic) LoadingScreenViewController *loadingPopup;
@@ -26,7 +21,7 @@
   [self.loadingPopup showOnScreen];
 
   [ViewsHelper changeBackgroundImage:self withImage:@"bg.jpg"];
-    [LandmarkData getLandmarkWithPostsAsync:self.landmark for:self];
+    [LandmarksData getLandmarkWithPostsAsync:self.landmark for:self];
 
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc]
         initWithTarget:self
@@ -90,10 +85,9 @@
     [PostsData
         loadImageFromPostAsync:post.pfObject for:self
                 andLoadHandler:^(UIImage *image) {
-                    [self.cachedImages setObject:image forKey:postId];
-                    [ViewsHelper
-                        changeImageSourceWithAnimation:image
-                                         forTargetView:self.imageContainer];
+      [self.cachedImages setObject:image forKey:postId];
+      [ViewsHelper changeImageSourceWithAnimation:image
+                                    forTargetView:self.imageContainer];
                 }];
   } else {
     [ViewsHelper changeImageSourceWithAnimation:imageToLoad
@@ -107,14 +101,14 @@
 }
 
 - (void)noConnectionHandler {
-    UIAlertView *alert =
-    [[UIAlertView alloc] initWithTitle:@"No connection"
-                               message:@"Please ensure your WiFi or mobile "
-     @"data connection is enabled."
-                              delegate:self
-                     cancelButtonTitle:@"Ok"
-                     otherButtonTitles:nil];
-    [alert show];
+  UIAlertView *alert =
+      [[UIAlertView alloc] initWithTitle:@"No connection"
+                                 message:@"Please ensure your WiFi or mobile "
+                                 @"data connection is enabled."
+                                delegate:self
+                       cancelButtonTitle:@"Ok"
+                       otherButtonTitles:nil];
+  [alert show];
 }
 
 @end

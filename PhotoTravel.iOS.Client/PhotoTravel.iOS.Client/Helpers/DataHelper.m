@@ -1,17 +1,11 @@
-//
-//  DataHelper.m
-//  PhotoTravel
-//
-//  Created by Pesho on 11/8/14.
-//  Copyright (c) 2014 PhotoTravel. All rights reserved.
-//
-
 #import "DataHelper.h"
+
+#import <Parse/Parse.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+
 #import "ApplicationUser.h"
 #import "Landmark.h"
 #import "Post.h"
-#import <Parse/Parse.h>
-#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @implementation DataHelper
 
@@ -32,44 +26,40 @@
 
 //+ (Landmark *) parseLandmarkFromQuery:(id)postLandmarkQuery{
 //    PFObject *landmark = postLandmarkQuery[@"landmark"];
-//    
+//
 //    Landmark * newLandmark = [Landmark initWithName:landmark[@"name"]];
-//    
+//
 //    return  newLandmark;
 //}
 
++ (Landmark *)parseLandmarkFromQuery:(id)postLandmarkQuery
+                            withPost:(Post *)post {
+  PFObject *landmark = postLandmarkQuery[@"landmark"];
 
-+ (Landmark *) parseLandmarkFromQuery:(id)postLandmarkQuery
-                             withPost:(Post*) post{
-    PFObject *landmark = postLandmarkQuery[@"landmark"];
-    
-    Landmark * newLandmark = [Landmark initWithName:landmark[@"name"]
-                                           withPost:post];
-    newLandmark.pfObject=landmark;
-    
-    
-    return  newLandmark;
+  Landmark *newLandmark =
+      [Landmark initWithName:landmark[@"name"] withPost:post];
+  newLandmark.pfObject = landmark;
+
+  return newLandmark;
 }
 
++ (Post *)parsePostFromQuery:(id)postQuery {
+  NSString *postName = postQuery[@"name"];
 
-+ (Post *) parsePostFromQuery:(id)postQuery{
-    NSString *postName = postQuery[@"name"];
-    
-    Post * newPost = [Post initWithName:postName];
-    newPost.pfObject = postQuery;
-    return newPost;
+  Post *newPost = [Post initWithName:postName];
+  newPost.pfObject = postQuery;
+  return newPost;
 }
 
 + (Landmark *)parseLastPostWithLandmarkFromQuery:(id)queryResult {
-    
-    NSString *landmarkName = queryResult[@"name"];
-    Post * post = [DataHelper parsePostFromQuery:queryResult];
-    
-    
-    Landmark *landmark = [DataHelper parseLandmarkFromQuery:queryResult
-                                                   withPost:post];
-    
-    return landmark;
+
+  NSString *landmarkName = queryResult[@"name"];
+  Post *post = [DataHelper parsePostFromQuery:queryResult];
+
+  Landmark *landmark =
+      [DataHelper parseLandmarkFromQuery:queryResult withPost:post];
+
+  return landmark;
 }
 
 @end

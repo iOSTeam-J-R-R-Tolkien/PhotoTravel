@@ -1,30 +1,27 @@
-//
-//  LoginViewController.m
-//  PhotoTravel
-//
-//  Created by Pesho Peshev on 11/3/14.
-//  Copyright (c) 2014 PhotoTravel. All rights reserved.
-//
-
 #import "MainViewController.h"
+
+#include <math.h>
+
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
-#import "LoginViewController.h"
-#import "LoadingScreenViewController.h"
-#import "AppDelegate.h"
-#import "MusicManagerController.h"
-#import "ViewsHelper.h"
-#include <math.h>
-#include "ProfileData.h"
-#import "LandmarkWithLastPostUITableViewCell.h"
-#import "DataHelper.h"
 
 #import "Landmark.h"
 #import "Post.h"
-#import "LandmarkData.h"
+
+#import "UsersData.h"
+#import "LandmarksData.h"
 #import "PostsData.h"
+
+#import "ViewsHelper.h"
+#import "DataHelper.h"
+
+#import "AppDelegate.h"
+#import "LoginViewController.h"
+#import "LoadingScreenViewController.h"
+#import "LandmarkWithLastPostUITableViewCell.h"
 #import "DetailedImageViewController.h"
 #import "LandmarkTableViewController.h"
+#import "MusicManagerController.h"
 
 @interface MainViewController ()
 @property(strong, nonatomic) MusicManagerController *musicController;
@@ -59,7 +56,7 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
                                                           green:0.960784
                                                            blue:0.960784
                                                           alpha:0.1]];
-    [LandmarkData getLastPostsAsync:5 for:self];
+    [LandmarksData getLastPostsAsync:5 for:self];
 }
 
 - (IBAction)addLandmark:(id)sender {
@@ -124,42 +121,39 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
   [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (UIButton *)profileImageToBarButton:(NSString *)userId {
-  UIImage *profileImage = [ProfileData getProfileImageForProfileId:userId];
-
-  CGFloat oImageWidth = profileImage.size.width;
-  CGFloat oImageHeight = profileImage.size.height;
-  // Draw the original image at the origin
-  CGRect oRect = CGRectMake(0, 0, oImageWidth, oImageHeight);
-  [profileImage drawInRect:oRect];
-
-  // Set the newRect to half the size of the original image
-  CGRect newRect = CGRectMake(0, 0, oImageWidth / 2, oImageHeight / 2);
-  UIImage *newImage =
-      [ViewsHelper circularScaleNCrop:profileImage withRectDimensions:newRect];
-
-  // create new button
-  UIButton *profileImageButton = [[UIButton alloc] init];
-  // set frame
-  profileImageButton.frame = CGRectMake(0, 0, 40, 40);
-  // set background image
-  [profileImageButton setBackgroundImage:newImage
-                                forState:UIControlStateNormal];
-  return profileImageButton;
-}
-
 - (void)loadBarItemsForUserWithName:(NSString *)name andId:(NSString *)userId {
-  UIBarButtonItem *nameButton =
-      [[UIBarButtonItem alloc] initWithTitle:name
-                                       style:UIBarButtonItemStylePlain
-                                      target:self
-                                      action:@selector(myInfoBtn)];
+    [UsersData getProfileImageForProfileIdAsync:userId for:self andLoadHandler:^(UIImage *profileImage) {
+    CGFloat oImageWidth = profileImage.size.width;
+    CGFloat oImageHeight = profileImage.size.height;
+    // Draw the original image at the origin
+    CGRect oRect = CGRectMake(0, 0, oImageWidth, oImageHeight);
+    [profileImage drawInRect:oRect];
 
-  UIBarButtonItem *profileImageButtonItem = [[UIBarButtonItem alloc]
-      initWithCustomView:[self profileImageToBarButton:userId]];
+    // Set the newRect to half the size of the original image
+    CGRect newRect = CGRectMake(0, 0, oImageWidth / 2, oImageHeight / 2);
+    UIImage *newImage = [ViewsHelper circularScaleNCrop:profileImage
+                                     withRectDimensions:newRect];
 
-  self.navigationItem.rightBarButtonItems =
-      [[NSArray alloc] initWithObjects:profileImageButtonItem, nameButton, nil];
+    // create new button
+    UIButton *profileImageButton = [[UIButton alloc] init];
+    // set frame
+    profileImageButton.frame = CGRectMake(0, 0, 40, 40);
+    // set background image
+    [profileImageButton setBackgroundImage:newImage
+                                  forState:UIControlStateNormal];
+
+    UIBarButtonItem *nameButton =
+        [[UIBarButtonItem alloc] initWithTitle:name
+                                         style:UIBarButtonItemStylePlain
+                                        target:self
+                                        action:@selector(myInfoBtn)];
+
+    UIBarButtonItem *profileImageButtonItem =
+        [[UIBarButtonItem alloc] initWithCustomView:profileImageButton];
+
+    self.navigationItem.rightBarButtonItems = [[NSArray alloc]
+        initWithObjects:profileImageButtonItem, nameButton, nil];
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -187,11 +181,10 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
     [PostsData
         loadImageFromPostAsync:post.pfObject for:self
                 andLoadHandler:^(UIImage *image) {
-                    [self.cachedImages setObject:image forKey:postId];
+      [self.cachedImages setObject:image forKey:postId];
 
-                    [ViewsHelper
-                        changeImageSourceWithAnimation:image
-                                         forTargetView:cell.postImageView];
+      [ViewsHelper changeImageSourceWithAnimation:image
+                                    forTargetView:cell.postImageView];
                 }];
   } else {
     [ViewsHelper changeImageSourceWithAnimation:imageToLoad
@@ -204,19 +197,18 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
 }
 
 - (void)tableView:(UITableView *)tableView
-didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    self.selectedRow = indexPath.row;
-    [self performSegueWithIdentifier:@"myLandmarkSegue" sender:self];
+    didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  self.selectedRow = indexPath.row;
+  [self performSegueWithIdentifier:@"myLandmarkSegue" sender:self];
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue
-                sender:(id)sender{
-    if ([[segue identifier] isEqualToString:@"myLandmarkSegue"]) {
-        LandmarkTableViewController *vc = [segue destinationViewController];
-        
-        Landmark *landmark = (Landmark *)self.rowDataArray[self.selectedRow];
-        vc.landmarkData = landmark;
-    }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([[segue identifier] isEqualToString:@"myLandmarkSegue"]) {
+    LandmarkTableViewController *vc = [segue destinationViewController];
+
+    Landmark *landmark = (Landmark *)self.rowDataArray[self.selectedRow];
+    vc.landmarkData = landmark;
+  }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -225,14 +217,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 }
 
 - (void)noConnectionHandler {
-    UIAlertView *alert =
-    [[UIAlertView alloc] initWithTitle:@"No connection"
-                               message:@"Please ensure your WiFi or mobile "
-     @"data connection is enabled."
-                              delegate:self
-                     cancelButtonTitle:@"Ok"
-                     otherButtonTitles:nil];
-    [alert show];
+  UIAlertView *alert =
+      [[UIAlertView alloc] initWithTitle:@"No connection"
+                                 message:@"Please ensure your WiFi or mobile "
+                                 @"data connection is enabled."
+                                delegate:self
+                       cancelButtonTitle:@"Ok"
+                       otherButtonTitles:nil];
+  [alert show];
 }
 
 @end

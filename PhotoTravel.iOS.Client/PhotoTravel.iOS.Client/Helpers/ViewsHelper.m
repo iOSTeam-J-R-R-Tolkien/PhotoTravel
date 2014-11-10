@@ -1,12 +1,5 @@
-//
-//  ViewsHelper.m
-//  PhotoTravel
-//
-//  Created by Pesho on 11/7/14.
-//  Copyright (c) 2014 PhotoTravel. All rights reserved.
-//
-
 #import "ViewsHelper.h"
+
 #import <UIKit/UIKit.h>
 
 @implementation ViewsHelper

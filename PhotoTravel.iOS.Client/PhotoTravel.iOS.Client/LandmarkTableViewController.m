@@ -1,24 +1,18 @@
-//
-//  LandmarkTableViewController.m
-//  PhotoTravel.iOS.Client
-//
-//  Created by Vindicator on 11/9/14.
-//  Copyright (c) 2014 Vindicator. All rights reserved.
-//
-
 #import "LandmarkTableViewController.h"
+
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+
 #import "ApplicationUser.h"
-#import "LoadingScreenViewController.h"
-#import "ViewsHelper.h"
-
 #import "Landmark.h"
-#import "Post.h"
-#import "LandmarkData.h"
 
+#import "LandmarksData.h"
 #import "PostsData.h"
+
 #import "ViewsHelper.h"
+#import "ViewsHelper.h"
+
+#import "LoadingScreenViewController.h"
 #import "LandmarkUITableViewCell.h"
 #import "DetailedImageViewController.h"
 
@@ -35,7 +29,7 @@ static NSString *identifier = @"LandmarkUITableViewCell";
   self.loadingPopup = [LoadingScreenViewController initWithParentView:self];
   [self.loadingPopup showOnScreen];
   [ViewsHelper changeBackgroundImage:self withImage:@"bg.jpg"];
-     [LandmarkData getLandmarkWithPostsAsync:self.landmarkData for:self];
+     [LandmarksData getLandmarkWithPostsAsync:self.landmarkData for:self];
 
      // cust table init
      UINib *nib = [UINib nibWithNibName:identifier bundle:nil];

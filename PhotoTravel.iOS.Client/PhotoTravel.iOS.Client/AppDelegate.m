@@ -1,12 +1,5 @@
-//
-//  AppDelegate.m
-//  PhotoTravel
-//
-//  Created by Pesho Peshev on 11/3/14.
-//  Copyright (c) 2014 PhotoTravel. All rights reserved.
-//
-
 #import "AppDelegate.h"
+
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <Parse/Parse.h>
 
@@ -106,8 +99,8 @@
   if (_managedObjectModel != nil) {
     return _managedObjectModel;
   }
-  NSURL *modelURL =
-      [[NSBundle mainBundle] URLForResource:@"PhotoTravel" withExtension:@"momd"];
+  NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"PhotoTravel"
+                                            withExtension:@"momd"];
   _managedObjectModel =
       [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
   return _managedObjectModel;

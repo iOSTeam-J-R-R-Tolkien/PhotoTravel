@@ -1,12 +1,16 @@
 #import "MyInfoViewController.h"
-#import "ViewsHelper.h"
-#import "LoadingScreenViewController.h"
-#import "ProfileData.h"
+
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
-#import "DataHelper.h"
+
 #import "ApplicationUser.h"
-#import "ProfileData.h"
+
+#import "UsersData.h"
+
+#import "ViewsHelper.h"
+#import "DataHelper.h"
+
+#import "LoadingScreenViewController.h"
 
 @interface MyInfoViewController ()
 @property(strong, nonatomic) LoadingScreenViewController *loadingPopup;
@@ -48,7 +52,7 @@
   if (self.userData) {
     [self userDataLoadHandler:self.userData];
   } else {
-    [ProfileData loadProfileDataAsync:self];
+    [UsersData loadProfileDataAsync:self];
   }
 }
 
@@ -77,7 +81,7 @@
   [self.viewTableProfileData reloadData];
   [self.loadingPopup hideFromScreen];
 
-  [ProfileData loadProfileImageAsync:self forUserId:self.userData.userId];
+  [UsersData loadProfileImageAsync:self forUserId:self.userData.userId];
 }
 
 - (void)profileImageLoadHandler:(UIImage *)profileImage {
@@ -127,7 +131,7 @@
   UIAlertView *alert =
       [[UIAlertView alloc] initWithTitle:@"No connection"
                                  message:@"Please ensure your WiFi or mobile "
-                                         @"data connection is enabled."
+                                 @"data connection is enabled."
                                 delegate:self
                        cancelButtonTitle:@"Ok"
                        otherButtonTitles:nil];

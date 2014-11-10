@@ -1,7 +1,8 @@
 #import <UIKit/UIKit.h>
+
 #import "ApplicationUser.h"
 
-@protocol ProfileDataProtocol
+@protocol UsersDataProtocol
 
 @required
 - (void)noConnectionHandler;

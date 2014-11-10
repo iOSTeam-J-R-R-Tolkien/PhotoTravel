@@ -1,16 +1,17 @@
+#import "UsersData.h"
+
 @import UIKit;
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <Parse/Parse.h>
 
-#import "ProfileData.h"
 #import "ProfileDataProtocol.h"
-#import "DataHelper.h"
 #import "EnvironmentHelper.h"
+#import "DataHelper.h"
 
-@implementation ProfileData
+@implementation UsersData
 
 + (UIImage *)getProfileImageForProfileId:(NSString *)profileId {
-    
+
   NSString *profileImageUrl = [NSString
       stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large",
                        profileId];
@@ -21,13 +22,40 @@
   return profileImage;
 }
 
-+ (void)loadProfileDataAsync:(id<ProfileDataProtocol>)delegate {
-    BOOL isConnected = [EnvironmentHelper isInternetConnectionEstablished];
-    if(!isConnected){
-        [delegate noConnectionHandler];
-        return;
-    }
-    
++ (void)getProfileImageForProfileIdAsync:(NSString *)profileId for:(id<UsersDataProtocol>)resultConsumer
+                          andLoadHandler:(void (^)(UIImage *))delegate {
+  BOOL isConnected = [EnvironmentHelper isInternetConnectionEstablished];
+  if (!isConnected) {
+    [delegate noConnectionHandler];
+    return;
+  }
+
+  NSString *pictureUrlFormat = [NSString
+      stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large",
+                       profileId];
+  NSURL *pictureURL = [NSURL URLWithString:pictureUrlFormat];
+  NSURLRequest *urlRequest = [NSURLRequest requestWithURL:pictureURL];
+  [NSURLConnection
+      sendAsynchronousRequest:urlRequest
+                        queue:[NSOperationQueue mainQueue]
+            completionHandler:^(NSURLResponse *response, NSData *imageData,
+                                NSError *connectionError) {
+                if (connectionError == nil && imageData != nil) {
+                  UIImage *image = [UIImage imageWithData:imageData];
+                  delegate(image);
+                } else {
+                  NSLog(@"Failed to load profile photo.");
+                }
+            }];
+}
+
++ (void)loadProfileDataAsync:(id<UsersDataProtocol>)delegate {
+  BOOL isConnected = [EnvironmentHelper isInternetConnectionEstablished];
+  if (!isConnected) {
+    [delegate noConnectionHandler];
+    return;
+  }
+
   FBRequest *request = [FBRequest requestForMe];
   [request startWithCompletionHandler:^(FBRequestConnection *connection,
                                         id result, NSError *error) {
@@ -45,14 +73,14 @@
   }];
 }
 
-+ (void)loadProfileImageAsync:(id<ProfileDataProtocol>)delegate
++ (void)loadProfileImageAsync:(id<UsersDataProtocol>)delegate
                     forUserId:(NSString *)userId {
-    BOOL isConnected = [EnvironmentHelper isInternetConnectionEstablished];
-    if(!isConnected){
-        [delegate noConnectionHandler];
-        return;
-    }
-    
+  BOOL isConnected = [EnvironmentHelper isInternetConnectionEstablished];
+  if (!isConnected) {
+    [delegate noConnectionHandler];
+    return;
+  }
+
   NSString *pictureUrlFormat = [NSString
       stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large",
                        userId];
