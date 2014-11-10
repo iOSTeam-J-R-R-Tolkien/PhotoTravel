@@ -43,12 +43,19 @@
 }
 
 - (IBAction)imagePinch:(UIPinchGestureRecognizer *)sender {
-  float scale = sender.scale;
-  self.imageContainer.transform = CGAffineTransformMakeScale(scale, scale);
+  self.scaleProportion = sender.scale;
+  self.imageContainer.transform =
+      CGAffineTransformMakeScale(self.scaleProportion, self.scaleProportion);
 }
 
 - (IBAction)imageTap:(UITapGestureRecognizer *)sender {
   self.imageContainer.transform = CGAffineTransformIdentity;
+}
+
+- (IBAction)onImageRotation:(UIRotationGestureRecognizer *)sender {
+  self.imageContainer.transform = CGAffineTransformRotate(
+      CGAffineTransformMakeScale(self.scaleProportion, self.scaleProportion),
+      sender.rotation);
 }
 
 - (IBAction)nextImageHandler:(id)sender {
@@ -74,6 +81,21 @@
 - (void)landmarkWithPostsHander:(Landmark *)landmarkData {
   self.landmark = landmarkData;
   [self reloadImage];
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+  if (event.subtype == UIEventSubtypeMotionShake) {
+    if (self.postIndex < [self.landmark.posts count] - 1) {
+      self.postIndex++;
+    } else {
+      self.postIndex = 0;
+    }
+
+    [self reloadImage];
+  }
+
+  if ([super respondsToSelector:@selector(motionEnded:withEvent:)])
+    [super motionEnded:motion withEvent:event];
 }
 
 - (void)reloadImage {

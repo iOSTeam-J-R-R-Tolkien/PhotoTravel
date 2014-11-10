@@ -255,7 +255,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uDu-YR-Yis">
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uDu-YR-Yis">
                                 <rect key="frame" x="82" y="78" width="437" height="444"/>
                                 <gestureRecognizers/>
                             </imageView>
@@ -288,6 +288,11 @@
                         <action selector="imageTap:" destination="0bN-zh-II3" id="xU3-pe-Hi0"/>
                     </connections>
                 </tapGestureRecognizer>
+                <rotationGestureRecognizer rotation="360" id="SUf-gA-Th3">
+                    <connections>
+                        <action selector="onImageRotation:" destination="0bN-zh-II3" id="lu9-eb-8Gx"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1128" y="-1151"/>
         </scene>
