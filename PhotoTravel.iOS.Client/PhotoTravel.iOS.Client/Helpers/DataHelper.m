@@ -24,14 +24,6 @@
   return appUser;
 }
 
-//+ (Landmark *) parseLandmarkFromQuery:(id)postLandmarkQuery{
-//    PFObject *landmark = postLandmarkQuery[@"landmark"];
-//
-//    Landmark * newLandmark = [Landmark initWithName:landmark[@"name"]];
-//
-//    return  newLandmark;
-//}
-
 + (Landmark *)parseLandmarkFromQuery:(id)postLandmarkQuery
                             withPost:(Post *)post {
   PFObject *landmark = postLandmarkQuery[@"landmark"];
@@ -44,11 +36,12 @@
 }
 
 + (Post *)parsePostFromQuery:(id)postQuery {
-  NSString *postName = postQuery[@"name"];
-
-  Post *newPost = [Post initWithName:postName];
-  newPost.pfObject = postQuery;
-  return newPost;
+    NSString *postName = postQuery[@"name"];
+    NSString *userName = postQuery[@"user"][@"profile"][@"name"];
+    Post *newPost = [Post initWithName:postName
+                                  user:userName];
+    newPost.pfObject = postQuery;
+    return newPost;
 }
 
 + (Landmark *)parseLastPostWithLandmarkFromQuery:(id)queryResult {

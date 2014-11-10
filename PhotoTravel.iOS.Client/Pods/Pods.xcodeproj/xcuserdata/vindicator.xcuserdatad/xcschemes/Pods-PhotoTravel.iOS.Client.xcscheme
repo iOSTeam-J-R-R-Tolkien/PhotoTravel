@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D4A904AE0DFB8837C40A63D3"
-               BuildableName = "libPods-PhotoTravel.iOS.Client-ParseFacebookUtils.a"
-               BlueprintName = "Pods-PhotoTravel.iOS.Client-ParseFacebookUtils"
+               BlueprintIdentifier = "530C340EBDD54CDB053F6D24"
+               BuildableName = "libPods-PhotoTravel.iOS.Client.a"
+               BlueprintName = "Pods-PhotoTravel.iOS.Client"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
