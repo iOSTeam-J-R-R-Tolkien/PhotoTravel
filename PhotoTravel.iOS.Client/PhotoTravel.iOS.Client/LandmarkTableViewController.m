@@ -35,7 +35,13 @@ static NSString *identifier = @"LandmarkUITableViewCell";
      UINib *nib = [UINib nibWithNibName:identifier bundle:nil];
      [self.tableView registerNib:nib forCellReuseIdentifier:identifier];
      [self.tableView setDataSource:self];
+     UIView *rootView = [[nib instantiateWithOwner:nil options:nil] lastObject];
+     self.tableView.estimatedRowHeight = rootView.frame.size.height;
+     self.tableView.rowHeight = UITableViewAutomaticDimension;
      self.tableView.delegate = self;
+     [self.tableView
+         setBackgroundView:[[UIImageView alloc]
+                               initWithImage:[UIImage imageNamed:@"bg.jpg"]]];
      [self.tableView setBackgroundColor:[UIColor colorWithRed:0.960784
                                                         green:0.960784
                                                          blue:0.960784

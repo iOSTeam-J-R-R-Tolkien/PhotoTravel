@@ -15,7 +15,7 @@
             <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="Liz-MT-ivM" id="GYW-ge-m0t">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b1i-Wa-rnx">
+                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="welcome.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="b1i-Wa-rnx">
                         <rect key="frame" x="8" y="11" width="128" height="105"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="b1i-Wa-rnx" secondAttribute="height" multiplier="128:105" id="Ohw-Ik-dMt"/>
@@ -68,4 +68,7 @@
             <point key="canvasLocation" x="808" y="529.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="welcome.jpg" width="2880" height="1800"/>
+    </resources>
 </document>
