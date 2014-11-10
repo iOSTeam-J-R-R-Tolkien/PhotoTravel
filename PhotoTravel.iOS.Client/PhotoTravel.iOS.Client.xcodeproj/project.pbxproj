@@ -19,6 +19,7 @@
 		84EDC6A01A0E336300939E2B /* LandmarkWithLastPostUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDC69F1A0E336300939E2B /* LandmarkWithLastPostUITableViewCell.m */; };
 		84EDC6A21A0E338200939E2B /* LandmarkWithLastPostUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84EDC6A11A0E338200939E2B /* LandmarkWithLastPostUITableViewCell.xib */; };
 		84EDC6A51A0E389500939E2B /* DetailedImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDC6A41A0E389500939E2B /* DetailedImageViewController.m */; };
+		912651D91A111E5B00812EAF /* NewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 912651D81A111E5B00812EAF /* NewPostViewController.m */; };
 		9126847C1A0D6F210080DD77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9126847B1A0D6F210080DD77 /* main.m */; };
 		9126847F1A0D6F210080DD77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9126847E1A0D6F210080DD77 /* AppDelegate.m */; };
 		912684821A0D6F210080DD77 /* PhotoTravel_iOS_Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912684801A0D6F210080DD77 /* PhotoTravel_iOS_Client.xcdatamodeld */; };
@@ -88,6 +89,8 @@
 		84EDC6A11A0E338200939E2B /* LandmarkWithLastPostUITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LandmarkWithLastPostUITableViewCell.xib; path = Views/LandmarkWithLastPostUITableViewCell.xib; sourceTree = "<group>"; };
 		84EDC6A31A0E389500939E2B /* DetailedImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailedImageViewController.h; path = ViewControllers/DetailedImageViewController.h; sourceTree = "<group>"; };
 		84EDC6A41A0E389500939E2B /* DetailedImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailedImageViewController.m; path = ViewControllers/DetailedImageViewController.m; sourceTree = "<group>"; };
+		912651D71A111E5B00812EAF /* NewPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewPostViewController.h; path = ViewControllers/NewPostViewController.h; sourceTree = "<group>"; };
+		912651D81A111E5B00812EAF /* NewPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewPostViewController.m; path = ViewControllers/NewPostViewController.m; sourceTree = "<group>"; };
 		912684761A0D6F210080DD77 /* PhotoTravel.iOS.Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoTravel.iOS.Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9126847A1A0D6F210080DD77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9126847B1A0D6F210080DD77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 		912684A61A0D750E0080DD77 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				912651D71A111E5B00812EAF /* NewPostViewController.h */,
+				912651D81A111E5B00812EAF /* NewPostViewController.m */,
 				91D7A2141A0FFA2A00BA0724 /* LandmarkTableViewController.h */,
 				91D7A2151A0FFA2A00BA0724 /* LandmarkTableViewController.m */,
 				84EDC6A31A0E389500939E2B /* DetailedImageViewController.h */,
@@ -551,6 +556,7 @@
 				912684821A0D6F210080DD77 /* PhotoTravel_iOS_Client.xcdatamodeld in Sources */,
 				91C500931A0FC61B008BDAB5 /* Post.m in Sources */,
 				8476C1641A0FECE9002D296F /* PostsData.m in Sources */,
+				912651D91A111E5B00812EAF /* NewPostViewController.m in Sources */,
 				91D56B5A1A1034C20070DC25 /* LandmarkUITableViewCell.m in Sources */,
 				844F24B11A11096600438066 /* StatisticsData.m in Sources */,
 				84EDC6981A0E302800939E2B /* DataHelper.m in Sources */,
