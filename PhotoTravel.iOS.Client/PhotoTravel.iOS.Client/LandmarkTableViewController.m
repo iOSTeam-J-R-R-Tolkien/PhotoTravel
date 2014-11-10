@@ -19,6 +19,8 @@
 
 #import "PostsData.h"
 #import "ViewsHelper.h"
+#import "LandmarkUITableViewCell.h"
+#import "DetailedImageViewController.h"
 
 @interface LandmarkTableViewController ()
 @property(strong, nonatomic) LoadingScreenViewController *loadingPopup;
@@ -26,65 +28,82 @@
 
 @implementation LandmarkTableViewController
 
+static NSString *identifier = @"LandmarkUITableViewCell";
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    self.loadingPopup = [LoadingScreenViewController initWithParentView:self];
-    [self.loadingPopup showOnScreen];
-    //    [ViewsHelper changeBackgroundImage:self withImage:@"bg.jpg"];
-    
-    UIBarButtonItem *logoutButton =
-    [[UIBarButtonItem alloc] initWithTitle:@"Log Out"
-                                     style:UIBarButtonItemStyleBordered
-                                    target:self
-                                    action:@selector(logoutButtonAction:)];
-    self.navigationItem.rightBarButtonItems =
-    [[NSArray alloc] initWithObjects:logoutButton, nil];
-    //    [LandmarkData getLastPostsAsync:5 for:self];
+  [super viewDidLoad];
+  self.loadingPopup = [LoadingScreenViewController initWithParentView:self];
+  [self.loadingPopup showOnScreen];
+  [ViewsHelper changeBackgroundImage:self withImage:@"bg.jpg"];
+     [LandmarkData getLandmarkWithPostsAsync:self.landmarkData for:self];
+
+     // cust table init
+     UINib *nib = [UINib nibWithNibName:identifier bundle:nil];
+     [self.tableView registerNib:nib forCellReuseIdentifier:identifier];
+     [self.tableView setDataSource:self];
+     self.tableView.delegate = self;
+     [self.tableView setBackgroundColor:[UIColor colorWithRed:0.960784
+                                                        green:0.960784
+                                                         blue:0.960784
+                                                        alpha:0.1]];
 }
 
 - (void)lastPostsDataLoadHandler:(NSMutableArray *)landmarkData {
-    //    self.rowDataArray = landmarkData;
-    //    [self.postsTableView reloadData];
+  //    self.rowDataArray = landmarkData;
+  //    [self.postsTableView reloadData];
 }
 
 - (void)logoutButtonAction:(id)sender {
-    [PFUser logOut];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+  [PFUser logOut];
+  [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [self.loadingPopup hideFromScreen];
+  [super viewDidAppear:animated];
+  [self.loadingPopup hideFromScreen];
 }
 
-//- (NSInteger)tableView:(UITableView *)tableView
-// numberOfRowsInSection:(NSInteger)section {
-//    return [self.landmarkData count];
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView
-//         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    static NSString *CellIdentifier = @"LandmarkWithLastPostUITableViewCell";
-//    
-//    LandmarkWithLastPostUITableViewCell *cell =
-//    [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    if (cell == nil) {
-//        cell = [self.postsTableView dequeueReusableCellWithIdentifier:identifier
-//                                                         forIndexPath:indexPath];
-//    }
-//    
-//    //    Landmark *landmark = (Landmark *)self.rowDataArray[indexPath.row];
-//    //    Post *post = (Post *)self.landmarkData[indexPath.row].posts[0];
-//    Post *post = (Post *)self.landmarkData.posts[0];
-//    [PostsData loadImageFromPostAsync:post.pfObject
-//                       andLoadHandler:^(UIImage *image) {
-//                           [ViewsHelper changeImageSourceWithAnimation:image forTargetView:cell.postImageView];
-//                       }];
-//    
-//    cell.landmarkLabel.text = landmark.name;
-//    cell.lastPostLable.text = post.name;
-//    return cell;
-//}
+- (void)landmarkWithPostsHander:(Landmark *)landmarkData {
+  self.landmarkData = landmarkData;
+  [self.tableView reloadData];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView
+    numberOfRowsInSection:(NSInteger)section {
+  return [self.landmarkData.posts count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+  LandmarkUITableViewCell *cell =
+      [tableView dequeueReusableCellWithIdentifier:identifier];
+
+  Post *post = self.landmarkData.posts[indexPath.row];
+    [PostsData loadImageFromPostAsync:post.pfObject for:self
+                       andLoadHandler:^(UIImage *image) {
+    [ViewsHelper changeImageSourceWithAnimation:image
+                                  forTargetView:cell.postImageView];
+                       }];
+
+  cell.postNameLable.text = post.name;
+  return cell;
+}
+
+- (void)tableView:(UITableView *)tableView
+    didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+  self.selectedRow = indexPath.row;
+  [self performSegueWithIdentifier:@"singleImageView" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([[segue identifier] isEqualToString:@"singleImageView"]) {
+    DetailedImageViewController *galleryController =
+        (DetailedImageViewController *)[segue destinationViewController];
+    galleryController.landmark = self.landmarkData;
+    galleryController.postIndex = 0;
+  }
+}
 
 @end

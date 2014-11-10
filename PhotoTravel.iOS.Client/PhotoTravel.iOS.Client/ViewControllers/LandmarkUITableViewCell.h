@@ -10,4 +10,8 @@
 
 @interface LandmarkUITableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *postNameLable;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLable;
+@property (weak, nonatomic) IBOutlet UIImageView *postImageView;
+
 @end

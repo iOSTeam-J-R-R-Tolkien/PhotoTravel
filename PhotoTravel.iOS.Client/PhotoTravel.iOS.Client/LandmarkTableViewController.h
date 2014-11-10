@@ -21,4 +21,5 @@
 //
 //@property (weak, nonatomic) IBOutlet UIImageView *postImageView;
 @property (nonatomic, strong) Landmark *landmarkData;
+@property(nonatomic) long selectedRow;
 @end

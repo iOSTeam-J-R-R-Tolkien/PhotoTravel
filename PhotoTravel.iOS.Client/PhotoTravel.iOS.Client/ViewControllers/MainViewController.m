@@ -24,6 +24,7 @@
 #import "LandmarkData.h"
 #import "PostsData.h"
 #import "DetailedImageViewController.h"
+#import "LandmarkTableViewController.h"
 
 @interface MainViewController ()
 @property(strong, nonatomic) MusicManagerController *musicController;
@@ -203,20 +204,19 @@ static NSString *identifier = @"LandmarkWithLastPostUITableViewCell";
 }
 
 - (void)tableView:(UITableView *)tableView
-    didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
-{
-  self.selectedRow = indexPath.row;
-  [self performSegueWithIdentifier:@"singleImageView" sender:self];
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.selectedRow = indexPath.row;
+    [self performSegueWithIdentifier:@"myLandmarkSegue" sender:self];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  if ([[segue identifier] isEqualToString:@"singleImageView"]) {
-    DetailedImageViewController *galleryController =
-        (DetailedImageViewController *)[segue destinationViewController];
-    Landmark *landmark = (Landmark *)self.rowDataArray[self.selectedRow];
-    galleryController.landmark = landmark;
-    galleryController.postIndex = 0;
-  }
+-(void)prepareForSegue:(UIStoryboardSegue *)segue
+                sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"myLandmarkSegue"]) {
+        LandmarkTableViewController *vc = [segue destinationViewController];
+        
+        Landmark *landmark = (Landmark *)self.rowDataArray[self.selectedRow];
+        vc.landmarkData = landmark;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
