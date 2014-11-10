@@ -299,7 +299,7 @@
                         <viewControllerLayoutGuide type="top" id="t1x-Ye-uxT"/>
                         <viewControllerLayoutGuide type="bottom" id="dzH-OG-5bh"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fsh-Xc-epc">
+                    <view key="view" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" id="fsh-Xc-epc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -329,8 +329,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pg-u0-sT5">
-                                <rect key="frame" x="225" y="359" width="150" height="59"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pg-u0-sT5">
+                                <rect key="frame" x="225" y="541" width="150" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="6lw-yu-xCa"/>
                                     <constraint firstAttribute="height" constant="59" id="ep1-Ib-CCL"/>
@@ -343,13 +343,28 @@
                                     <action selector="addNewPostBtn:" destination="uvO-ej-lgO" eventType="touchUpInside" id="xaM-bL-ZpP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzx-qy-Mo6">
+                                <rect key="frame" x="260" y="294" width="80" height="30"/>
+                                <state key="normal" title="Add picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPictureBtn:" destination="uvO-ej-lgO" eventType="touchUpInside" id="gOL-Jp-5qG"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDz-u9-qa8">
+                                <rect key="frame" x="0.0" y="338" width="600" height="200"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6pg-u0-sT5" firstAttribute="top" secondItem="XIl-uf-g8h" secondAttribute="bottom" constant="76" id="65C-hl-Cdx"/>
+                            <constraint firstItem="lzx-qy-Mo6" firstAttribute="centerX" secondItem="HDz-u9-qa8" secondAttribute="centerX" id="3Wi-vK-Kqy"/>
+                            <constraint firstItem="6pg-u0-sT5" firstAttribute="top" secondItem="XIl-uf-g8h" secondAttribute="bottom" constant="261" id="65C-hl-Cdx"/>
+                            <constraint firstItem="lzx-qy-Mo6" firstAttribute="top" secondItem="XIl-uf-g8h" secondAttribute="bottom" constant="14" id="7BN-7T-3y5"/>
                             <constraint firstItem="OUr-tl-f4M" firstAttribute="trailing" secondItem="fsh-Xc-epc" secondAttribute="trailingMargin" id="7C8-uq-8Sf"/>
                             <constraint firstItem="6pg-u0-sT5" firstAttribute="centerX" secondItem="fsh-Xc-epc" secondAttribute="centerX" id="Dw0-bI-xwW"/>
                             <constraint firstItem="XIl-uf-g8h" firstAttribute="leading" secondItem="OUr-tl-f4M" secondAttribute="leading" id="E5F-GA-HvY"/>
+                            <constraint firstItem="lzx-qy-Mo6" firstAttribute="centerX" secondItem="6pg-u0-sT5" secondAttribute="centerX" id="EfY-0H-isn"/>
                             <constraint firstItem="bkk-6l-LeH" firstAttribute="top" secondItem="sqM-b4-guy" secondAttribute="bottom" constant="95" id="NNP-XZ-teJ"/>
                             <constraint firstItem="sqM-b4-guy" firstAttribute="leading" secondItem="fsh-Xc-epc" secondAttribute="leadingMargin" id="NvO-ax-jTe"/>
                             <constraint firstItem="bkk-6l-LeH" firstAttribute="leading" secondItem="sqM-b4-guy" secondAttribute="leading" id="OLt-vO-rtD"/>
@@ -358,11 +373,13 @@
                             <constraint firstItem="OUr-tl-f4M" firstAttribute="trailing" secondItem="XIl-uf-g8h" secondAttribute="trailing" id="VcQ-kY-YcS"/>
                             <constraint firstItem="XIl-uf-g8h" firstAttribute="leading" secondItem="bkk-6l-LeH" secondAttribute="trailing" constant="8" symbolic="YES" id="Vrg-MW-wE1"/>
                             <constraint firstItem="OUr-tl-f4M" firstAttribute="leading" secondItem="sqM-b4-guy" secondAttribute="trailing" constant="8" symbolic="YES" id="aIb-iL-bfg"/>
-                            <constraint firstItem="dzH-OG-5bh" firstAttribute="top" secondItem="6pg-u0-sT5" secondAttribute="bottom" constant="185" id="tP9-aJ-ukW"/>
+                            <constraint firstItem="dzH-OG-5bh" firstAttribute="top" secondItem="6pg-u0-sT5" secondAttribute="bottom" id="tP9-aJ-ukW"/>
                             <constraint firstItem="sqM-b4-guy" firstAttribute="top" secondItem="t1x-Ye-uxT" secondAttribute="bottom" constant="8" symbolic="YES" id="v2g-Jf-4gT"/>
+                            <constraint firstItem="HDz-u9-qa8" firstAttribute="top" secondItem="lzx-qy-Mo6" secondAttribute="bottom" constant="14" id="v67-t5-jXi"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="HDz-u9-qa8" id="8G6-4g-0Mq"/>
                         <outlet property="postDescriptionTextView" destination="XIl-uf-g8h" id="XtL-GU-GRv"/>
                         <outlet property="postNameTextField" destination="OUr-tl-f4M" id="xqB-2w-UUu"/>
                     </connections>

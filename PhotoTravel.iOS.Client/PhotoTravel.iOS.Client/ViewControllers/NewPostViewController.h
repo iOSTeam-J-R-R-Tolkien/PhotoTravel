@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewPostViewController : UIViewController
+@interface NewPostViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *postNameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *postDescriptionTextView;
 
 - (IBAction)addNewPostBtn:(id)sender;
+- (IBAction)addPictureBtn:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
